@@ -12,10 +12,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body class="grey lighten-2 ">
+    <body class="grey lighten-5 ">
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/materialize.js"></script>
 
      
 
@@ -39,14 +39,13 @@
 
 
 
+
+
         <!--MID CONTENT-->
         <div class="container ">
         <div class="row ">
 
 
-       
-
-            
 
             <!--<div class="container">-->
             <div>     
@@ -106,14 +105,14 @@
                                       <label for="pessoa5">Welington Correia</label>
                                     </p>
                                     <p>
-                                      <input type="checkbox" id="pessoa6" value="Só Sergio" />
-                                      <label for="pessoa6">Só Sergio</label>
+                                      <input type="checkbox" id="pessoa6" value="Sérgio" />
+                                      <label for="pessoa6">Sérgio</label>
                                     </p>
                                 </div>
                                 <div class="col s12 m3">
                                     <p>
-                                      <input type="checkbox" id="pessoa7" value="Icaro Sanches" />
-                                      <label for="pessoa7">Icaro Sanches</label>
+                                      <input type="checkbox" id="pessoa7" value="Icaro Leite" />
+                                      <label for="pessoa7">Icaro Leite</label>
                                     </p>
                                     <p>
                                       <input type="checkbox" id="pessoa8" value="Ricardo Matos"/>
@@ -138,6 +137,7 @@
                                       <label for="pessoa12">NONE</label>
                                     </p>
                                 </div>
+                                
 
                                 
                             </div>
@@ -148,9 +148,21 @@
                         <div class="col s12">
                         <h5><i class="material-icons teal-text ">forum</i> Desenvolvimento</h5>
                         
+                            <table class="highlight bordered">
+                                <thead>
+                                  <tr>
+                                      <th data-field="id">Tópicos discutidos</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody id="table-body-discutido">
+                                  <!-- javascript will put code here, don't worry-->                                  
+                                </tbody>
+                            </table>
                             <div class="input-field col s12">
-                              <textarea id="texto_discutido" class="materialize-textarea"></textarea>
-                              <label for="texto_discutido">Discutido</label>
+                                <textarea id="text-add-desenvolvimento" class="materialize-textarea"></textarea>
+                                <label for="text-add-desenvolvimento">Adiconar tópico discutido</label>
+                                <button onclick="DesenvAddTopic()" class="right btn-floating waves-effect waves-light"><i class="material-icons">add</i></button>
                             </div>
                         </div>
                         </div>
@@ -159,9 +171,22 @@
                         <div class="col s12">
                         <h5><i class="material-icons teal-text ">done_all</i> Finalização</h5>
                         
+                            <table class="highlight bordered">
+                                <thead>
+                                  <tr>
+                                      <th data-field="id">Tópicos decididos</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody id="table-body-decidido">
+                                  <!-- javascript will put code here, don't worry-->
+                                </tbody>
+                            </table>
+                            <br>
                             <div class="input-field col s12">
-                              <textarea id="texto_decidido" class="materialize-textarea "></textarea>
-                              <label for="texto_decidido" >Decidido</label>
+                                <textarea id="text-add-finalizacao" class="materialize-textarea"></textarea>
+                                <label for="text-add-finalizacao">Adiconar tópico decidido</label>
+                                <button onclick="finaliAddTopic()" class="right btn-floating waves-effect waves-light"><i class="material-icons">add</i></button>
                             </div>
                         </div>
                         </div>
@@ -180,8 +205,10 @@
                             <!--<i class="material-icons right">send</i>-->
                         </button>
 
+
                     </div>
                 </div>
+                
 
                 
 
@@ -235,8 +262,88 @@
     
     <script type="text/javascript">
 
-    
 
+
+       
+
+
+        function DesenvAddTopic(){
+
+            //CREATIG ELEMENTS
+            var tableRow = document.createElement("tr");
+            var headerCell1 = document.createElement("td");
+            var headerCell2 = document.createElement("td");
+            var removeButton = document.createElement("button");
+            var icon = document.createElement("i");
+
+            //STRUCTURING THE ELEMENTS
+            tableRow.appendChild(headerCell1);
+            tableRow.appendChild(headerCell2);
+            headerCell2.appendChild(removeButton);
+            removeButton.appendChild(icon);
+         
+            //REMOVE BUTTON
+            removeButton.className = "right btn-floating waves-effect waves-light red";
+            removeButton.onclick = function(){ tableRow.remove()};
+
+            //ICON OF REMOVE BUTTON
+            icon.className = "material-icons";
+            icon.innerHTML="clear";
+
+            //GETING THE VALUE OF TEXTAREA
+            headerCell1.innerHTML = document.getElementById("text-add-desenvolvimento").value;
+
+            //CLEAR THE TEXT DIGITED
+            document.getElementById("text-add-desenvolvimento").value = "";
+            //PUT THE ELEMENT ON THE TABLE
+            document.getElementById('table-body-discutido').appendChild(tableRow);
+
+
+        }
+
+        function finaliAddTopic(){
+
+            //CREATIG ELEMENTS
+            var tableRow = document.createElement("tr");
+            var headerCell1 = document.createElement("td");
+            var headerCell2 = document.createElement("td");
+            var removeButton = document.createElement("button");
+            var icon = document.createElement("i");
+
+            //STRUCTURING THE ELEMENTS
+            tableRow.appendChild(headerCell1);
+            tableRow.appendChild(headerCell2);
+            headerCell2.appendChild(removeButton);
+            removeButton.appendChild(icon);
+            
+            //REMOVE BUTTON
+            removeButton.className = "right btn-floating waves-effect waves-light red";
+            removeButton.onclick = function(){ tableRow.remove()};
+            //removeButton.onclick = function(){ document.getElementById(tableRow.id).remove();}
+
+            //ICON OF REMOVE BUTTON
+            icon.className = "material-icons";
+            icon.innerHTML="clear";
+
+            //GETING THE VALUE OF TEXTAREA
+            headerCell1.innerHTML = document.getElementById("text-add-finalizacao").value;
+
+            //CLEAR THE TEXT DIGITED
+            document.getElementById("text-add-finalizacao").value = "";
+            //PUT THE ELEMENT ON THE TABLE
+            document.getElementById('table-body-decidido').appendChild(tableRow);
+            //console.log(ataReuniao.decidido.JSONparse);
+
+
+        }
+
+
+    /*
+        var exemplo = document.createElement("p");
+        exemplo.appendChild(document.createTextNode("haha"));
+        var end = document.getElementById('end');
+        end.appendChild(exemplo);
+        */
        /* var doc = new jsPDF();
 
         doc.text('hello world', 10, 10);
@@ -272,15 +379,15 @@
 
         function GeneratePdf(){
 
-            var ataReuniao = {
-                pauta: document.getElementById('pauta-reuniao').value,
-                numero: document.getElementById('numero_ata').value,
-                data: document.getElementById('data_ata').value,
-                local: document.getElementById('local_reuniao').value,
-                presentes: [],
-                discutido: document.getElementById('texto_decidido').value,
-                decidido: document.getElementById('texto_discutido').value
-            }
+        var ataReuniao = {
+            pauta: document.getElementById('pauta-reuniao').value,
+            numero: document.getElementById('numero_ata').value,
+            data: document.getElementById('data_ata').value,
+            local: document.getElementById('local_reuniao').value,
+            presentes: [],
+            discutido: [],
+            decidido:  []
+        }
 
             //if( document.getElementById('pessoa1').checked ) ataReuniao.presentes.push( document.getElementById('pessoa1').value);
             if( document.getElementById('pessoa1').checked ) ataReuniao.presentes.push( document.getElementById('pessoa1').value);
@@ -295,6 +402,17 @@
             if( document.getElementById('pessoa10').checked ) ataReuniao.presentes.push( document.getElementById('pessoa10').value);
             if( document.getElementById('pessoa11').checked ) ataReuniao.presentes.push( document.getElementById('pessoa11').value);
             if( document.getElementById('pessoa12').checked ) ataReuniao.presentes.push( document.getElementById('pessoa12').value);
+
+
+            for(var i=0;i<document.getElementById('table-body-discutido').rows.length;i++){
+                ataReuniao.discutido.push(document.getElementById('table-body-discutido').rows[i].cells[0].innerHTML);
+            } 
+
+            for(var i=0;i<document.getElementById('table-body-decidido').rows.length;i++){
+                ataReuniao.decidido.push(document.getElementById('table-body-decidido').rows[i].cells[0].innerHTML);
+            } 
+
+            
 
 
 
@@ -321,10 +439,10 @@
  
                     
                     {text: 'Discutido',style:'pageHeader',pageBreak: 'before'},
-                    {text: ataReuniao.discutido, style: 'info'},
+                    {ul: ataReuniao.discutido, style: 'info'},
 
                     {text: 'Definido',style:'pageHeader',pageBreak: 'before'},
-                    {text: ataReuniao.decidido, style: 'info'},
+                    {ul: ataReuniao.decidido, style: 'info'},
 
 
                 ],
@@ -369,7 +487,7 @@
                 pageSize: 'A4',
             };
 
-             pdfMake.createPdf(docDefinition).download('optionalName.pdf');
+             pdfMake.createPdf(docDefinition).download(ataReuniao.numero + '_'+ ataReuniao.data + '_' + ataReuniao.pauta +'.pdf');
 
 
         }
@@ -408,7 +526,7 @@
 */
          // download the PDF*
 
-
+ 
 
 
 
