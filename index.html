@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- HTML 4 -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body class="grey lighten-2 ">
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+     
+
+
+        <div class="section  teal z-depth-2">
+            <div class="row">
+            <div class="col s12">
+            <br>
+            </div>
+                <div class="col s12">
+                    <h1 class="center white-text"><b>Space Rockets</b></h1>
+                    <h5 class="center grey-text text-lighten-3">Gerador de ata de reunião</h5>
+                </div>
+            </div>
+            <!--<div class="row">
+                <div class="col s12 center">
+                    <a href="pratice.html"class="waves-effect waves-light btn-flat btn-large white-text"><b>Start Training</b></a>
+                </div>
+            </div> -->
+        </div>
+
+
+
+        <!--MID CONTENT-->
+        <div class="container ">
+        <div class="row ">
+
+
+       
+
+            
+
+            <!--<div class="container">-->
+            <div>     
+                <div class="row">
+
+
+                        <br>
+                        <div class="row">
+                        <div class="col s12">
+                        <h5><i class="material-icons teal-text ">note</i> Informações</h5>
+                       
+                           <!-- <div class="row">-->
+
+                           <div>
+                    
+                                <div class="col s12 m6 input-field">
+                                    <input id="pauta-reuniao" type="text">
+                                    <label for="pauta-reuniao">Pauta de reunião</label>
+                                </div>
+                                <div class="col s12 m6 input-field">                                    
+                                    <input id="numero_ata" type="number" name="quantity" min="1">
+                                    <label for="numero_ata" >Numero da ata</label>
+                                </div>
+                                <div class="col s12 m6 input-field">                                   
+                                    <input id="data_ata" type="date" class="datepicker">
+                                    <label for="data_ata">Data de reunião</label>
+                                </div>
+                                <div class="col s12 m6 input-field">                                    
+                                    <input id="local_reuniao" type="text">
+                                    <label for="local_reuniao">Local de reunião</label>
+                                </div>
+                            </div>                                    
+                            <!--</div>-->
+                            <!--<div class="row">-->
+                            
+                                <div class="col s12 m3">
+                                    <p>
+                                      <input type="checkbox" id="pessoa1" value="José Diogo"/>
+                                      <label for="pessoa1">José Diogo</label>
+                                    </p>
+                                    <p>
+                                      <input type="checkbox" id="pessoa2" value="Fernando Maia"/>
+                                      <label for="pessoa2">Fernando Maia</label>
+                                    </p>
+                                    <p>
+                                      <input type="checkbox" id="pessoa3" value="Mateus Nascimento"/>
+                                      <label for="pessoa3">Mateus Nascimento</label>
+                                    </p>
+                                </div>
+                                <div class="col s12 m3">
+                                    <p>
+                                      <input type="checkbox" id="pessoa4" value="Samuel Carvalho"/>
+                                      <label for="pessoa4">Samuel Carvalho</label>
+                                    </p>
+                                    <p>
+                                      <input type="checkbox" id="pessoa5" value="Welington Correia"/>
+                                      <label for="pessoa5">Welington Correia</label>
+                                    </p>
+                                    <p>
+                                      <input type="checkbox" id="pessoa6" value="Só Sergio" />
+                                      <label for="pessoa6">Só Sergio</label>
+                                    </p>
+                                </div>
+                                <div class="col s12 m3">
+                                    <p>
+                                      <input type="checkbox" id="pessoa7" value="Icaro Sanches" />
+                                      <label for="pessoa7">Icaro Sanches</label>
+                                    </p>
+                                    <p>
+                                      <input type="checkbox" id="pessoa8" value="Ricardo Matos"/>
+                                      <label for="pessoa8">Ricardo Matos</label>
+                                    </p>
+                                    <p>
+                                      <input type="checkbox" id="pessoa9" value="Kevin Oliveira" />
+                                      <label for="pessoa9">Kevin Oliveira</label>
+                                    </p>
+                                </div>
+                                <div class="col s12 m3">
+                                    <p>
+                                      <input type="checkbox" id="pessoa10" disabled="disabled"/>
+                                      <label for="pessoa10">NONE</label>
+                                    </p>
+                                    <p>
+                                      <input type="checkbox" id="pessoa11" disabled="disabled"/>
+                                      <label for="pessoa11">NONE</label>
+                                    </p>
+                                    <p>
+                                      <input type="checkbox" id="pessoa12" disabled="disabled"/>
+                                      <label for="pessoa12">NONE</label>
+                                    </p>
+                                </div>
+
+                                
+                            </div>
+                            </div>    
+                           <!-- </div>-->
+                        
+                        <div class="row">
+                        <div class="col s12">
+                        <h5><i class="material-icons teal-text ">forum</i> Desenvolvimento</h5>
+                        
+                            <div class="input-field col s12">
+                              <textarea id="texto_discutido" class="materialize-textarea"></textarea>
+                              <label for="texto_discutido">Discutido</label>
+                            </div>
+                        </div>
+                        </div>
+                      
+                        <div class="row">
+                        <div class="col s12">
+                        <h5><i class="material-icons teal-text ">done_all</i> Finalização</h5>
+                        
+                            <div class="input-field col s12">
+                              <textarea id="texto_decidido" class="materialize-textarea "></textarea>
+                              <label for="texto_decidido" >Decidido</label>
+                            </div>
+                        </div>
+                        </div>
+                      
+                    
+                   <!-- <input type="date" class="datepicker">
+                      <input type="number" name="quantity" min="1" max="5">
+                -->
+
+                </div>
+
+                <div class="row">
+                    <div class="col s12 center">
+
+                        <button class="btn-large btn-flat waves-effect white-text teal" onclick="GeneratePdf()" type="submit" name="action"><b>Gerar pdf</b>
+                            <!--<i class="material-icons right">send</i>-->
+                        </button>
+
+                    </div>
+                </div>
+
+                
+
+
+
+
+            </div>            
+        </div>
+        </div>
+
+        <!--FOOTER-->
+        <div class="">
+            <footer class="page-footer  teal">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h5 class="white-text"><b>Space Rockets</b></h5>
+                            <p class="grey-text text-lighten-4">Gerador de ata de reunião feito para faciliatar a documentação das reuniões.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2017 Copyright Text
+                        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+
+    </body>
+    <script type="text/javascript">
+
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+
+        $(document).ready(function() {
+            $('input#input_text').characterCounter();
+        });
+    </script>
+    <script src="js/pdfmake.min.js"></script>
+    <script src="js/vfs_fonts.js"></script>
+
+
+
+    
+    <script type="text/javascript">
+
+    
+
+       /* var doc = new jsPDF();
+
+        doc.text('hello world', 10, 10);
+        doc.save('firstfile.pdf'); */
+
+        function showData(){
+            console.log('hello world');
+            console.log('PAUTA: ' + document.getElementById('pauta-reuniao').value);
+            console.log('NUMERO DA ATA: ' + document.getElementById('numero_ata').value);
+            console.log('DATA: ' + document.getElementById('data_ata').value);
+            console.log('LOCAL: ' + document.getElementById('local_reuniao').value);
+           
+            console.log('PRESENTES:')
+
+            if( document.getElementById('pessoa1').checked ) console.log( document.getElementById('pessoa1').value);
+            if( document.getElementById('pessoa2').checked ) console.log( document.getElementById('pessoa2').value);
+            if( document.getElementById('pessoa3').checked ) console.log( document.getElementById('pessoa3').value);
+            if( document.getElementById('pessoa4').checked ) console.log( document.getElementById('pessoa4').value);
+            if( document.getElementById('pessoa5').checked ) console.log( document.getElementById('pessoa5').value);
+            if( document.getElementById('pessoa6').checked ) console.log( document.getElementById('pessoa6').value);
+            if( document.getElementById('pessoa7').checked ) console.log( document.getElementById('pessoa7').value);
+            if( document.getElementById('pessoa8').checked ) console.log( document.getElementById('pessoa8').value);
+            if( document.getElementById('pessoa9').checked ) console.log( document.getElementById('pessoa9').value);
+            if( document.getElementById('pessoa10').checked ) console.log( document.getElementById('pessoa10').value);
+            if( document.getElementById('pessoa11').checked ) console.log( document.getElementById('pessoa11').value);
+            if( document.getElementById('pessoa12').checked ) console.log( document.getElementById('pessoa12').value);
+
+
+            console.log('DISCUTIDO: ' + document.getElementById('texto_decidido').value);
+            console.log('DECIDIDO: ' + document.getElementById('texto_discutido').value);
+        }
+
+
+        function GeneratePdf(){
+
+            var ataReuniao = {
+                pauta: document.getElementById('pauta-reuniao').value,
+                numero: document.getElementById('numero_ata').value,
+                data: document.getElementById('data_ata').value,
+                local: document.getElementById('local_reuniao').value,
+                presentes: [],
+                discutido: document.getElementById('texto_decidido').value,
+                decidido: document.getElementById('texto_discutido').value
+            }
+
+            //if( document.getElementById('pessoa1').checked ) ataReuniao.presentes.push( document.getElementById('pessoa1').value);
+            if( document.getElementById('pessoa1').checked ) ataReuniao.presentes.push( document.getElementById('pessoa1').value);
+            if( document.getElementById('pessoa2').checked ) ataReuniao.presentes.push( document.getElementById('pessoa2').value);
+            if( document.getElementById('pessoa3').checked ) ataReuniao.presentes.push( document.getElementById('pessoa3').value);
+            if( document.getElementById('pessoa4').checked ) ataReuniao.presentes.push( document.getElementById('pessoa4').value);
+            if( document.getElementById('pessoa5').checked ) ataReuniao.presentes.push( document.getElementById('pessoa5').value);
+            if( document.getElementById('pessoa6').checked ) ataReuniao.presentes.push( document.getElementById('pessoa6').value);
+            if( document.getElementById('pessoa7').checked ) ataReuniao.presentes.push( document.getElementById('pessoa7').value);
+            if( document.getElementById('pessoa8').checked ) ataReuniao.presentes.push( document.getElementById('pessoa8').value);
+            if( document.getElementById('pessoa9').checked ) ataReuniao.presentes.push( document.getElementById('pessoa9').value);
+            if( document.getElementById('pessoa10').checked ) ataReuniao.presentes.push( document.getElementById('pessoa10').value);
+            if( document.getElementById('pessoa11').checked ) ataReuniao.presentes.push( document.getElementById('pessoa11').value);
+            if( document.getElementById('pessoa12').checked ) ataReuniao.presentes.push( document.getElementById('pessoa12').value);
+
+
+
+            console.log(ataReuniao);
+
+
+            console.log(ataReuniao.presentes.toString());
+
+            var docDefinition = {
+                content:[
+                    {text: 'Space Rockets',style:'mainHeader'},
+                    {text: 'Ata da Reunião n°' + ataReuniao.numero, style:'subMainHeader'},
+                    {text: ataReuniao.local+ ' - ' + ataReuniao.data , style:'subMainHeaderInfo'},
+
+                    {text: 'Informações',style:'pageHeader',pageBreak: 'before'},
+                    {text: 'Pauta da reunião', style: 'topic'},
+                    {text: ataReuniao.pauta, style: 'info'},
+                    {text: 'Data de reunião', style:'topic'},
+                    {text: ataReuniao.data, style: 'info'},
+                    {text: 'Local de reunião', style:'topic'},
+                    {text: ataReuniao.local, style: 'info'},
+                    {text: 'Presentes', style:'topic'},
+                    {ul: ataReuniao.presentes, style:'info'},
+ 
+                    
+                    {text: 'Discutido',style:'pageHeader',pageBreak: 'before'},
+                    {text: ataReuniao.discutido, style: 'info'},
+
+                    {text: 'Definido',style:'pageHeader',pageBreak: 'before'},
+                    {text: ataReuniao.decidido, style: 'info'},
+
+
+                ],
+                styles:{
+                    mainHeader:{
+                        fontSize: 50,
+                        bold: true,
+                        alignment: 'right',
+                    },
+                    subMainHeader:{
+                        fontSize: 25,
+                        bold: false,
+                        alignment: 'right',
+                    },
+                    subMainHeaderInfo:{
+                        fontsize: 20,
+                        bold: true,
+                        alignment: 'right',
+                    },
+                    pageHeader:{
+                        fontSize: 40,
+                        bold: true,
+                        alignment: 'right',
+                        margin: [0,0,0,20],                      
+                    },
+                    topic:{
+                        fontsize: 30,
+                        bold: true,
+                        alignment: 'left',                        
+                    },
+                    info:{
+                        fontsize: 20,
+                        bold: false,
+                        alignment: 'left',
+                        margin: [20,0,0,15],
+                    }
+
+                    
+
+                },
+                pageMargins: [ 40, 60, 40, 60 ],
+                pageSize: 'A4',
+            };
+
+             pdfMake.createPdf(docDefinition).download('optionalName.pdf');
+
+
+        }
+        
+/*
+        var docDefinition = {
+           content: [
+                {text:'Pauta da reunião',style:'header'},
+                {text:'reunião de numero',style:'header'},
+                {text:'this is a test',style:'header'},
+                {text:'this is a test',style:'header'},
+                {text:'this is a test',style:'header'},
+                {text:'this is a test',style:'header'},
+
+                {text:'i think it works jut fine'},
+                {text:'ps: o love you'}
+           ],
+           styles: {
+                header:{
+                    fontSize: 30,
+                    bold: true
+                },
+                text: {
+                    fontsize: 18
+                }
+           }
+         };
+
+      /*
+
+         // open the PDF in a new window
+         pdfMake.createPdf(docDefinition).open();
+
+         // print the PDF
+         pdfMake.createPdf(docDefinition).print();
+*/
+         // download the PDF*
+
+
+
+
+
+    </script>
+</html>
