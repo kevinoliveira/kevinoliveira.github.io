@@ -1,8 +1,12 @@
 # Gerador de ata de reunião v0.2
-Gerador de ata de reunião para a Space Rockets, visando facilitar e agilizar a criação da dos documentos, de forma leve, pratica e rápida.
+Gerador de ata de reunião para a Space Rocket, visando facilitar e agilizar a criação da dos documentos, de forma leve, pratica e rápida.
 
 # Funcionalidades
-##### v.0.2 
+##### v.0.3
+ - Edição de tópicos definidos e discutidos existentes
+
+
+###### v.0.2 
   - Modal de data em português brasileiro
   - Desenvolvimento e Finalização formados por tópicos, não mais texto plano
   - Padronização de nomenclatura na geração do PDF

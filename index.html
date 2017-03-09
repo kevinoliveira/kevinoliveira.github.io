@@ -26,7 +26,7 @@
             <br>
             </div>
                 <div class="col s12">
-                    <h1 class="center white-text"><b>Space Rockets</b></h1>
+                    <h1 class="center white-text"><b>Space Rocket</b></h1>
                     <h5 class="center grey-text text-lighten-3">Gerador de ata de reunião</h5>
                 </div>
             </div>
@@ -219,13 +219,24 @@
         </div>
         </div>
 
+
+          <!-- Modal Structure -->
+		  <div id="modal1" class="modal modal-fixed-footer bottom-sheet">
+		    <div class="modal-content">
+		      <textarea id="textarea1" class="materialize-textarea"></textarea>
+		    </div>
+		    <div class="modal-footer">
+		      <button href="#!" id="modalbutton" class="modal-action modal-close right btn-floating waves-effect waves-light green"><i class="material-icons">done</i></button>
+		    </div>
+		  </div>
+
         <!--FOOTER-->
         <div class="">
             <footer class="page-footer  teal">
                 <div class="container">
                     <div class="row">
                         <div class="col l6 s12">
-                            <h5 class="white-text"><b>Space Rockets</b></h5>
+                            <h5 class="white-text"><b>Space Rocket</b></h5>
                             <p class="grey-text text-lighten-4">Gerador de ata de reunião feito para faciliatar a documentação das reuniões.</p>
                         </div>
                         
@@ -253,6 +264,13 @@
         $(document).ready(function() {
             $('input#input_text').characterCounter();
         });
+
+        $(document).ready(function(){
+		    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+		    $('.modal').modal();
+		  });
+
+
     </script>
     <script src="js/pdfmake.min.js"></script>
     <script src="js/vfs_fonts.js"></script>
@@ -269,19 +287,25 @@
 
         function DesenvAddTopic(){
 
+        	if(document.getElementById("text-add-desenvolvimento").value == "" )  return;      	
+
             //CREATIG ELEMENTS
             var tableRow = document.createElement("tr");
             var headerCell1 = document.createElement("td");
             var headerCell2 = document.createElement("td");
             var removeButton = document.createElement("button");
             var icon = document.createElement("i");
+            var iconEdit = document.createElement("i");
+            var editButton = document.createElement("button");
 
             //STRUCTURING THE ELEMENTS
             tableRow.appendChild(headerCell1);
             tableRow.appendChild(headerCell2);
             headerCell2.appendChild(removeButton);
             removeButton.appendChild(icon);
-         
+         	editButton.appendChild(iconEdit);
+            headerCell2.appendChild(editButton);
+
             //REMOVE BUTTON
             removeButton.className = "right btn-floating waves-effect waves-light red";
             removeButton.onclick = function(){ tableRow.remove()};
@@ -289,6 +313,29 @@
             //ICON OF REMOVE BUTTON
             icon.className = "material-icons";
             icon.innerHTML="clear";
+
+
+            //EDIT BUTTON
+            editButton.className = "right btn-floating waves-effect waves-light orange";
+            editButton.setAttribute("data-target","modal1");
+            editButton.onclick = function(){ 
+            	//editButton.className = "right btn-floating waves-effect waves-light green";
+            	//iconEdit.innerHTML = "done";
+            	//editButton.onclick = function(){
+            		//editButton.className = "right btn-floating waves-effect waves-light orange";
+            		//iconEdit.innerHTML = "mode_edit";
+            		//editButton.onclick = editMode(tableRow);
+            	//}
+            	document.getElementById("textarea1").value = headerCell1.innerHTML;
+            	document.getElementById("modalbutton").onclick = function(){ 
+            		headerCell1.innerHTML = document.getElementById("textarea1").value;
+            	 };
+
+            };
+
+            //ICON OF EDIT BUTTON
+            iconEdit.className = "material-icons";
+            iconEdit.innerHTML = "mode_edit";
 
             //GETING THE VALUE OF TEXTAREA
             headerCell1.innerHTML = document.getElementById("text-add-desenvolvimento").value;
@@ -303,27 +350,59 @@
 
         function finaliAddTopic(){
 
+        	if(document.getElementById("text-add-finalizacao").value == "" )  return;      	
+
             //CREATIG ELEMENTS
             var tableRow = document.createElement("tr");
             var headerCell1 = document.createElement("td");
             var headerCell2 = document.createElement("td");
             var removeButton = document.createElement("button");
             var icon = document.createElement("i");
+            var iconEdit = document.createElement("i");
+            var editButton = document.createElement("button");
+
 
             //STRUCTURING THE ELEMENTS
             tableRow.appendChild(headerCell1);
             tableRow.appendChild(headerCell2);
             headerCell2.appendChild(removeButton);
             removeButton.appendChild(icon);
+            editButton.appendChild(iconEdit);
+            headerCell2.appendChild(editButton);
+
             
             //REMOVE BUTTON
             removeButton.className = "right btn-floating waves-effect waves-light red";
             removeButton.onclick = function(){ tableRow.remove()};
             //removeButton.onclick = function(){ document.getElementById(tableRow.id).remove();}
 
+
             //ICON OF REMOVE BUTTON
             icon.className = "material-icons";
-            icon.innerHTML="clear";
+            icon.innerHTML= "clear";
+
+            //EDIT BUTTON
+            editButton.className = "right btn-floating waves-effect waves-light orange";
+            editButton.setAttribute("data-target","modal1");
+            editButton.onclick = function(){ 
+            	//editButton.className = "right btn-floating waves-effect waves-light green";
+            	//iconEdit.innerHTML = "done";
+            	//editButton.onclick = function(){
+            		//editButton.className = "right btn-floating waves-effect waves-light orange";
+            		//iconEdit.innerHTML = "mode_edit";
+            		//editButton.onclick = editMode(tableRow);
+            	//}
+            	document.getElementById("textarea1").value = headerCell1.innerHTML;
+            	document.getElementById("modalbutton").onclick = function(){ 
+            		headerCell1.innerHTML = document.getElementById("textarea1").value;
+            	 };
+
+            };
+
+            //ICON OF EDIT BUTTON
+            iconEdit.className = "material-icons";
+            iconEdit.innerHTML = "mode_edit";
+
 
             //GETING THE VALUE OF TEXTAREA
             headerCell1.innerHTML = document.getElementById("text-add-finalizacao").value;
