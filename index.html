@@ -5,7 +5,7 @@
         <!-- HTML 4 -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <!--Import Google Icon Font-->
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
@@ -81,63 +81,28 @@
                             <!--</div>-->
                             <!--<div class="row">-->
                             
-                                <div class="col s12 m3">
-                                    <p>
-                                      <input type="checkbox" id="pessoa1" value="José Diogo"/>
-                                      <label for="pessoa1">José Diogo</label>
-                                    </p>
-                                    <p>
-                                      <input type="checkbox" id="pessoa2" value="Fernando Maia"/>
-                                      <label for="pessoa2">Fernando Maia</label>
-                                    </p>
-                                    <p>
-                                      <input type="checkbox" id="pessoa3" value="Mateus Nascimento"/>
-                                      <label for="pessoa3">Mateus Nascimento</label>
-                                    </p>
-                                </div>
-                                <div class="col s12 m3">
-                                    <p>
-                                      <input type="checkbox" id="pessoa4" value="Samuel Carvalho"/>
-                                      <label for="pessoa4">Samuel Carvalho</label>
-                                    </p>
-                                    <p>
-                                      <input type="checkbox" id="pessoa5" value="Welington Correia"/>
-                                      <label for="pessoa5">Welington Correia</label>
-                                    </p>
-                                    <p>
-                                      <input type="checkbox" id="pessoa6" value="Sérgio" />
-                                      <label for="pessoa6">Sérgio</label>
-                                    </p>
-                                </div>
-                                <div class="col s12 m3">
-                                    <p>
-                                      <input type="checkbox" id="pessoa7" value="Icaro Leite" />
-                                      <label for="pessoa7">Icaro Leite</label>
-                                    </p>
-                                    <p>
-                                      <input type="checkbox" id="pessoa8" value="Ricardo Matos"/>
-                                      <label for="pessoa8">Ricardo Matos</label>
-                                    </p>
-                                    <p>
-                                      <input type="checkbox" id="pessoa9" value="Kevin Oliveira" />
-                                      <label for="pessoa9">Kevin Oliveira</label>
-                                    </p>
-                                </div>
-                                <div class="col s12 m3">
-                                    <p>
-                                      <input type="checkbox" id="pessoa10" disabled="disabled"/>
-                                      <label for="pessoa10">NONE</label>
-                                    </p>
-                                    <p>
-                                      <input type="checkbox" id="pessoa11" disabled="disabled"/>
-                                      <label for="pessoa11">NONE</label>
-                                    </p>
-                                    <p>
-                                      <input type="checkbox" id="pessoa12" disabled="disabled"/>
-                                      <label for="pessoa12">NONE</label>
-                                    </p>
-                                </div>
-                                
+                            	<div class="col s12">
+	                            	<table class="highlight bordered">
+		                            	<thead>
+		                            		<tr>
+		                            			<th data-field="id">Presentes</th>
+		                            		</tr>
+		                            	</thead>
+		                            	<tbody id="table-body-presentes">
+		                            		<!-- A LISTA DE PRESENTES VEM AQUI-->
+		                            		
+		                            	</tbody>
+	                            	</table>
+                            	</div>
+                            	
+                            	 
+								<div class="input-field col s12">
+									<input type="text" id="text-add-presentes" class="autocomplete">
+									<label for="autocomplete-input">Adicionar presente</label>
+									<button onclick="PresentesAddTopic()" class="right btn-floating waves-effect waves-light"><i class="material-icons">add</i></button>
+								</div>
+
+                           		
 
                                 
                             </div>
@@ -270,6 +235,21 @@
 		    $('.modal').modal();
 		  });
 
+        $(function () {
+		  $('input.autocomplete').autocomplete({
+		    data: {
+				"José Diogo": null,
+				"Fernando Maia": null,
+				"Mateus Nascimento": null,
+				"Welington Correia": null,
+				"Sérgio Sacramento": null,
+				"Icaro Leite": null,
+				"Ricardo Matos": null,
+				"Kevin Oliveira": null,
+				"Emanuel Argolo": null,
+		    }
+		  });
+		});
 
     </script>
     <script src="js/pdfmake.min.js"></script>
@@ -282,7 +262,68 @@
 
 
 
-       
+        function PresentesAddTopic(){
+
+        	if(document.getElementById("text-add-presentes").value == "" )  return;      	
+
+            //CREATIG ELEMENTS
+            var tableRow = document.createElement("tr");
+            var headerCell1 = document.createElement("td");
+            var headerCell2 = document.createElement("td");
+            var removeButton = document.createElement("button");
+            var icon = document.createElement("i");
+            var iconEdit = document.createElement("i");
+            var editButton = document.createElement("button");
+
+            //STRUCTURING THE ELEMENTS
+            tableRow.appendChild(headerCell1);
+            tableRow.appendChild(headerCell2);
+            headerCell2.appendChild(removeButton);
+            removeButton.appendChild(icon);
+         	editButton.appendChild(iconEdit);
+            headerCell2.appendChild(editButton);
+
+            //REMOVE BUTTON
+            removeButton.className = "right btn-floating waves-effect waves-light red";
+            removeButton.onclick = function(){ tableRow.remove()};
+
+            //ICON OF REMOVE BUTTON
+            icon.className = "material-icons";
+            icon.innerHTML="clear";
+
+
+            //EDIT BUTTON
+            editButton.className = "right btn-floating waves-effect waves-light orange";
+            editButton.setAttribute("data-target","modal1");
+            editButton.onclick = function(){ 
+            	//editButton.className = "right btn-floating waves-effect waves-light green";
+            	//iconEdit.innerHTML = "done";
+            	//editButton.onclick = function(){
+            		//editButton.className = "right btn-floating waves-effect waves-light orange";
+            		//iconEdit.innerHTML = "mode_edit";
+            		//editButton.onclick = editMode(tableRow);
+            	//}
+            	document.getElementById("textarea1").value = headerCell1.innerHTML;
+            	document.getElementById("modalbutton").onclick = function(){ 
+            		headerCell1.innerHTML = document.getElementById("textarea1").value;
+            	 };
+
+            };
+
+            //ICON OF EDIT BUTTON
+            iconEdit.className = "material-icons";
+            iconEdit.innerHTML = "mode_edit";
+
+            //GETING THE VALUE OF TEXTAREA
+            headerCell1.innerHTML = document.getElementById("text-add-presentes").value;
+
+            //CLEAR THE TEXT DIGITED
+            document.getElementById("text-add-presentes").value = "";
+            //PUT THE ELEMENT ON THE TABLE
+            document.getElementById('table-body-presentes').appendChild(tableRow);
+
+
+        }
 
 
         function DesenvAddTopic(){
@@ -469,6 +510,7 @@
         }
 
             //if( document.getElementById('pessoa1').checked ) ataReuniao.presentes.push( document.getElementById('pessoa1').value);
+            /*
             if( document.getElementById('pessoa1').checked ) ataReuniao.presentes.push( document.getElementById('pessoa1').value);
             if( document.getElementById('pessoa2').checked ) ataReuniao.presentes.push( document.getElementById('pessoa2').value);
             if( document.getElementById('pessoa3').checked ) ataReuniao.presentes.push( document.getElementById('pessoa3').value);
@@ -481,7 +523,11 @@
             if( document.getElementById('pessoa10').checked ) ataReuniao.presentes.push( document.getElementById('pessoa10').value);
             if( document.getElementById('pessoa11').checked ) ataReuniao.presentes.push( document.getElementById('pessoa11').value);
             if( document.getElementById('pessoa12').checked ) ataReuniao.presentes.push( document.getElementById('pessoa12').value);
+			*/
 
+			for(var i=0;i<document.getElementById('table-body-presentes').rows.length;i++){
+                ataReuniao.presentes.push(document.getElementById('table-body-presentes').rows[i].cells[0].innerHTML);
+            } 
 
             for(var i=0;i<document.getElementById('table-body-discutido').rows.length;i++){
                 ataReuniao.discutido.push(document.getElementById('table-body-discutido').rows[i].cells[0].innerHTML);
