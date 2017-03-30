@@ -10,6 +10,7 @@
         <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Gerador de ata de reunião - Space Rocket</title>
     </head>
 
     <body class="grey lighten-5 ">
@@ -62,7 +63,7 @@
                            <div>
                     
                                 <div class="col s12 m6 input-field">
-                                    <input id="pauta-reuniao" type="text">
+                                    <input id="pauta-reuniao" type="text" onchange="titleUpdate(this);">
                                     <label for="pauta-reuniao">Pauta de reunião</label>
                                 </div>
                                 <div class="col s12 m6 input-field">                                    
@@ -221,6 +222,7 @@
     </body>
     <script type="text/javascript">
 
+
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
             selectYears: 15 // Creates a dropdown of 15 years to control year
@@ -247,9 +249,12 @@
 				"Ricardo Matos": null,
 				"Kevin Oliveira": null,
 				"Emanuel Argolo": null,
+				"Samuel Carvalho": null,
 		    }
 		  });
 		});
+
+
 
     </script>
     <script src="js/pdfmake.min.js"></script>
@@ -260,7 +265,9 @@
     
     <script type="text/javascript">
 
-
+    	function titleUpdate(pauta){
+    		document.title = pauta.value;
+    	}
 
         function PresentesAddTopic(){
 
