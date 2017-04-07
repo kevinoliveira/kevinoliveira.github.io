@@ -3,7 +3,15 @@ Gerador de ata de reunião para a Space Rocket, visando facilitar e agilizar a c
 [Acessar](https://kevinoliveira.github.io)
 
 # Funcionalidades
-##### v.0.3
+
+##### v0.4
+ - Adicionando titulo dinamico de acordo com a pauta
+ - Adicionando favicons a pagina
+ - Adicionando membros que faltamvam ao auto-complete dos presentes
+ - Correção do nome da equipe no PDF gerado
+
+
+###### v.0.3
  - Edição de tópicos definidos e discutidos existentes
  - Possibilidade adição de convidados a lista de presença
 
