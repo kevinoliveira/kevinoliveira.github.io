@@ -123,9 +123,9 @@
 					span3.className = "c-text c-text--loud c-link--warning";
 
 				if(notaNescesaria == 1)
-					span3.innerHTML = " "+notaNescesaria.toFixed(2)+" Ponto ";
+					span3.innerHTML = " "+notaNescesaria.toFixed(1)+" Ponto ";
 				else
-					span3.innerHTML = " "+notaNescesaria.toFixed(2)+" Pontos ";
+					span3.innerHTML = " "+notaNescesaria.toFixed(1)+" Pontos ";
 
 				div3.className = "c-progress";
 				if(notaNescesaria<3)
@@ -134,7 +134,7 @@
 					div4.className = "c-progress__bar c-progress__bar--error";
 				else
 					div4.className = "c-progress__bar c-progress__bar--warning";
-				div4.setAttribute("style","width:"+notaNescesaria.toFixed(2)*10+"%;");
+				div4.setAttribute("style","width:"+notaNescesaria.toFixed(1)*10+"%;");
 				break;
 		}
 		//console.log(notaNescesaria);
