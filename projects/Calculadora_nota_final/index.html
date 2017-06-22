@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="blaze.min.css">
+      <title>CittiCard Web</title>
+   </head>
+   <body>
+      <div class="o-grid o-grid--wrap o-grid--demo">
+         <div class="o-grid__cell o-grid__cell--width-100 o-grid__cell--width-60@medium o-grid__cell--offset-20@medium " style="margin-top: 5%;margin-bottom: 5%;">
+            <!--o-grid__cell--width-60@medium o-grid__cell--offset-20@medium u-center-block-->
+            <div class="c-card u-highest">
+               <div class=" c-card__item c-card__item--brand  c-text u-centered u-large"><b>Cálculo de nota necessária na prova final</b><br>Veja o quanto está ferrado</div>
+               <div class="c-card__item">
+                  <p class="c-paragraph c-text u-centered">Coloque nome e a media final da disciplina para descobrir quanto voce precisa tirar no minimo para ser aprovado na final.</p>
+                  
+                  <label class="c-label o-form-element c-text">
+                  Nome da disciplina:
+                  <input id="input-nome-disciplina" class="c-field u-medium c-text" type="text" placeholder="Nome da disciplina"> 
+                  </label>
+                  <label class="c-label o-form-element c-text">
+                     Media final:
+                     <div class="c-input-group">
+                        <div class="o-field">
+                           <input id="input-media" class="c-field  c-text" type="number" step="0.1" value="7.0">
+                        </div>
+                        <button class="c-button c-button--brand  c-text" onclick="calculate()">CALCULAR</button>
+                     </div>
+                  </label>
+               </div>
+               <!--
+               <div class="c-card__item c-card__item--divider c-text">Notas necessarias </div>
+                  -->
+                  <div id="note-box">
+
+                  <!--
+
+                     <div> 
+                        <br> 
+                        <div style="padding-left: 9px;padding-right: 9px;"> 
+                           <span class="c-text c-text--loud u-centered">Linguagem de programação I</span><br> 
+                           <span class="c-text ">Pontos Necessarios: </span> 
+                           <span class="c-text c-text--loud c-link--warning "> 1.7 Pontos </span>
+                        </div>
+                        <div class="c-progress"> 
+                          <div class="c-progress__bar c-progress__bar--success" style="width:17%;"></div> 
+                        </div>                  
+                     </div>
+
+
+
+                     <div> 
+                        <br> 
+                        <div style="padding-left: 9px;padding-right: 9px;"> 
+                           <span class="c-text c-text--loud u-centered">Linguagem de programação I</span><br> 
+                           <span class="c-text "></span> 
+                           <span class="c-text c-text--loud c-link--error ">Reprovado</span>
+                        </div>
+                        <div class="c-progress"> 
+                          <div class="c-progress__bar c-progress__bar--error" style="width:100%;"></div> 
+                        </div>                  
+                     </div>
+
+                     <div> 
+                        <br> 
+                        <div style="padding-left: 9px;padding-right: 9px;"> 
+                           <span class="c-text c-text--loud u-centered">Linguagem de programação I</span><br> 
+                           <span class="c-text "></span> 
+                           <span class="c-text c-text--loud c-link--success ">Aprovado</span>
+                        </div>
+                        <div class="c-progress"> 
+                          <div class="c-progress__bar c-progress__bar--success" style="width:100%;"></div> 
+                        </div>                  
+                     </div>
+
+                     -->
+
+                  </div>
+               <!--
+              
+               <div>
+                  <br>
+                  <div style="padding-left: 9px;padding-right: 9px;">
+                     <span class="c-text">Linguagem de programação I</span><br>
+                     <span class="c-text c-text--loud">1.7 Pontos</span>
+                  </div>
+                  <div class="c-progress">
+                    <div class="c-progress__bar c-progress__bar--success" style="width:17%;"></div>
+                  </div>                  
+               </div>
+
+
+               <div>
+                  <br>
+                  <div style="padding-left: 9px;padding-right: 9px;">
+                     <span class="c-text">Metodologia de Desenvolvimento de Sistemas I</span><br>
+                     <span class="c-text c-text--loud">6.2 Pontos</span>
+                  </div>
+                  <div class="c-progress">
+                    <div class="c-progress__bar c-progress__bar--warning" style="width:62%;"></div>
+                  </div>                  
+               </div>
+
+
+               <div>
+                  <br>
+                  <div style="padding-left: 9px;padding-right: 9px;">
+                     <span class="c-text">Compiladores</span><br>
+                     <span class="c-text c-text--loud">8.7 Pontos</span>
+                  </div>
+                  <div class="c-progress">
+                    <div class="c-progress__bar c-progress__bar--error" style="width:87%;"></div>
+                  </div>                  
+               </div>
+
+
+                <div>
+                  <br>
+                  <div style="padding-left: 9px;padding-right: 9px;">
+                     <span class="c-text">Compiladores</span><br>
+                     <span class="c-text c-text--loud">Reprovado</span>
+                  </div>
+                  <div class="c-progress">
+                    <div class="c-progress__bar c-progress__bar--error" style="width:100%;"></div>
+                  </div>                  
+               </div>
+
+
+               <div>
+                  <br>
+                  <div style="padding-left: 9px;padding-right: 9px;">
+                     <span class="c-text">Compiladores</span><br>
+                     <span class="c-text c-text--loud">Aprovado</span>
+                  </div>
+                  <div class="c-progress">
+                    <div class="c-progress__bar c-progress__bar--success" style="width:100%;"></div>
+                  </div>                  
+               </div>
+
+                
+               -->
+              
+               
+               
+
+               
+
+            </div>
+         </div>
+      </div>
+
+      <p class="c-text u-centered">Desenvolvido por <a href="https://github.com/kevinoliveira">Kevin Oliveira</a></p>
+      <script type="text/javascript" src="main.js"></script>
+   </body>
+</html>
