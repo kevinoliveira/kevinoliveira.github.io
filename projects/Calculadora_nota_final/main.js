@@ -1,24 +1,26 @@
-console.log('my enemy');
+	// FORMULA
+	//((MP * 7) + (PF * 3)) / 10
 
-
-
-//((MP * 7) + (PF * 3)) / 10
-
-
-
+	//vetor que vai contar o objeto de notas
+	var notas = [];
+	
 	function calculate(){
-	//console.log("LOOOOSER");
 		let nomeDisciplina = document.getElementById("input-nome-disciplina").value;
 		let media = parseFloat(document.getElementById("input-media").value.replace(',','.'));
 		let notaNescesaria = 0;
 
 		if(nomeDisciplina != ""){
 
-			if(media >= 7) add(0,nomeDisciplina,media);
-			else if( media < 3) add(1,nomeDisciplina,media);
-			else{
+			if(media >= 7){
+				add_on_notas(0,nomeDisciplina,media,null);
+				add(0,nomeDisciplina,media);
+			}else if( media < 3){
+				add_on_notas(1,nomeDisciplina,media,null);
+				add(1,nomeDisciplina,media);
+			}else{
 				notaNescesaria = (50 - 7*media)/3;
 				//console.log(notaNescesaria);
+				add_on_notas(2,nomeDisciplina,media,notaNescesaria);
 				add(2,nomeDisciplina,media,notaNescesaria);
 			}
 		}
@@ -135,7 +137,10 @@ console.log('my enemy');
 				div4.setAttribute("style","width:"+notaNescesaria.toFixed(2)*10+"%;");
 				break;
 		}
-		console.log(notaNescesaria);
+		//console.log(notaNescesaria);
+		//console.log(box);
+		//console.log(div1);
+
 		box.appendChild(div1);
 
 
@@ -161,9 +166,70 @@ console.log('my enemy');
 
 		div4.className = "c-progress__bar c-progress__bar--success";
 		div4.setAttribute("style","width:17%;");
-		*/
-		
+		*/	
+	}
+
+	/**
+	 * Adiciona o objeto nota ao vetor de objetos no vetor nota.
+	 * @function
+	 * @param {int} flag - flag que diz se o aluno foi aprovado(0), reprovado(1) ou vai pra prova final(2).
+	 * @param {string} disciplina - nome da disciplina.
+	 * @param {float} media - media do aluno na disciplina.
+	 * @param {float} notaNescesaria - nota nescesaria para o aluno ser aprovado na prova final da disciplina.
+	 */
+	function add_on_notas(flag,disciplina,media,notaNescesaria){
+		 notas.push({
+			'flag':flag,
+			'disciplina':disciplina,
+			'media':media,
+			'notaNescesaria':notaNescesaria,
+		});
+
+		if(storageAvailable('localStorage')){
+			localStorage.setItem('lista-notas', JSON.stringify(notas));
+		}
+
+	}
+
+	function storageAvailable(type) {
+	    try {
+	        var storage = window[type],
+	            x = '__storage_test__';
+	        storage.setItem(x, x);
+	        storage.removeItem(x);
+	        return true;
+	    }
+	    catch(e) {
+	        return e instanceof DOMException && (
+	            // everything except Firefox
+	            e.code === 22 ||
+	            // Firefox
+	            e.code === 1014 ||
+	            // test name field too, because code might not be present
+	            // everything except Firefox
+	            e.name === 'QuotaExceededError' ||
+	            // Firefox
+	            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+	            // acknowledge QuotaExceededError only if there's something already stored
+	            storage.length !== 0;
+	    }
+	}
+
+	function inicializa(){
+		if(storageAvailable('localStorage')){
+			if(!localStorage.getItem('lista-notas')) {
+			  //populateStorage();
+			  localStorage.setItem('lista-notas', JSON.stringify(notas));
+			} else {
+			  notas = JSON.parse(localStorage.getItem('lista-notas'));
+			  //console.log(notas);
+			  notas.map(function(x){
+			  	add(x.flag,x.disciplina,x.media,x.notaNescesaria);
+			  	//console.log(i);
+			  });
+			}
+		}
 	}
 
 
-
+	inicializa();
