@@ -9,7 +9,7 @@ console.log('my enemy');
 	function calculate(){
 	//console.log("LOOOOSER");
 		let nomeDisciplina = document.getElementById("input-nome-disciplina").value;
-		let media = parseFloat(document.getElementById("input-media").value);
+		let media = parseFloat(document.getElementById("input-media").value.replace(',','.'));
 		let notaNescesaria = 0;
 
 		if(nomeDisciplina != ""){
