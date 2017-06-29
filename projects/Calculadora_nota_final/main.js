@@ -9,7 +9,7 @@
 		let media = parseFloat(document.getElementById("input-media").value.replace(',','.'));
 		let notaNescesaria = 0;
 
-		if(nomeDisciplina != ""){
+		if(nomeDisciplina != "" && !isNaN(media)){
 
 			if(media >= 7){
 				add_on_notas(0,nomeDisciplina,media,null);
