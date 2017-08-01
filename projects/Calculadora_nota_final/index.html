@@ -3,7 +3,8 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="blaze.min.css">
+      <link rel="stylesheet" href="css/blaze.min.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
       <title>Calculadora de nota prova final</title>
       <meta property="og:title" content="Calculadora de prova final">
       <meta property="og:type" content="website">
@@ -44,9 +45,13 @@
             <!--o-grid__cell--width-60@medium o-grid__cell--offset-20@medium u-center-block-->
             <div class="c-card u-highest">
                <div class=" c-card__item c-card__item--brand  c-text u-centered u-large"><b>Cálculo de nota necessária na prova final</b></div>
+               <a href="whatsapp://send?text=Cálculo de prova final - http://bit.ly/finalsi" data-action="share/whatsapp/share">
+               <button  class="c-button--success c-button--active   u-medium c-button--block " onclick="console.log('HA')" ><i class="fa fa-fw fa-whatsapp c-icon" aria-hidden="true"></i> Compartilhar</button></a>
+               
                <div class="c-card__item">
+
                   <p class="c-paragraph c-text u-centered">Coloque nome e a media final da disciplina para descobrir quanto voce precisa tirar no minimo para ser aprovado na final.</p>
-                  
+
                   <label class="c-label o-form-element c-text">
                   Nome da disciplina:
                   <input id="input-nome-disciplina" class="c-field u-medium c-text" type="text" placeholder="Nome da disciplina"> 
