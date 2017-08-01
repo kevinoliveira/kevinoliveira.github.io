@@ -5,7 +5,7 @@
 	var notas = [];
 	
 	function calculate(){
-		let nomeDisciplina = document.getElementById("input-nome-disciplina").value;
+		let nomeDisciplina = document.getElementById("input-nome-disciplina").value;		
 		let media = parseFloat(document.getElementById("input-media").value.replace(',','.'));
 		let notaNescesaria = 0;
 
@@ -24,6 +24,9 @@
 				add(2,nomeDisciplina,media,notaNescesaria);
 			}
 		}
+		//Reset the form
+		document.getElementById("input-nome-disciplina").value= "";
+		document.getElementById("input-media").value = "7.0";
 	}
 
 	/*
@@ -141,6 +144,8 @@
 		//console.log(box);
 		//console.log(div1);
 
+
+
 		box.appendChild(div1);
 
 
@@ -167,6 +172,13 @@
 		div4.className = "c-progress__bar c-progress__bar--success";
 		div4.setAttribute("style","width:17%;");
 		*/	
+	}
+
+	function clearHistory(){
+		let box = document.getElementById("note-box");
+		while(box.hasChildNodes()) box.removeChild(box.childNodes[0]);
+		notas = [];
+		localStorage.clear();
 	}
 
 	/**
