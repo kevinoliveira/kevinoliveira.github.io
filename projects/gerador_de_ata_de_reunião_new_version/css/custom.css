@@ -32,6 +32,12 @@ div .mdl-textfield__label:after {
 .mdl-textfield--floating-label.is-dirty .mdl-textfield__label{
     color: #0277BD;
 }
+
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+    color: #616161;
+}
+
+
 .mdl-button--raised.mdl-button--colored {
     background: #0277BD;
     color: #fff;
@@ -61,4 +67,10 @@ html {
 /* optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
+}
+
+
+
+.mdl-button.mdl-button--colored.removePerson {
+    color: #B71C1C;
 }

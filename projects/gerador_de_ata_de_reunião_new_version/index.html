@@ -74,6 +74,8 @@
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/immybox.css">
+    
 
     
   </head>
@@ -279,22 +281,60 @@
                     <form>
                       <fieldset>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="mdl-textfield__input" type="text" id="sample3">
-                          <label class="mdl-textfield__label" for="sample3">Nome da organização</label>
+                          <input class="mdl-textfield__input" type="text" id="nomeorg" placeholder="" >
+                          <label class="mdl-textfield__label" for="nomeorg" >Nome da organização</label>
+                        </div>
+                      </fieldset>
+                      <fieldset>
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="numeroata" placeholder="">
+                            <label class="mdl-textfield__label" for="numeroata">Numero da ata</label>
+                            <span class="mdl-textfield__error">Isso não é um numero!</span>
+                        </div>
+                        </fieldset>
+                      <fieldset>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="date" id="data" placeholder="" >
+                          <label class="mdl-textfield__label" for="data">Data da reunião</label>
                         </div>
                       </fieldset>
                       <fieldset>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <input class="mdl-textfield__input" type="date" id="sample3" >
-                          <label class="mdl-textfield__label" for="sample3">Data da reunião</label>
+                          <input class="mdl-textfield__input" type="text" id="localreu" placeholder="" >
+                          <label class="mdl-textfield__label" for="localreu" >Local de reunião</label>
                         </div>
-                      </fieldset>
+                      </fieldset> 
+                      <p><b>Presentes:</b></p>
+                      <ul class="demo-list-controls mdl-lists">
+                          <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                              Kevin Oliveira
+                            </span>
+                            <span>
+                              <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored removePerson">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </span>
+                          </li>
+                          <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                              Icaro Leite
+                            </span>
+                            <span class="mdl-list__item-secondary-actionm">
+                              <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored removePerson">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </span>
+                          </li>
+                                
+                        </ul>
+                        
                       <fieldset>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                          <textarea class="mdl-textfield__input " type="text" rows="3" id="sample5" ></textarea>
-                          <label class="mdl-textfield__label" for="sample5">Breve descrição</label>
+                          <input class="mdl-textfield__input" type="text" id="presentes" placeholder="" >
+                          <label class="mdl-textfield__label" for="presentes" >Presentes</label>
                         </div>
-                      </fieldset>
+                      </fieldset> 
                     </form>
                       <div class="mdl-layout__header-row"> 
                           <div class="mdl-layout-spacer"></div>
@@ -443,7 +483,26 @@
       </main>
     </div>
     
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/material.min.js"></script>
+    <script src="./js/jquery-3.2.1.min.js"></script>    
+    <script src="./js/jquery.immybox.min.js"></script>
+    <script>
+        $('#presentes').immybox({
+          choices: [
+            {text: 'José Diogo', value: 'José Diogo'},
+            {text: 'Fernando Maia', value: 'Fernando Maia'},
+            {text: 'Mateus Nascimento', value: 'Mateus Nascimento'},
+            {text: 'Welington Correia', value: 'Welington Correia'},
+            {text: 'Sérgio Sacramento', value: 'Sérgio Sacramento'},
+            {text: 'Icaro Leite', value: 'Icaro Leite'},
+            {text: 'Ricardo Matos', value: 'Ricardo Matos'},
+            {text: 'Kevin Oliveira', value: 'Kevin Oliveira'},
+            {text: 'Emanuel Argolo', value: 'Emanuel Argolo'},
+            {text: 'Samuel Carvalho', value: 'Samuel Carvalho'}
+          ]
+        });
+    </script>
+    
     
   </body>
 </html>
