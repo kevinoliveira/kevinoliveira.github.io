@@ -24,7 +24,7 @@
     color:#0277BD;
 }
 .mdl-textfield__label{
-    color: #616161;
+    color: black;
 }
 div .mdl-textfield__label:after {
     background: #0277BD;
@@ -34,7 +34,7 @@ div .mdl-textfield__label:after {
 }
 
 .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
-    color: #616161;
+    color: black;
 }
 
 
@@ -69,3 +69,43 @@ html {
     background: #FF0000;
 }
 
+.remove-button{
+    color: #E53935;
+}
+.edit-button{
+    color: #FB8C00;
+}
+.blue-icon{
+    color: #0277BD;
+}
+
+
+
+.mdl-demo .mdl-card .mdl-card__supporting-text {
+    color: black;
+}
+
+.mdl-color-text--grey-700 {
+    color: black !important;
+}
+
+
+
+
+
+.demo-card-wide.mdl-card {
+    width: auto;
+}
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: auto;
+    background: #0277BD;
+}
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+}
+
+.truncate{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
