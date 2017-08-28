@@ -180,8 +180,8 @@
               </div>
               
               <div class="mdl-card__menu">
-                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                  <i class="material-icons">forum</i>
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect click-action">
+                  <i class="material-icons ">forum</i>
                 </button>
               </div>
             </div>
@@ -196,8 +196,8 @@
                 </div>
                 
                 <div class="mdl-card__menu">
-                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                    <i class="material-icons">forum</i>
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect click-action">
+                    <i class="material-icons ">forum</i>
                   </button>
                 </div>
               </div>
@@ -514,6 +514,87 @@
         </footer>
       </main>
     </div>
+
+    <!--<dialog class="mdl-dialog">-->
+      <!--
+      <h4 class="mdl-dialog__title">Nova identidade visual</h4>
+      <div class="mdl-dialog__content">
+        <p>
+          Allowing us to collect data will let us get you the information you want faster.
+        </p>
+      </div>
+      <div class="mdl-dialog__actions">
+        <button type="button" class="mdl-button">Agree</button>
+        <button type="button" class="mdl-button close">Disagree</button>
+      </div>-->
+      <!--
+            <dialog class="mdl-dialog ">
+                <section class="section--center mdl-grid mdl-grid--no-spacing ">
+                    <div class="mdl-cell mdl-cell--12-col">
+                      
+                      
+                       <h4 class="mdl-dialog__title">Nova identidade visual</h4><br>
+                        <div class="mdl-dialog__content custom-padding">
+                          <!--<p>
+                            Allowing us to collect data will let us get you the information you want faster.
+                          </p>--><!--
+                          
+                          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" style="margin-bottom: 10px">
+                            <div class="mdl-card mdl-shadow--2dp demo-card-wide" style="width:100%;">
+                              <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text">Descrição</h2>
+                              </div>
+                              <div class="mdl-card__supporting-text">
+                                This is a work in progress. I'll continue to add on new components as I read through the MDL documentation. This is a work in progress. 
+                              </div>
+                              
+                              <div class="mdl-card__menu">
+                                  <i class="material-icons ">chat</i>
+                              </div>
+                            </div>
+                          </section>
+                          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                            <div class="mdl-card mdl-shadow--2dp demo-card-wide" style="width:100%;">
+                              <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text">Votação</h2>
+                              </div>
+                              <div class="mdl-card__supporting-text">
+                                This is a work in progress. I'll continue to add on new components as I read through the MDL documentation. This is a work in progress. 
+                              </div>
+                              
+                              <div class="mdl-card__menu">
+                                  <i class="material-icons ">forum</i>
+                              </div>
+                            </div>
+                          </section>  
+                        </div>
+                        <div class="mdl-dialog__actions">
+                          <button type="button" class="mdl-button">Agree</button>
+                          <button type="button" class="mdl-button close">Disagree</button>
+                        </div>
+                      </div>
+                    </section>
+            </dialog>-->
+
+            <dialog class="mdl-dialog">
+                <div class="mdl-card mdl-shadow--2dp demo-card-wide" style="width:100%;">
+                    <div class="mdl-card__title teal-card">
+                      <h2 class="mdl-card__title-text">Descrição</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                      This is a work in progress. I'll continue to add on new components as I read through the MDL documentation. This is a work in progress. 
+                    </div>
+                    
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect click-action close">
+                            <i class="material-icons ">close</i>
+                          </button>
+                    </div>
+                  </div>
+            </dialog>
+         
+          
+    <!--</dialog>-->
     
     <script src="./js/material.min.js"></script>
     <script src="./js/jquery-3.2.1.min.js"></script>    
@@ -533,6 +614,18 @@
             {text: 'Samuel Carvalho', value: 'Samuel Carvalho'}
           ]
         });
+
+        var button = document.querySelector('.click-action');
+        var dialog = document.querySelector('dialog');
+        button.addEventListener('click', function() {
+          dialog.showModal();
+         // dialog.show();
+          /* Or dialog.show(); to show the dialog without a backdrop. */
+        });
+        dialog.querySelector('.close').addEventListener('click', function() {
+          dialog.close();
+        });
+
     </script>
     
     

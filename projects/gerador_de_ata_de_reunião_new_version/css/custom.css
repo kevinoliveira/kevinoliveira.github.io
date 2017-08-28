@@ -109,3 +109,29 @@ html {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.mdl-dialog {
+    width: 90%;
+    max-width: 860px;
+}
+
+.custom-padding{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.mdl-dialog{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+
+.teal-card {
+    color: #fff;
+    height: auto;
+    background: teal;
+}
