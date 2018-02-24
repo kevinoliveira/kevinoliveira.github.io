@@ -1,0 +1,117 @@
+/******* CONFIG *******/
+/**********************/
+/**** COLOR SCHEME ****/
+/**********************/
+html {
+  height: 100%;
+}
+
+body {
+    /* background: url(https://i.imgur.com/Xk2YhTb.jpg); */
+    /* background-repeat: no-repeat; */
+    background: linear-gradient(#011f4b, #005b96);
+    height: 100%;
+    margin: 0px;
+    /* width: 40vw; */
+  }
+  #terminal {
+    width: 500px;
+    height: 300px;
+    margin: auto auto;
+    background-color: #2d2d2d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow: 0px 0px 70px 7px rgba(0, 0, 0, 0.75);
+    opacity: 1;
+    padding: 10px;
+  }
+  .title {
+    text-align: center;
+    font-size: 0.75em;
+    color: #999;
+    height: 18px;
+    position: relative;
+    top: 2px;
+    font-family: monospace;
+  }
+  .window {
+    color: #d6d6d6;
+    font-size: 14px;
+    font-family: monospace;
+    overflow-wrap: break-word;
+    line-height: 1.25em;
+  }
+  .icons {
+    margin: 0;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+  }
+  ul.icons li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  ul.icons li.close {
+    background-color: #ff5552;
+  }
+  ul.icons li.minimize {
+    background-color: #ffbe42;
+  }
+  ul.icons li.maximize {
+    background-color: #31c74a;
+  }
+  code {
+    display: block;
+  }
+  code:before {
+    content: '$' ' ';
+  }
+  code.output:before,
+  code.out:before {
+    content: '';
+  }
+  ::selection {
+    color: #2d2d2d;
+    background: #d6d6d6;
+  }
+  .green {
+    color: #a9d3ab;
+  }
+  .red {
+    color: #f58e8e;
+  }
+  .yellow {
+    color: #fee08a;
+  }
+  .blue {
+    color: #99caf4;
+  }
+  .cyan {
+    color: #79d4d5;
+  }
+  .magenta {
+    color: #d6add5;
+  }
+  .black {
+    color: #646464;
+  }
+  .bold {
+    font-style: bold;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+  .typed-strings{
+    overflow-x: hidden;
+  }    
+  .typed-cursor{
+    display: none;
+  }
