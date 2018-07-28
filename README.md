@@ -1,20 +1,13 @@
+# gatsby-starter-typescript
+The [default Gatsby starter](https://github.com/gatsbyjs/gatsby-starter-default) converted to [TypeScript](https://www.typescriptlang.org/).
 
-# My website...
-## [Click here to open](https://kevinoliveira.github.io/)
-Call me or send a message!
+For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
 
-|               |                                    |
-|---------------|------------------------------------|
-| phone         | +55 (71) 9 9199-6405               |
-| Email         | kevin.oliveira@live.com            |
-| GitHub (Duh!) | github.com/kevinoliveira           |
-| Instagram     | @kevin_oliveira                    |
-| LinkedIn      | linkedin.com/in/kevinoliveirasilva |
+Install this starter (assuming Gatsby is installed) by running from your CLI:
+```
+gatsby new gatsby-starter-typescript https://github.com/haysclark/gatsby-starter-typescript
+```
 
-thank you for coming!
+## Deploy
 
-
-
-# Special thanks
-* [TypedJs](https://github.com/mattboldt/typed.js)  - A JavaScript Typing Animation Library.
-
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/haysclark/gatsby-starter-typescript)
