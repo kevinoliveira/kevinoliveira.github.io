@@ -1,0 +1,63 @@
+// #particles-js {
+//     position: absolute;
+//     width: 992px;
+//     height: 300px;
+//     background-color: #d14334;
+//     background-image: url("");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: 50% 50%;
+//     border-radius: 5px;
+//     z-index: 1;
+//   }
+  
+ 
+  
+  
+  
+  #banner {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 992px;
+    height: 300px;
+    background-color: white;
+
+
+    .particlesBackgroung{
+        position: absolute;
+        width: 992px;
+        height: 300px;
+        background-color: #d14334;
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    #text {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 992px;
+        height: 300px;
+        z-index:2;
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 0;
+        padding:0;
+
+
+        h3{
+            margin: 0.5rem 0.5rem 0.5rem 2rem;
+        }
+        h6{
+            margin: 0.5rem 0.5rem 0.5rem 2rem;
+        }
+      }
+  }
+  
