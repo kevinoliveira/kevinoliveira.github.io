@@ -27,7 +27,7 @@
     "develop": "gatsby develop",
     "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b deploy"
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "devDependencies": {
     "prettier": "^1.8.2"
