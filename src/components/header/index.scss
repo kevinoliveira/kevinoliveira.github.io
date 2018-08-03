@@ -6,8 +6,8 @@
 
 
     .header{
-        display: flex;
-        height: 50px;
+        display: inline-flex;
+        // height: 50px;
         background-color: transparent;
         justify-content: space-between;
         width: 100%;
@@ -15,9 +15,9 @@
         margin-bottom: 2rem;
 
        
-        .titleWrapper{
+        .title-wrapper{
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             font-size: 2rem;
             // padding: 0 0 0 1rem;
             a{
@@ -40,33 +40,93 @@
                 }
             }
         }
-        .NavWrapper{
-            display: flex;
-            a{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin: 0 2px;
-                padding: 0 10px;
-                text-decoration: none;
-                color: #26273C;
-                // border-top: 2px solid transparent;
-                mark{
-                    background-color: #26273C;
-                    color: #47785C;
-                }
-                &:hover{
-                    // border-top-color: #D14334;
-                    color: #ACDF7D;
-                    cursor: pointer;
-                    font-weight: bold;
 
-                    mark{
-                        background-color: #ACDF7D;
-                        color: #47785C;
+
+        @media screen and (max-width: 600px) {
+            .nav-wrapper-desktop{
+                display: none !important;
+            }
+            .nav-wrapper-mobile{
+                display: flex !important;
+                flex-direction: column;
+
+                .nav-wrapper-mobile-menu{
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-bottom: 1rem;
+                    // margin-top: 20px;
+                }
+
+                .nav-wrapper-mobile-itens-open{
+                    display: flex;
+                    flex-direction: column;
+
+                    a{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        width: 100%;
+                        // margin: 0 2px;
+                        // padding: 0 10px;
+                        text-decoration: none;
+                        color: #26273C;
+                        // border-top: 2px solid transparent;
+                        mark{
+                            background-color: #26273C;
+                            color: #47785C;
+                        }
+                        &:hover{
+                            // border-top-color: #D14334;
+                            color: #ACDF7D;
+                            cursor: pointer;
+                            font-weight: bold;
+    
+                            mark{
+                                background-color: #ACDF7D;
+                                color: #47785C;
+                            }
+                        }
                     }
                 }
+                .nav-wrapper-mobile-itens-close{
+                    display: none;
+                }
+            }
+        }
+        @media screen and (min-width: 600px) {
+            .nav-wrapper-desktop{
+                display: flex;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin: 0 2px;
+                    padding: 0 10px;
+                    text-decoration: none;
+                    color: #26273C;
+                    // border-top: 2px solid transparent;
+                    mark{
+                        background-color: #26273C;
+                        color: #47785C;
+                    }
+                    &:hover{
+                        // border-top-color: #D14334;
+                        color: #ACDF7D;
+                        cursor: pointer;
+                        font-weight: bold;
+
+                        mark{
+                            background-color: #ACDF7D;
+                            color: #47785C;
+                        }
+                    }
+                }
+            }
+
+            .nav-wrapper-mobile{
+                display: none !important;
             }
         }
     }
