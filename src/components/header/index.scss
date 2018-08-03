@@ -2,25 +2,41 @@
 // .headerWrapper{
 //     display: flex;
 //     justify-content: center;
+
+
+
     .header{
         display: flex;
         height: 50px;
         background-color: transparent;
         justify-content: space-between;
-        width: 992px;
-    
+        width: 100%;
+        max-width: 1000px;
+        margin-bottom: 2rem;
+
+       
         .titleWrapper{
             display: flex;
             align-items: center;
             font-size: 2rem;
-            padding: 0 0 0 1rem;
+            // padding: 0 0 0 1rem;
             a{
                 text-decoration: none;
-                color: #1C2130;
+                color: #26273C;
+
+                mark{
+                    background-color: #26273C;
+                    color: #47785C;
+                }
                 &:hover{
-                    border-top-color: #D14334;
-                    color: #D14334;
+                    // border-top-color: #ACDF7D;
+                    color: #ACDF7D;
                     cursor: pointer;
+
+                    mark{
+                        background-color: #ACDF7D;
+                        color: #47785C;
+                    }
                 }
             }
         }
@@ -34,12 +50,22 @@
                 margin: 0 2px;
                 padding: 0 10px;
                 text-decoration: none;
-                color: #1C2130;
-                border-top: 2px solid transparent;
+                color: #26273C;
+                // border-top: 2px solid transparent;
+                mark{
+                    background-color: #26273C;
+                    color: #47785C;
+                }
                 &:hover{
-                    border-top-color: #D14334;
-                    color: #D14334;
+                    // border-top-color: #D14334;
+                    color: #ACDF7D;
                     cursor: pointer;
+                    font-weight: bold;
+
+                    mark{
+                        background-color: #ACDF7D;
+                        color: #47785C;
+                    }
                 }
             }
         }

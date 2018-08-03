@@ -33,15 +33,16 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
           ]}
         />
 
-         <div className="mainwrapper"> 
-            <Header />
-            <div
-                className="children"
-            >
+         {/* <div className="background"> */}
+            <div  className="background-top" /> 
+            <div className="children-wrapper">
+              <Header/>
+              <div className="children-card">
               {this.props.children()}
+              </div>
             </div>
-            <Footer/>
-         </div>
+            {/* <Footer/> */}
+         {/* </div> */}
       </div>
     )
   }

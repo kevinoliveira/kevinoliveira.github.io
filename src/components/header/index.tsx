@@ -7,7 +7,7 @@ const Header = () => (
     // <div className="headerWrapper">
         <div className="header">
             <div className="titleWrapper">
-                {/* <Link to="/">home</Link> */}
+                <Link to="/"><mark>Ho</mark>me</Link>
             </div>
             <div className="NavWrapper">
                 <Link to="/">Home</Link>

@@ -21,15 +21,18 @@ export default class extends React.Component<IndexPageProps, {}> {
   }
   public render() {
     return (
-      // <div>
-      //   <h1>Hi people</h1>
-      //   <p>
-      //     Welcome to your new{' '}
-      //     <strong>{this.props.data.site.siteMetadata.title}</strong> site.
-      //   </p>
-      //   <p>Now go build something great.</p>
-      //   <Link to="/page-2/">Go to page 2</Link>
-      // </div>
+      <div>
+        <h1>Hi people</h1>
+        <h1>Hi people</h1>
+        <h1>Hi people</h1>
+        
+        <p>
+          Welcome to your new{' '}
+          <strong>{this.props.data.site.siteMetadata.title}</strong> site.
+        </p>
+        <p>Now go build something great.</p>
+        <Link to="/page-2/">Go to page 2</Link>
+      </div>
       // <section className="hero is-medium is-link is-bold">
       //   <div className="hero-body">
       //     <div className="container">
@@ -47,9 +50,10 @@ export default class extends React.Component<IndexPageProps, {}> {
       //     </div>
       //   </div>
       // </section>
-      <div style={{display:"flex",alignItems:"center", flexDirection: "column"}}> 
-        <Banner/>
-      </div>
+      
+      // <div style={{display:"flex",alignItems:"center", flexDirection: "column"}}> 
+      //   <Banner/>
+      // </div>
     )
   }
 }
