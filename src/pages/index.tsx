@@ -25,7 +25,6 @@ export default class extends React.Component<IndexPageProps, {}> {
         <h1>Hi people</h1>
         <h1>Hi people</h1>
         <h1>Hi people</h1>
-        
         <p>
           Welcome to your new{' '}
           <strong>{this.props.data.site.siteMetadata.title}</strong> site.
