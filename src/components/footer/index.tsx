@@ -5,7 +5,9 @@ import "./index.scss"
 const Footer = () => (
 
         <div className="footer">
-           Footer
+                <code>
+                        /* Made in 2018, with thinkpad and free software */
+                </code>
         </div>
 )
 

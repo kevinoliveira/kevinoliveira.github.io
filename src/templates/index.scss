@@ -1,0 +1,18 @@
+
+
+.title{
+    text-transform: capitalize;
+    margin: 0;
+    word-break: break-all;
+}
+
+.subtitle{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    h5{
+        margin: 0;
+    }
+}

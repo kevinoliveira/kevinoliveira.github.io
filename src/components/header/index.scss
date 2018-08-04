@@ -1,13 +1,45 @@
 
-// .headerWrapper{
-//     display: flex;
-//     justify-content: center;
+    @mixin no-user-select() {
+        outline: none;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                            supported by Chrome and Opera */
+    }
+
+    @mixin mark($bgcolor){
+        background-color: $bgcolor;
+        color: rgb(70, 70, 70);
+    }
+
+    @mixin hoverThing($bold: true){
+        @if $bold {
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        } @else {
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    @mixin flex($justify-content: center){
+        display: flex;
+        justify-content: $justify-content;
+        align-items: center;
+    }
+
+    @mixin capitalize(){
+        text-transform: capitalize;
+    }
 
 
 
     .header{
         display: inline-flex;
-        // height: 50px;
         background-color: transparent;
         justify-content: space-between;
         width: 100%;
@@ -18,30 +50,17 @@
             display: flex;
             align-items: flex-start;
             font-size: 2rem;
-            // padding: 0 0 0 1rem;
             a{
                 text-decoration: none;
                 color: lightgray;
-                -webkit-touch-callout: none; /* iOS Safari */
-                -webkit-user-select: none; /* Safari */
-                 -khtml-user-select: none; /* Konqueror HTML */
-                   -moz-user-select: none; /* Firefox */
-                    -ms-user-select: none; /* Internet Explorer/Edge */
-                        user-select: none; /* Non-prefixed version, currently
-                                              supported by Chrome and Opera */
-
+                @include no-user-select();
                 mark{
-                    background-color: lightgray;
-                    color: rgb(70, 70, 70);
+                    @include mark(lightgray);
                 }
                 &:hover{
-                    // border-top-color: white;
-                    color: white;
-                    cursor: pointer;
-
+                    @include hoverThing(false);
                     mark{
-                        background-color: white;
-                        color: rgb(70, 70, 70);
+                        @include mark(white);
                     }
                 }
             }
@@ -59,29 +78,16 @@
                 .nav-wrapper-mobile-menu{
                     color: lightgray;
                     cursor: pointer;
-                    display: flex;
-                    justify-content: flex-end;
                     margin: 0;
-                    // margin-bottom: 1rem;
                     height: 37px;
-                    align-items: center;
-                    // margin-top: 20px;
-                    -webkit-touch-callout: none; /* iOS Safari */
-                    -webkit-user-select: none; /* Safari */
-                     -khtml-user-select: none; /* Konqueror HTML */
-                       -moz-user-select: none; /* Firefox */
-                        -ms-user-select: none; /* Internet Explorer/Edge */
-                            user-select: none; /* Non-prefixed version, currently
-                                                  supported by Chrome and Opera */
+                    @include capitalize();
+                    @include flex(flex-end);
+                    @include no-user-select();
                     &:hover{
-                        // border-top-color: #D14334;
-                        color: white;
-                        cursor: pointer;
-                        font-weight: bold;
+                        @include hoverThing();
 
                         mark{
-                            background-color: white;
-                            color: rgb(70, 70, 70);
+                            @include mark(white);
                         }
                     }
                 }
@@ -91,35 +97,19 @@
                     flex-direction: column;
 
                     a{
-                        display: flex;
-                        justify-content: flex-end;
-                        align-items: center;
+                        @include flex(flex-end);
+                        @include no-user-select();
+                        @include capitalize();
                         width: 100%;
-                        // margin: 0 2px;
-                        // padding: 0 10px;
                         text-decoration: none;
                         color: lightgray;
-                        // border-top: 2px solid transparent;
-                        -webkit-touch-callout: none; /* iOS Safari */
-                        -webkit-user-select: none; /* Safari */
-                         -khtml-user-select: none; /* Konqueror HTML */
-                           -moz-user-select: none; /* Firefox */
-                            -ms-user-select: none; /* Internet Explorer/Edge */
-                                user-select: none; /* Non-prefixed version, currently
-                                                      supported by Chrome and Opera */
                         mark{
-                            background-color: lightgray;
-                            color: rgb(70, 70, 70);
+                            @include mark(lightgray);
                         }
                         &:hover{
-                            // border-top-color: #D14334;
-                            color: white;
-                            cursor: pointer;
-                            font-weight: bold;
-    
+                            @include hoverThing();    
                             mark{
-                                background-color: white;
-                                color: rgb(70, 70, 70);
+                                @include mark(white);
                             }
                         }
                     }
@@ -133,35 +123,23 @@
             .nav-wrapper-desktop{
                 display: flex;
                 a{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     width: 100%;
                     margin: 0 2px;
                     padding: 0 10px;
                     text-decoration: none;
                     color: lightgray;
-                    // border-top: 2px solid transparent;
-                    -webkit-touch-callout: none; /* iOS Safari */
-                    -webkit-user-select: none; /* Safari */
-                     -khtml-user-select: none; /* Konqueror HTML */
-                       -moz-user-select: none; /* Firefox */
-                        -ms-user-select: none; /* Internet Explorer/Edge */
-                            user-select: none; /* Non-prefixed version, currently
-                                                  supported by Chrome and Opera */
-                    mark{
-                        background-color: lightgray;
-                        color: rgb(70, 70, 70);
-                    }
-                    &:hover{
-                        // border-top-color: #D14334;
-                        color: white;
-                        cursor: pointer;
-                        font-weight: bold;
 
+                    @include flex(center);
+                    @include no-user-select();
+                    @include capitalize();
+                    mark{
+                        @include mark(lightgray);
+                    }
+
+                    &:hover{
+                        @include hoverThing();
                         mark{
-                            background-color: white;
-                            color: rgb(70, 70, 70);
+                            @include mark(white);
                         }
                     }
                 }
@@ -172,4 +150,3 @@
             }
         }
     }
-// }

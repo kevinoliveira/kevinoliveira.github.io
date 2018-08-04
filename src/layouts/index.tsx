@@ -41,6 +41,7 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
               <div className="children-card">
               {this.props.children()}
               </div>
+              <Footer/>
             </div>
             {/* <Footer/> */}
          {/* </div> */}

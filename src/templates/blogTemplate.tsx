@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import "./index.scss"
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -8,8 +10,10 @@ export default function Template({
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+        <h1 className="title">{frontmatter.title}</h1>
+        <div className="subtitle">
+          <h5 >{frontmatter.date}</h5>
+        </div>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
