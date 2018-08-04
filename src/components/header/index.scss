@@ -22,6 +22,13 @@
             a{
                 text-decoration: none;
                 color: lightgray;
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                 -khtml-user-select: none; /* Konqueror HTML */
+                   -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                        user-select: none; /* Non-prefixed version, currently
+                                              supported by Chrome and Opera */
 
                 mark{
                     background-color: lightgray;
@@ -59,6 +66,13 @@
                     height: 37px;
                     align-items: center;
                     // margin-top: 20px;
+                    -webkit-touch-callout: none; /* iOS Safari */
+                    -webkit-user-select: none; /* Safari */
+                     -khtml-user-select: none; /* Konqueror HTML */
+                       -moz-user-select: none; /* Firefox */
+                        -ms-user-select: none; /* Internet Explorer/Edge */
+                            user-select: none; /* Non-prefixed version, currently
+                                                  supported by Chrome and Opera */
                     &:hover{
                         // border-top-color: #D14334;
                         color: white;
@@ -86,6 +100,13 @@
                         text-decoration: none;
                         color: lightgray;
                         // border-top: 2px solid transparent;
+                        -webkit-touch-callout: none; /* iOS Safari */
+                        -webkit-user-select: none; /* Safari */
+                         -khtml-user-select: none; /* Konqueror HTML */
+                           -moz-user-select: none; /* Firefox */
+                            -ms-user-select: none; /* Internet Explorer/Edge */
+                                user-select: none; /* Non-prefixed version, currently
+                                                      supported by Chrome and Opera */
                         mark{
                             background-color: lightgray;
                             color: rgb(70, 70, 70);
@@ -121,6 +142,13 @@
                     text-decoration: none;
                     color: lightgray;
                     // border-top: 2px solid transparent;
+                    -webkit-touch-callout: none; /* iOS Safari */
+                    -webkit-user-select: none; /* Safari */
+                     -khtml-user-select: none; /* Konqueror HTML */
+                       -moz-user-select: none; /* Firefox */
+                        -ms-user-select: none; /* Internet Explorer/Edge */
+                            user-select: none; /* Non-prefixed version, currently
+                                                  supported by Chrome and Opera */
                     mark{
                         background-color: lightgray;
                         color: rgb(70, 70, 70);
