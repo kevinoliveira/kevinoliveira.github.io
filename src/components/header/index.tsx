@@ -34,10 +34,10 @@ class Header extends React.Component<{}, State> {
     render(){
 
         const menuItens = [
-            {key:"/" ,to: "/",title:"home"},
-            {key:"/blog/test" ,to: "/blog/test",title:"test"},
-            {key:"/rss" ,to: "/rss",title:"rss"},
-            {key:"/rssa" ,to: "/rssa",title:"rssa"},
+            {key:"blog" ,to: "/blog",title:"blog"},
+            // {key:"/blog/test" ,to: "/blog/test",title:"test"},
+            // {key:"/rss" ,to: "/rss",title:"rss"},
+            // {key:"/rssa" ,to: "/rssa",title:"rssa"},
             {external: true,key:"github" ,to: "https://www.github.com/kevinoliveira",target: "_blank",title:"Github"},
         ]
         const menuItensJSX = menuItens.map(item =>{

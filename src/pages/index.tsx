@@ -6,12 +6,15 @@ import Footer from '../components/footer';
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
 interface IndexPageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
+  data:{
+      site:{
+          siteMetadata:{
+              title: string;
+          }
       }
-    }
+      allMarkdownRemark: {  
+        totalCount: number
+      }
   }
 }
 
@@ -20,49 +23,31 @@ export default class extends React.Component<IndexPageProps, {}> {
     super(props, context)
   }
   public render() {
+    console.log(this.props)
     return (
       <div>
         <h1>Hi people</h1>
         <h1>Hi people</h1>
         <h1>Hi people</h1>
         <p>
-          Welcome to your new{' '}
-          <strong>{this.props.data.site.siteMetadata.title}</strong> site.
+            This is my personal page and is under construction. and o only have 
+          <strong>{this.props.data.allMarkdownRemark.totalCount}</strong> blog post... what a shame.
         </p>
-        <p>Now go build something great.</p>
-        <Link to="/page-2/">Go to page 2</Link>
-      </div>
-      // <section className="hero is-medium is-link is-bold">
-      //   <div className="hero-body">
-      //     <div className="container">
-      //       <h1 className="title">
-      //          Hi people
-      //       </h1>
-      //       <p className="subtitle">
-      //         Welcome to your new{' '}
-      //         <strong>{this.props.data.site.siteMetadata.title}</strong> site.
-      //       </p>
-      //       <p >
-      //         Now go build something great.
-      //         <Link to="/page-2/">Go to page 2</Link>
-      //       </p>
-      //     </div>
-      //   </div>
-      // </section>
-      
-      // <div style={{display:"flex",alignItems:"center", flexDirection: "column"}}> 
-      //   <Banner/>
-      // </div>
+        <Link to="/blog/">Go to Blog</Link>
+      </div>      
     )
   }
 }
 
 export const pageQuery = graphql`
   query IndexQuery {
-    site {
-      siteMetadata {
-        title
+      site{
+          siteMetadata{
+              title
+          }
       }
-    }
+      allMarkdownRemark {  
+        totalCount
+      }
   }
 `

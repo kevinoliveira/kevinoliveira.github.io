@@ -1,15 +1,9 @@
 ---
 path: "/blog/test"
-date: "2017-11-07"
+date: "1970-01-01"
 title: "why is my blog on monochromatic colors?"
+tag: "11"
 ---
-<!-- # H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6 -->
-
 
 ⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
 
