@@ -1,0 +1,2 @@
+webpackJsonp([0x94072fe266bb],{204:function(e,t,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=l(2),a=l(66),o=function(){return n.createElement("div",null,n.createElement("h1",null,"Hi from the second page"),n.createElement("p",null,"Welcome to page 2"),n.createElement(a.default,{to:"/"},"Go back to the homepage"))};t.default=o}});
+//# sourceMappingURL=component---src-pages-page-2-tsx-e5200429368bb2772333.js.map
