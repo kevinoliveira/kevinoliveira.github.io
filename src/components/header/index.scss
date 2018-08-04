@@ -21,20 +21,20 @@
             // padding: 0 0 0 1rem;
             a{
                 text-decoration: none;
-                color: #26273C;
+                color: lightgray;
 
                 mark{
-                    background-color: #26273C;
-                    color: #47785C;
+                    background-color: lightgray;
+                    color: rgb(70, 70, 70);
                 }
                 &:hover{
-                    // border-top-color: #ACDF7D;
-                    color: #ACDF7D;
+                    // border-top-color: white;
+                    color: white;
                     cursor: pointer;
 
                     mark{
-                        background-color: #ACDF7D;
-                        color: #47785C;
+                        background-color: white;
+                        color: rgb(70, 70, 70);
                     }
                 }
             }
@@ -50,6 +50,7 @@
                 flex-direction: column;
 
                 .nav-wrapper-mobile-menu{
+                    color: lightgray;
                     cursor: pointer;
                     display: flex;
                     justify-content: flex-end;
@@ -60,13 +61,13 @@
                     // margin-top: 20px;
                     &:hover{
                         // border-top-color: #D14334;
-                        color: #ACDF7D;
+                        color: white;
                         cursor: pointer;
                         font-weight: bold;
 
                         mark{
-                            background-color: #ACDF7D;
-                            color: #47785C;
+                            background-color: white;
+                            color: rgb(70, 70, 70);
                         }
                     }
                 }
@@ -83,21 +84,21 @@
                         // margin: 0 2px;
                         // padding: 0 10px;
                         text-decoration: none;
-                        color: #26273C;
+                        color: lightgray;
                         // border-top: 2px solid transparent;
                         mark{
-                            background-color: #26273C;
-                            color: #47785C;
+                            background-color: lightgray;
+                            color: rgb(70, 70, 70);
                         }
                         &:hover{
                             // border-top-color: #D14334;
-                            color: #ACDF7D;
+                            color: white;
                             cursor: pointer;
                             font-weight: bold;
     
                             mark{
-                                background-color: #ACDF7D;
-                                color: #47785C;
+                                background-color: white;
+                                color: rgb(70, 70, 70);
                             }
                         }
                     }
@@ -118,21 +119,21 @@
                     margin: 0 2px;
                     padding: 0 10px;
                     text-decoration: none;
-                    color: #26273C;
+                    color: lightgray;
                     // border-top: 2px solid transparent;
                     mark{
-                        background-color: #26273C;
-                        color: #47785C;
+                        background-color: lightgray;
+                        color: rgb(70, 70, 70);
                     }
                     &:hover{
                         // border-top-color: #D14334;
-                        color: #ACDF7D;
+                        color: white;
                         cursor: pointer;
                         font-weight: bold;
 
                         mark{
-                            background-color: #ACDF7D;
-                            color: #47785C;
+                            background-color: white;
+                            color: rgb(70, 70, 70);
                         }
                     }
                 }
