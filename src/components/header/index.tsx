@@ -47,7 +47,7 @@ class Header extends React.Component<{}, State> {
         return (
             <div className="header">
                 <div className="title-wrapper">
-                    <Link to="/"><mark>Ho</mark>me</Link>
+                    <Link to="/"><mark>Ke</mark>vin Oliveira</Link>
                 </div>
                 <div className="nav-wrapper-desktop">
                     {menuItensJSX}
