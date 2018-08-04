@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-layouts-index-tsx": [
-      "component---src-layouts-index-tsx-9a1325069f797ea8e1f3.js",
-      "component---src-layouts-index-tsx-9a1325069f797ea8e1f3.js.map"
+      "component---src-layouts-index-tsx-87db9b558a21898eb25d.js",
+      "component---src-layouts-index-tsx-87db9b558a21898eb25d.js.map"
     ],
     "path---blog-test": [
       "path---blog-test-aa079b75f3cf738f68a4.js",
@@ -49,8 +49,8 @@
       "component---src-pages-index-tsx-7787c6e2b738c861e4fa.js.map"
     ],
     "app": [
-      "app-a29edeb1c040b278a626.js",
-      "app-a29edeb1c040b278a626.js.map"
+      "app-c2483584b2448d914b3e.js",
+      "app-c2483584b2448d914b3e.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
