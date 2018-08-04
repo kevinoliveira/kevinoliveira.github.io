@@ -30,6 +30,7 @@
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "devDependencies": {
+    "gh-pages": "^1.2.0",
     "prettier": "^1.8.2"
   },
   "contributors": [
