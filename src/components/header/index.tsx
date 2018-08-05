@@ -37,19 +37,19 @@ class Header extends React.Component<{}, State> {
             {key:"blog" ,to: "/blog",title:"blog"},
             // {key:"/blog/test" ,to: "/blog/test",title:"test"},
             // {key:"/rss" ,to: "/rss",title:"rss"},
-            // {key:"/rssa" ,to: "/rssa",title:"rssa"},
+            {key:"contact" ,to: "/contact",title:"contact"},
             {external: true,key:"github" ,to: "https://www.github.com/kevinoliveira",target: "_blank",title:"Github"},
         ]
         const menuItensJSX = menuItens.map(item =>{
             const {title,to,external,...rest} = item;
-            console.log(!!external)
             return !!external? <a href={to} {...rest}>{title}</a> : <Link {...rest} to={to} >{title}</Link>;
         })
 
         return (
             <div className="header">
                 <div className="title-wrapper">
-                    <Link to="/"><mark>Ke</mark>vin Oliveira</Link>
+                    {/* <Link to="/"><mark>Ke</mark>vin Oliveira</Link> */}
+                    <Link to="/">kevinoliveira.github.io</Link>
                 </div>
                 <div className="nav-wrapper-desktop">
                     {menuItensJSX}

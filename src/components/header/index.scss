@@ -1,4 +1,21 @@
 
+// $color1: #E1331B;
+// $color2: #F85E28;
+// $color3: #CCFCEE;
+// $color4: #7BD1B8;
+// $color5: #3E6C61;
+
+$color1: #234A56;
+$color2: #417D95;
+$color3: #89B9C5;
+$color4: #C1DEE2;
+$color5: #DDE7DC;
+$extra: #F34C56;
+
+
+
+
+
     @mixin no-user-select() {
         outline: none;
         -webkit-touch-callout: none; /* iOS Safari */
@@ -12,7 +29,7 @@
 
     @mixin mark($bgcolor){
         background-color: $bgcolor;
-        color: rgb(70, 70, 70);
+        color: $color1;
     }
 
     @mixin hoverThing($bold: true){
@@ -49,13 +66,13 @@
         .title-wrapper{
             display: flex;
             align-items: flex-start;
-            font-size: 2rem;
+            font-size: 1.5rem;
             a{
                 text-decoration: none;
-                color: lightgray;
+                color: whitesmoke;
                 @include no-user-select();
                 mark{
-                    @include mark(lightgray);
+                    @include mark(whitesmoke);
                 }
                 &:hover{
                     @include hoverThing(false);
@@ -76,7 +93,7 @@
                 flex-direction: column;
 
                 .nav-wrapper-mobile-menu{
-                    color: lightgray;
+                    color: whitesmoke;
                     cursor: pointer;
                     margin: 0;
                     height: 37px;
@@ -102,9 +119,9 @@
                         @include capitalize();
                         width: 100%;
                         text-decoration: none;
-                        color: lightgray;
+                        color: whitesmoke;
                         mark{
-                            @include mark(lightgray);
+                            @include mark(whitesmoke);
                         }
                         &:hover{
                             @include hoverThing();    
@@ -127,13 +144,13 @@
                     margin: 0 2px;
                     padding: 0 10px;
                     text-decoration: none;
-                    color: lightgray;
+                    color: whitesmoke;
 
                     @include flex(center);
                     @include no-user-select();
                     @include capitalize();
                     mark{
-                        @include mark(lightgray);
+                        @include mark(whitesmoke);
                     }
 
                     &:hover{

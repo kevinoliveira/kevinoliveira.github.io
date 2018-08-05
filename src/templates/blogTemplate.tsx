@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from 'gatsby-link'
 
 import "./index.scss"
 
@@ -10,6 +11,9 @@ export default function Template({
   return (
     <div className="blog-post-container">
       <div className="blog-post">
+        <div className="go-back-wrapper">
+          <Link to="/blog">all posts</Link>
+        </div>
         <h1 className="title">{frontmatter.title}</h1>
         <div className="subtitle">
           <h5 >{frontmatter.date}</h5>

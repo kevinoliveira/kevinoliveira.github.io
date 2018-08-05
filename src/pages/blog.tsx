@@ -1,6 +1,8 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
 
+import "./blog.scss"
+
 
 interface IndexPageProps {
     data:{
@@ -33,15 +35,22 @@ export default class extends React.Component<IndexPageProps, {}> {
 
         const blogpages = this.props.data.allMarkdownRemark.edges.map((edge)=>{
             const {title, path, date} = edge.node.frontmatter;
-            return <li><Link to={path}>{title} - {date}</Link></li>
+            return (
+                <Link to={path}>
+                    <div className="post-card">
+                        <div className="post-card-title">{title}</div>
+                        <div className="post-card-date">{date}</div>
+                    </div>
+                </Link>
+            )
         })
 
       return (
         <div>
           <h1 >Blog Pages</h1>
-          <ul>
+          <div className="wrapper-blog">
             {blogpages}
-          </ul>
+          </div>
         </div>
       )
     }
