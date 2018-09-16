@@ -1,2 +1,0 @@
-webpackJsonp([92192511134898],{344:function(a,p){a.exports={data:{markdownRemark:{html:"<p>crap crap crap crap crap crap crap crap crap crap crap crap </p>",frontmatter:{date:"November 07, 2017",path:"/blog/crap6",title:"the crazy podcast to listen"}}},pathContext:{}}}});
-//# sourceMappingURL=path---blog-crap-6-7702468a6428faa85d37.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([0x81b8806e4260],{351:function(t,a){t.exports={data:{site:{siteMetadata:{title:"Kevin Oliveira"}},allMarkdownRemark:{totalCount:11}},pathContext:{}}}});
+//# sourceMappingURL=path---index-8c3968e1eca4d9bfba3d.js.map

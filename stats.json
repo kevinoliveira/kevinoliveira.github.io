@@ -1,20 +1,20 @@
 {
   "assetsByChunkName": {
     "component---src-layouts-index-tsx": [
-      "component---src-layouts-index-tsx-953a459b75cae9174320.js",
-      "component---src-layouts-index-tsx-953a459b75cae9174320.js.map"
+      "component---src-layouts-index-tsx-72486e9fe6b4ea9564f2.js",
+      "component---src-layouts-index-tsx-72486e9fe6b4ea9564f2.js.map"
     ],
     "path---blog-test": [
       "path---blog-test-6cf8cd75f56bea88b8b3.js",
       "path---blog-test-6cf8cd75f56bea88b8b3.js.map"
     ],
     "component---src-templates-blog-template-tsx": [
-      "component---src-templates-blog-template-tsx-d8bfce19379c3856b5ac.js",
-      "component---src-templates-blog-template-tsx-d8bfce19379c3856b5ac.js.map"
+      "component---src-templates-blog-template-tsx-52f7199918d485142f06.js",
+      "component---src-templates-blog-template-tsx-52f7199918d485142f06.js.map"
     ],
     "path---blog": [
-      "path---blog-88541ae0e0be648326be.js",
-      "path---blog-88541ae0e0be648326be.js.map"
+      "path---blog-b6d65e230710e2042579.js",
+      "path---blog-b6d65e230710e2042579.js.map"
     ],
     "path---blog-crap-4": [
       "path---blog-crap-4-05a7c8c449a81d414ce4.js",
@@ -23,6 +23,10 @@
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
+    ],
+    "path---info-biblioteca-como-tirar-cartao": [
+      "path---info-biblioteca-como-tirar-cartao-77142faf7f21850578e2.js",
+      "path---info-biblioteca-como-tirar-cartao-77142faf7f21850578e2.js.map"
     ],
     "path---blog-crap-6": [
       "path---blog-crap-6-29cc9b3bc2b4105f5618.js",
@@ -41,12 +45,12 @@
       "path---blog-crap-5-c0b6f4e86f4479b24dc0.js.map"
     ],
     "path---index": [
-      "path---index-4402a653f34b4c59523f.js",
-      "path---index-4402a653f34b4c59523f.js.map"
+      "path---index-8c3968e1eca4d9bfba3d.js",
+      "path---index-8c3968e1eca4d9bfba3d.js.map"
     ],
     "component---src-pages-blog-tsx": [
-      "component---src-pages-blog-tsx-6b5247693ac4097a02a0.js",
-      "component---src-pages-blog-tsx-6b5247693ac4097a02a0.js.map"
+      "component---src-pages-blog-tsx-6ce9aa4899255066b8f2.js",
+      "component---src-pages-blog-tsx-6ce9aa4899255066b8f2.js.map"
     ],
     "path---blog-crap-1": [
       "path---blog-crap-1-5fadd884035fbd2ade63.js",
@@ -89,8 +93,8 @@
       "component---src-pages-index-tsx-2edef3428c80ee63241f.js.map"
     ],
     "app": [
-      "app-d411e13f7bab7556d0f5.js",
-      "app-d411e13f7bab7556d0f5.js.map"
+      "app-eca7782c009287cc6996.js",
+      "app-eca7782c009287cc6996.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
