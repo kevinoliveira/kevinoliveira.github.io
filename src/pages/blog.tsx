@@ -23,7 +23,7 @@ interface IEdge {
         frontmatter: {
             title: string;
             path: string;
-            date: string;
+            date: Date;
             tags?: string[];
             category?: string;
         }
@@ -85,6 +85,7 @@ export default class BlogPages extends React.Component<IndexPageProps, IState> {
                             <a href={i.node.frontmatter.path}>
                                 <div className="carditem" key={i.node.frontmatter.path}>
                                     {i.node.frontmatter.title}
+                                    <div className="cardDate">{i.node.frontmatter.date.toString()}</div>
                                 </div>
                             </a>)
                         }
@@ -124,7 +125,7 @@ export const pageQuery = graphql`
                 frontmatter{
                   title
                   path
-                  date
+                  date(formatString: "MMMM DD, YYYY")
                   tags
                   category
                 }

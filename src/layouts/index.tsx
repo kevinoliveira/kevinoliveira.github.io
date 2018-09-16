@@ -26,11 +26,11 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
     return (
       <div>
         <Helmet
-          title="Gatsby Default Starter"
+          title="Kevin Oliveira"
           meta={[
-            { name: 'description', content: 'Sample' },
+            { name: 'description', content: 'Kevin Oliveira blog ' },
             { name: 'keywords', content: 'sample, something' },
-            { name: 'theme-color',content: '#234A56'}
+            { name: 'theme-color',content: '#27ae60'}
           ]}
         />
 
