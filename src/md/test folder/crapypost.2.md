@@ -2,6 +2,7 @@
 path: "/blog/crap2"
 date: "2017-11-07"
 title: "ad lucem"
+category: "computer science"
 ---
 to the light
 to the light

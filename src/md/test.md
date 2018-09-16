@@ -2,6 +2,8 @@
 path: "/blog/test"
 date: "1970-01-01"
 title: "markdown test to create css stytles"
+tags: ["docker","test","life","breed"]
+category: "politics"
 ---
 
 

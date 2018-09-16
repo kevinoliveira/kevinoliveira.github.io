@@ -2,6 +2,7 @@
 path: "/blog/crap3"
 date: "2017-11-07"
 title: "ad sumus"
+category: "computer science"
 ---
 here we are	
 here we are	

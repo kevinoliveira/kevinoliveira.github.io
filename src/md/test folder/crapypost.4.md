@@ -2,6 +2,7 @@
 path: "/blog/crap4"
 date: "2017-11-07"
 title: "audio hostem"
+category: "computer science"
 ---
 I hear the enemy
 I hear the enemy

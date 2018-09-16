@@ -11,11 +11,9 @@ export default function Template({
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-        <div className="go-back-wrapper">
-          <Link to="/blog">all posts</Link>
-        </div>
         <h1 className="title">{frontmatter.title}</h1>
         <div className="subtitle">
+          <Link to="/blog" className="go-back-wrapper">go back</Link>
           <h5 >{frontmatter.date}</h5>
         </div>
         <div

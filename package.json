@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-typescript",
-  "description": "Gatsby TypeScript starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "kevin_0liveira_blog",
+  "description": "Kevin Oliveira blog",
+  "version": "0.0.1",
+  "author": "Kevin Olivera <kevin.oliveira@live.com>",
   "dependencies": {
+    "@types/lodash.groupby": "^4.6.4",
     "@types/node": "^8.0.7",
     "@types/react": "15.0.21",
     "@types/react-dom": "0.14.23",
@@ -15,6 +16,7 @@
     "gatsby-plugin-typescript": "^1.4.10",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
+    "lodash.groupby": "^4.6.0",
     "react-particles-js": "^2.3.0"
   },
   "keywords": [
@@ -34,7 +36,6 @@
     "prettier": "^1.8.2"
   },
   "contributors": [
-    "fabien0102 <fabien0102@gmail.com>",
-    "Hays Clark <hays.clark@gmail.com>"
+    "kevin oliveira <kevin.oliveira@live.com>"
   ]
 }

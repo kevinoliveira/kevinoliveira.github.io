@@ -1,60 +1,115 @@
-import * as React from 'react'
-import Link from 'gatsby-link'
+import * as React from "react"
+import Link from "gatsby-link"
+import * as groupBy from "lodash.groupby"
 
 import "./blog.scss"
 
 
 interface IndexPageProps {
-    data:{
-        site:{
-            siteMetadata:{
+    data: {
+        site: {
+            siteMetadata: {
                 title: string;
             }
         }
-        allMarkdownRemark: {  
-            edges:{
-                node:{
-                    frontmatter:{
-                        title: string;
-                        path: string;
-                        date: string;
-                    }
-                }
-            }[],
+        allMarkdownRemark: {
+            edges: IEdge[],
         }
     }
 }
 
-
-
-export default class extends React.Component<IndexPageProps, {}> {
-    constructor(props: IndexPageProps, context: any) {
-      super(props, context)
+interface IEdge {
+    node: {
+        frontmatter: {
+            title: string;
+            path: string;
+            date: string;
+            tags?: string[];
+            category?: string;
+        }
     }
+}
+
+interface IState {
+    offline: boolean;
+}
+export default class BlogPages extends React.Component<IndexPageProps, IState> {
+    state = {
+        // I KNOW THIS IS STRANGE,
+        // BUT GATSBY DOES NOT LIKE THE WINDOW, SEE MORE ON https://github.com/gatsbyjs/gatsby/issues/5835
+        // I KNOW... I HATE IT TOO.
+        offline: typeof window !== "undefined" && !window.navigator.onLine,
+    }
+    constructor(props: IndexPageProps, context: any) {
+        super(props, context)
+    }
+
+    setOnline = () => {
+        this.setState({ offline: false })
+    }
+    setOffline = () => {
+        this.setState({ offline: true })
+    }
+
+    public componentWillMount = () => {
+        console.log("mount")
+        if (typeof window !== "undefined") {
+            window.addEventListener("offline", this.setOffline, false);
+            window.addEventListener("online", this.setOnline, false);
+        }
+    }
+
+    public componentWillUnmount = () => {
+        console.log("unmount")
+        if (typeof window !== "undefined") {
+            window.removeEventListener("offline", this.setOffline, false);
+            window.removeEventListener("online", this.setOnline, false);
+        }
+    }
+
+
+
     public render() {
 
-        const blogpages = this.props.data.allMarkdownRemark.edges.map((edge)=>{
-            const {title, path, date} = edge.node.frontmatter;
-            return (
-                <Link to={path}>
-                    <div className="post-card">
-                        <div className="post-card-title">{title}</div>
-                        <div className="post-card-date">{date}</div>
-                    </div>
-                </Link>
-            )
-        })
+        const groups = groupBy(this.props.data.allMarkdownRemark.edges, (edge: IEdge) => edge.node.frontmatter.category);
 
-      return (
-        <div>
-          <h1 >Blog Pages</h1>
-          <div className="wrapper-blog">
-            {blogpages}
-          </div>
-        </div>
-      )
+        let categories = [];
+        for (const group in groups) {
+            const itens = groups[group];
+            const groupName = group !== "null" ? group : "Others";
+            const element = (
+                <div key={groupName}>
+                    <h3 className="category">{groupName}</h3>
+                    <div className="itens">
+                        {itens.map(i =>
+                            <a href={i.node.frontmatter.path}>
+                                <div className="carditem" key={i.node.frontmatter.path}>
+                                    {i.node.frontmatter.title}
+                                </div>
+                            </a>)
+                        }
+                    </div>
+                </div>
+            )
+            categories.push(element);
+        }
+
+
+
+        const offlineBanner = this.state.offline ? <div className="alert"><p className="alert-text"><b>Hey, you are offline.</b></p></div> : null;
+
+
+
+        return (
+            <div>
+                <h1 className="title" >Blog Posts</h1>
+                {offlineBanner}
+                {categories}
+
+            </div>
+        )
     }
-  }
+}
 
 export const pageQuery = graphql`
     query BlogQuery {
@@ -63,16 +118,18 @@ export const pageQuery = graphql`
                 title
             }
         }
-        allMarkdownRemark {  
-            edges {
-                node {
-                    frontmatter {
-                        title
-                        path
-                        date
-                    }
+        allMarkdownRemark{
+            edges{
+              node{
+                frontmatter{
+                  title
+                  path
+                  date
+                  tags
+                  category
                 }
+              }
             }
-        }
+          }
     }
 `

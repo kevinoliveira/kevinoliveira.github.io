@@ -1,24 +1,36 @@
 @import '../globalvars.scss';
 
 
-
-
-@media screen and (max-width: 600px) {
-    .wrapper-blog {
-        display: grid;
-        grid-template-columns: repeat( 1, 100% ) ;
-        grid-gap: 5px;
+    .category{
+        text-transform: capitalize;
     }
-}
 
-
-@media screen and (min-width: 600px) {
-    .wrapper-blog {
+    .itens {
         display: grid;
         grid-template-columns: repeat( 3, 33.34% ) ;
+        @media screen and (max-width: 600px) {
+            grid-template-columns: repeat( 1, 100% ) ;
+        }
         grid-gap: 5px;
+
+        .carditem{
+            width: 100%;
+            height: 3rem;
+            padding: 1rem;
+            border: solid $color1;
+            color: $color1;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-transform: capitalize;
+            &:hover {
+                background-color: $color1;
+                color: whitesmoke;
+            }
+        }
     }
-}
+
 
 
 a{
@@ -31,23 +43,21 @@ a{
     align-items: center;
     height: 100%;
     padding: 1rem;
-    border: 2px dotted $color1;
+    border-left: 5px solid grey;
     text-decoration: none;
     
-    // margin: 5px;
 
-    // border: 1px solid black;
-    border-radius: 5px;
-    // box-shadow: 2px 2px lightgray;
+    -webkit-box-shadow: 10px 10px 20px -15px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 20px -15px rgba(0,0,0,1);
+    box-shadow: 10px 10px 20px -15px rgba(0,0,0,1);
+
     &:hover{
-        // box-shadow: 2px 2px grey;  
-        border: 2px solid $extra;
+        border-left: 5px solid $color1;
         .post-card-title{
-            color: $extra;
-            font-weight: bold;
+            color: $color1;
         }
         .post-card-date{
-            color: $extra;
+            color: $color1;
         }
     }
 
@@ -65,3 +75,18 @@ a{
         text-decoration: none;
     }
 }
+
+.alert{
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 2.5px 10px;
+
+
+    .alert-text{
+        margin-left: 10px;
+    }
+}
+

@@ -2,6 +2,7 @@
 path: "/blog/crap7"
 date: "2017-11-07"
 title: "bono malum superate"
+category: "computer science"
 ---
 Overcome evil with good
 Overcome evil with good

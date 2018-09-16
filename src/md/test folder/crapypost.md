@@ -2,6 +2,7 @@
 path: "/blog/crap"
 date: "2017-11-07"
 title: "ad augusta per angusta"
+category: "computer science"
 ---
 to rise to a high position overcoming hardships
 to rise to a high position overcoming hardships

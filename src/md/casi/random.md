@@ -1,7 +1,7 @@
 ---
-path: "/blog/super-cool-thing"
+path: "/info/biblioteca/como-tirar-cartao"
 date: "2017-11-07"
-title: "super cool thing"
+title: "como tirar seu cartão"
 category: "univesity"
 ---
 There must be at least 3 dashes separating each header cell.
