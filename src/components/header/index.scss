@@ -2,9 +2,6 @@
 
 
 
-
-
-
     @mixin no-user-select() {
         outline: none;
         -webkit-touch-callout: none; /* iOS Safari */
@@ -109,6 +106,7 @@
                         width: 100%;
                         text-decoration: none;
                         color: whitesmoke;
+                        margin-bottom: 10px;
                         mark{
                             @include mark(whitesmoke);
                         }
@@ -156,3 +154,14 @@
             }
         }
     }
+
+
+.iconSlack{
+    path{
+        color: white;
+    }
+}
+
+.slack{
+    color: white;
+}
