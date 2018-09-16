@@ -84,7 +84,9 @@ export default class BlogPages extends React.Component<IndexPageProps, IState> {
                         {itens.map(i =>
                             <a href={i.node.frontmatter.path}>
                                 <div className="carditem" key={i.node.frontmatter.path}>
-                                    {i.node.frontmatter.title}
+                                    <div className="carditemtitle">
+                                        {i.node.frontmatter.title}
+                                    </div>
                                     <div className="cardDate">{i.node.frontmatter.date.toString()}</div>
                                 </div>
                             </a>)

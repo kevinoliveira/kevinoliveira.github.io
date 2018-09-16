@@ -16,18 +16,48 @@
         .carditem{
             width: 100%;
             height: 4rem;
-            padding: 1rem;
+            padding: 1rem 0 0 0;
             border: solid $color1;
-            color: $color1;
-            font-weight: bold;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-transform: capitalize;
-            &:hover {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: white;
+            
+            .carditemtitle{
+                padding: 3px;
+                color: $color1;
+                font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-transform: capitalize;
+            }
+
+            .cardDate{
+                display: flex;
+                align-items: center;
+                padding: 3px;
+                margin :0;
+                font-weight: bold;
+                
+                // height: 100%;
+                font-size: 0.75rem;
+
                 background-color: $color1;
                 color: whitesmoke;
             }
+            &:hover {
+                background-color: $color1;
+                .carditemtitle{
+                    color: whitesmoke;
+                }
+                .cardDate{
+                    background-color: white;
+                    color: $color1;
+                }
+            }
+
         }
     }
 
