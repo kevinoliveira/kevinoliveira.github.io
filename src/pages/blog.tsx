@@ -79,7 +79,7 @@ export default class BlogPages extends React.Component<IndexPageProps, IState> {
             const groupName = group !== "null" ? group : "Others";
             const element = (
                 <div key={groupName}>
-                    <h3 className="category">{groupName}</h3>
+                    <h3 className="category">{groupName+` (${itens.length})`}</h3>
                     <div className="itens">
                         {itens.map(i =>
                             <a href={i.node.frontmatter.path}>
