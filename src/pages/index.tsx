@@ -30,7 +30,7 @@ export default class extends React.Component<IndexPageProps, {}> {
         <h1>Hi people</h1>
         <p>
             This is my personal page and is under construction. and o only have 
-          <strong> {this.props.data.allMarkdownRemark.totalCount}</strong> blog post... what a shame.
+          <strong> {this.props.data.allMarkdownRemark.totalCount}</strong> blog posts... what a shame.
         </p>
         <Link to="/blog/">Go to Blog</Link>
       </div>
