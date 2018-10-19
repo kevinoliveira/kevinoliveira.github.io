@@ -1,18 +1,15 @@
-@import '../../globalvars.scss';
+@import "../../globalvars.scss";
 
+.footer {
+  display: flex;
+  height: 100px;
 
-    .footer{
-        display: flex;
-        height: 100px;
-        
-        background-color: transparent;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        // margin-top: 2rem;
-        color: black;
-        font-weight: bold;
-        border-radius: 5px 5px 0px 0px;
-      
-    }
-
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  // margin-top: 2rem;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px 5px 0px 0px;
+}

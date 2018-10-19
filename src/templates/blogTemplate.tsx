@@ -1,10 +1,10 @@
 import * as React from "react";
-import Link from 'gatsby-link'
+import Link from "gatsby-link";
 
-import "./index.scss"
+import "./index.scss";
 
 export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
+  data // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
@@ -13,8 +13,10 @@ export default function Template({
       <div className="blog-post">
         <h1 className="title">{frontmatter.title}</h1>
         <div className="subtitle">
-          <Link to="/blog" className="go-back-wrapper">go back</Link>
-          <h5 >{frontmatter.date}</h5>
+          <Link to="/blog" className="go-back-wrapper">
+            go back
+          </Link>
+          <h5>{frontmatter.date}</h5>
         </div>
         <div
           className="blog-post-content"
