@@ -25,6 +25,7 @@ class Header extends React.Component<{}, State> {
   render() {
     const menuItens: IMenuItem[] = [
       { key: "blog", to: "/blog", title: "blog" },
+      { key: "page-2", to: "/page-2", title: "page2" },
       { key: "contact", to: "/contact", title: "contact" },
       {
         external: true,
@@ -49,9 +50,9 @@ class Header extends React.Component<{}, State> {
 
     return (
       <div className="header">
-        <div className="title-wrapper">
+        {/* <div className="title-wrapper">
           <Link to="/">kevinoliveira.github.io</Link>
-        </div>
+        </div> */}
         <div className="nav-wrapper-desktop">{menuItensJSX}</div>
         <div className="nav-wrapper-mobile">
           <div className="nav-wrapper-mobile-menu" onClick={this.flipState}>

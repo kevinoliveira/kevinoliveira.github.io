@@ -40,10 +40,12 @@
 .header {
   display: inline-flex;
   background-color: transparent;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
-  max-width: 1000px;
-  margin-bottom: 2rem;
+  height: 100%;
+  // max-width: 1000px;
+  // margin-bottom: 2rem;
 
   .title-wrapper {
     display: flex;

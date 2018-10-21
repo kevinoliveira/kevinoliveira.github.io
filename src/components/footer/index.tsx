@@ -4,7 +4,7 @@ import "./index.scss";
 
 const Footer = () => (
   <div className="footer">
-    <code>/* Made in 2018, with a thinkpad and free software */</code>
+    <code>// Made in 2018, with a thinkpad and free software </code>
   </div>
 );
 

@@ -59,75 +59,59 @@ body,
   color: black;
 }
 
-@media screen and (max-width: 600px) {
-  .children-wrapper {
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-  }
+// @mixin arrows($up, $down) {
+//   background: linear-gradient(45deg, $down 22.5px, transparent 22.5px) 32px 32px,
+//     linear-gradient(
+//       45deg,
+//       $down 22.5px,
+//       transparent 22.5px,
+//       transparent 45.5px,
+//       $up 45.5px,
+//       $up 67.5px,
+//       transparent 67.5px
+//     ),
+//     linear-gradient(
+//       -45deg,
+//       $down 11.5px,
+//       transparent 11.5px,
+//       transparent 34px,
+//       $down 34px,
+//       $down 56.5px,
+//       transparent 56.5px,
+//       transparent 79px,
+//       $down 79px
+//     );
+//   background-color: $up;
+//   background-size: 64px 64px;
+// }
+
+@mixin pluses() {
+  -moz-box-shadow: 0 6px 11px -4px rgba(0, 0, 0, 0.38) inset,
+    0 -6px 11px -4px rgba(0, 0, 0, 0.38) inset;
+  -webkit-box-shadow: 0 6px 11px -4px rgba(0, 0, 0, 0.38) inset,
+    0 -6px 11px -4px rgba(0, 0, 0, 0.38) inset;
+  box-shadow: 0 6px 11px -4px rgba(0, 0, 0, 0.38) inset,
+    0 -6px 11px -4px rgba(0, 0, 0, 0.38) inset;
 }
 
-@media screen and (min-width: 600px) {
-  .children-wrapper {
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem;
-  }
-}
-
-@mixin arrows($up, $down) {
-  background: linear-gradient(45deg, $down 22.5px, transparent 22.5px) 32px 32px,
-    linear-gradient(
-      45deg,
-      $down 22.5px,
-      transparent 22.5px,
-      transparent 45.5px,
-      $up 45.5px,
-      $up 67.5px,
-      transparent 67.5px
-    ),
-    linear-gradient(
-      -45deg,
-      $down 11.5px,
-      transparent 11.5px,
-      transparent 34px,
-      $down 34px,
-      $down 56.5px,
-      transparent 56.5px,
-      transparent 79px,
-      $down 79px
-    );
-  background-color: $up;
-  background-size: 64px 64px;
-}
-
-.children-card {
-  background-color: white;
-  width: 100%;
-  max-width: 1000px;
-  height: 100%;
-  z-index: 0;
-  border: 1px solid black;
-  padding: 1.5rem;
-  box-shadow: 5px 5px black;
-}
+// .children-card {
+//   background-color: white;
+//   width: 100%;
+//   max-width: 1000px;
+//   height: 100%;
+//   z-index: 0;
+//   padding: 1.5rem;
+//   box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.38);
+//   border-radius: 25px;
+// }
 
 .background,
 body {
-  // background-color: grey;
+  background-color: whitesmoke;
   position: absolute;
   z-index: -2;
   width: 100%;
   height: 100%;
-  @include arrows($color3, $color4);
 }
 
 .background-top {
@@ -136,4 +120,75 @@ body {
   width: 100%;
   height: 250px;
   z-index: -1;
+  background-color: grey;
+
+  // @include pluses();
+}
+
+.children-wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  // display: flex;
+  // align-items: flex-start;
+  // flex-direction: column;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(60px, auto);
+
+  .page-title-grid {
+    grid-column: 1 / 5;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    h1 {
+      margin: 0px;
+      text-transform: capitalize;
+      color: white;
+    }
+  }
+  .links-grid {
+    grid-column: 5 / 10;
+    grid-row: 1;
+  }
+  .information-grid {
+    grid-column: 10 / 13;
+    grid-row: 1 / 5;
+  }
+  .title-grid {
+    grid-column: 1 / 10;
+    grid-row: 2;
+    h1 {
+      margin: 0px;
+      text-transform: capitalize;
+      color: white;
+    }
+  }
+  .content-grid {
+    grid-column: 1 / 9;
+    grid-row: 3 / 10;
+  }
+  // .six {
+  //   grid-column: 3;
+  //   grid-row: 4;
+  // }
+  .example {
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.38);
+  }
+  .example-2 {
+    padding: 1em;
+    border: 2px white dashed;
+    color: white;
+  }
+  .example-3 {
+    padding: 1em;
+    // border: 2px white dashed;
+    color: white;
+  }
 }
