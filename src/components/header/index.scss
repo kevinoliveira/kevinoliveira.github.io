@@ -18,11 +18,14 @@
 
 @mixin hoverThing($bold: true) {
   @if $bold {
-    color: white;
+    color: darkslategray;
+    // color: white;
     cursor: pointer;
     font-weight: bold;
   } @else {
-    color: white;
+    // color: white;
+    color: darkslategray;
+
     cursor: pointer;
   }
 }
@@ -53,15 +56,19 @@
     font-size: 1.5rem;
     a {
       text-decoration: none;
-      color: whitesmoke;
+      // color: whitesmoke;
+      color: darkslategray;
+
       @include no-user-select();
       mark {
-        @include mark(whitesmoke);
+        @include mark(darkslategray);
+        // @include mark(whitesmoke);
       }
       &:hover {
         @include hoverThing(false);
         mark {
-          @include mark(white);
+          @include mark(darkslategray);
+          // @include mark(white);
         }
       }
     }
@@ -76,7 +83,9 @@
       flex-direction: column;
 
       .nav-wrapper-mobile-menu {
-        color: whitesmoke;
+        // color: whitesmoke;
+        color: darkslategray;
+
         cursor: pointer;
         margin: 0;
         height: 37px;
@@ -87,7 +96,8 @@
           @include hoverThing();
 
           mark {
-            @include mark(white);
+            // @include mark(white);
+            @include mark(darkslategray);
           }
         }
       }
@@ -102,15 +112,18 @@
           @include capitalize();
           width: 100%;
           text-decoration: none;
-          color: whitesmoke;
+          // color: whitesmoke;
+          color: darkslategray;
           margin-bottom: 10px;
           mark {
-            @include mark(whitesmoke);
+            // @include mark(whitesmoke);
+            @include mark(darkslategray);
           }
           &:hover {
             @include hoverThing();
             mark {
-              @include mark(white);
+              @include mark(darkslategray);
+              // @include mark(white);
             }
           }
         }
@@ -128,7 +141,8 @@
         margin: 0 2px;
         padding: 0 10px;
         text-decoration: none;
-        color: whitesmoke;
+        color: darkslategray;
+        // color: whitesmoke;
 
         @include flex(center);
         @include no-user-select();

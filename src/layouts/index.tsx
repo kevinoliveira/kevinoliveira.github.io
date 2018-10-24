@@ -20,8 +20,10 @@ interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
 class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
   public render() {
     const items: Item[] = [
-      { legend: "BTC", value: "1DECAF2uSpFTP4L1fAHR8GCLrPqdwdLse9" },
-      { legend: "ETC", value: "0xDECAF9CD2367cdbb726E904cD6397eDFcAe6068D" }
+      // { legend: "BTC", value: "1DECAF2uSpFTP4L1fAHR8GCLrPqdwdLse9" },
+      // { legend: "ETC", value: "0xDECAF9CD2367cdbb726E904cD6397eDFcAe6068D" }
+      { legend: "POLITICAL", value: "anarcho-capitalist" },
+      { legend: "FREEDOM", value: "FIGHTER" }
     ];
 
     return (

@@ -15,8 +15,8 @@
   margin-bottom: 3rem;
   margin-top: 1rem;
 
-  border-top: solid black;
-  border-bottom: solid black;
+  border-top: solid darkslategray;
+  border-bottom: solid darkslategray;
 
   h5 {
     margin: 0.5rem 0;
@@ -27,12 +27,12 @@
   font-family: "Ubuntu", sans-serif;
 
   img {
-    border: 2px solid black;
+    border: 2px solid darkslategray;
     width: 100%;
   }
 
   blockquote {
-    border-left: 5px solid $extra;
+    border-left: 5px solid darkslategray;
     padding: 1px 1px 1px 5px;
     p {
       margin: 0;
@@ -45,24 +45,27 @@
 
   table {
     border-collapse: collapse;
-    border: 2px solid black;
+    border: 2px solid darkslategray;
     width: 100%;
     th {
-      border: 1px solid black;
-      background-color: $extra;
+      border: 1px solid darkslategray;
+      background-color: darkslategray;
       color: white;
       font-weight: bold;
     }
     td {
-      border: 1px solid black;
+      border: 1px solid darkslategray;
     }
   }
   strong {
     font-weight: inherit;
-    color: white;
-    background-color: $color1;
+    // color: white;
+    // background-color: $color1;
     padding-left: 2.5px;
     padding-right: 2.5px;
+    color: darkslategray;
+    background-color: turquoise;
+    font-weight: bold;
   }
 }
 
