@@ -1,28 +1,28 @@
 {
   "assetsByChunkName": {
     "component---src-layouts-index-tsx": [
-      "component---src-layouts-index-tsx-b6611f6b6a87f58d1b3c.js",
-      "component---src-layouts-index-tsx-b6611f6b6a87f58d1b3c.js.map"
+      "component---src-layouts-index-tsx-91d710b4e2066e960367.js",
+      "component---src-layouts-index-tsx-91d710b4e2066e960367.js.map"
     ],
     "path---blog-test": [
       "path---blog-test-6cf8cd75f56bea88b8b3.js",
       "path---blog-test-6cf8cd75f56bea88b8b3.js.map"
     ],
     "component---src-templates-blog-template-tsx": [
-      "component---src-templates-blog-template-tsx-52f7199918d485142f06.js",
-      "component---src-templates-blog-template-tsx-52f7199918d485142f06.js.map"
+      "component---src-templates-blog-template-tsx-ae6710812347574852a0.js",
+      "component---src-templates-blog-template-tsx-ae6710812347574852a0.js.map"
     ],
     "path---blog": [
-      "path---blog-5913fed1c9f5c02ff87f.js",
-      "path---blog-5913fed1c9f5c02ff87f.js.map"
+      "path---blog-a6d15ce976b2a516936d.js",
+      "path---blog-a6d15ce976b2a516936d.js.map"
     ],
     "path---blog-crap-4": [
       "path---blog-crap-4-05a7c8c449a81d414ce4.js",
       "path---blog-crap-4-05a7c8c449a81d414ce4.js.map"
     ],
     "path---": [
-      "path----557518bd178906f8d58a.js",
-      "path----557518bd178906f8d58a.js.map"
+      "path----47128108c2f80df2ca90.js",
+      "path----47128108c2f80df2ca90.js.map"
     ],
     "path---info-biblioteca-como-tirar-cartao": [
       "path---info-biblioteca-como-tirar-cartao-77142faf7f21850578e2.js",
@@ -45,8 +45,8 @@
       "path---blog-crap-5-c0b6f4e86f4479b24dc0.js.map"
     ],
     "path---index": [
-      "path---index-8c3968e1eca4d9bfba3d.js",
-      "path---index-8c3968e1eca4d9bfba3d.js.map"
+      "path---index-323f6ce1379a2767466a.js",
+      "path---index-323f6ce1379a2767466a.js.map"
     ],
     "component---src-pages-blog-tsx": [
       "component---src-pages-blog-tsx-3167de14c4f080047261.js",
@@ -57,16 +57,16 @@
       "path---blog-crap-1-5fadd884035fbd2ade63.js.map"
     ],
     "component---src-pages-page-2-tsx": [
-      "component---src-pages-page-2-tsx-e5200429368bb2772333.js",
-      "component---src-pages-page-2-tsx-e5200429368bb2772333.js.map"
+      "component---src-pages-page-2-tsx-b6d14edf72e47ad22e1a.js",
+      "component---src-pages-page-2-tsx-b6d14edf72e47ad22e1a.js.map"
     ],
     "path---blog-crap-3": [
       "path---blog-crap-3-d45cc8ab44de34679f4c.js",
       "path---blog-crap-3-d45cc8ab44de34679f4c.js.map"
     ],
     "commons": [
-      "commons-0715db58e0ff93ec7b1f.js",
-      "commons-0715db58e0ff93ec7b1f.js.map"
+      "commons-605730581979c5cec35b.js",
+      "commons-605730581979c5cec35b.js.map"
     ],
     "component---src-pages-404-tsx": [
       "component---src-pages-404-tsx-66ebd35ef4104d3f7b89.js",
@@ -89,12 +89,12 @@
       "path---blog-super-cool-thing-53fff7afe79e497f6675.js.map"
     ],
     "component---src-pages-index-tsx": [
-      "component---src-pages-index-tsx-fc5c0cadd068eebf11f4.js",
-      "component---src-pages-index-tsx-fc5c0cadd068eebf11f4.js.map"
+      "component---src-pages-index-tsx-5047c2d57465c2a41677.js",
+      "component---src-pages-index-tsx-5047c2d57465c2a41677.js.map"
     ],
     "app": [
-      "app-1f1a0612608ad817a71d.js",
-      "app-1f1a0612608ad817a71d.js.map"
+      "app-69822742a93f1d9570dd.js",
+      "app-69822742a93f1d9570dd.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
