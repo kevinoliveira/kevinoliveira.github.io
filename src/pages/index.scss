@@ -67,5 +67,11 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .grid-index-page {
+    grid-template-columns: 100%;
+  }
+}
+
 //009688
 //00ced1

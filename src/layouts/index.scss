@@ -179,6 +179,12 @@ body {
   .information-grid {
     grid-column: 10 / 13;
     grid-row: 1 / 5;
+    padding: 1em;
+    color: darkslategray;
+    transform: skew(0deg, -1.5deg);
+    background-color: whitesmoke;
+    opacity: 0.9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.38);
   }
   .title-grid {
     grid-column: 1 / 10;
@@ -194,10 +200,6 @@ body {
     grid-column: 1 / 9;
     grid-row: 2 / 10;
   }
-  // .six {
-  //   grid-column: 3;
-  //   grid-row: 4;
-  // }
   .example {
     border-radius: 5px;
     // background-color: whitesmoke;
@@ -206,22 +208,35 @@ body {
     background-color: whitesmoke;
     opacity: 0.9;
   }
-  .example-2 {
-    padding: 1em;
-    // border: 2px white dashed;
-    // border: 2px darkslategray dashed;
+  // .example-2 {
+  //   padding: 1em;
+  //   // border: 2px white dashed;
+  //   // border: 2px darkslategray dashed;
 
-    // color: white;
-    color: darkslategray;
-    transform: skew(0deg, -1.5deg);
-    background-color: whitesmoke;
-    opacity: 0.9;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.38);
-  }
+  //   // color: white;
+  //   color: darkslategray;
+  //   transform: skew(0deg, -1.5deg);
+  //   background-color: whitesmoke;
+  //   opacity: 0.9;
+  //   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.38);
+  // }
   .example-3 {
     padding: 1em;
     // border: 2px white dashed;
     // color: white;
     color: darkslategray;
+  }
+
+  @media screen and (max-width: 600px) {
+    // background-color: rebeccapurple;
+    .information-grid {
+      display: none;
+    }
+    .links-grid {
+      grid-column: 5 / 13;
+    }
+    .content-grid {
+      grid-column: 1 / 13;
+    }
   }
 }

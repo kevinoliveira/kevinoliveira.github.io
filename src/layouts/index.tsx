@@ -51,7 +51,7 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
           <div className="links-grid">
             <Header />
           </div>
-          <div className="example-2 information-grid">
+          <div className="information-grid">
             <InformationCards items={items} />
           </div>
           {/* <div className="example-3 title-grid">
