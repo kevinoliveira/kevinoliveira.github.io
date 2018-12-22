@@ -4,3 +4,16 @@ $color3: #eff0f1;
 $color4: #fcfbfc;
 $color5: #e9f0f4;
 $extra: #036564;
+
+
+@mixin grid( $n) {
+    // $n: 24;
+    $width: 95vw;
+    display: grid;
+  
+    grid-auto-rows: calc( #{$width} / #{$n});
+    grid-template-columns: repeat(
+      $n,
+        calc( #{$width} / #{$n})
+    );
+}
