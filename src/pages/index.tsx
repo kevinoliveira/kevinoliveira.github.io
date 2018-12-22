@@ -38,16 +38,11 @@ export default class extends React.Component<IndexPageProps, {}> {
   public render() {
     return (
       <Grid>
-
-        <h1>Ultimos posts</h1>
-
-        {/* <div className="grid-index-page"> */}
-        {this.props.data.allMarkdownRemark.edges.map(edge => (
-          <div key={edge.node.id} className="grid-index-page-card">
-            {edge.node.frontmatter.title}
-          </div>
-        ))}
-        {/* </div> */}
+        <div className="index-title">title</div>
+        <div className="index-art">art</div>
+        <div className="index-links">links</div>
+        <div className="index-footer">footer</div>
+        <div className="index-posts">posts</div>
       </Grid>
     );
   }

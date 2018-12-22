@@ -2,7 +2,7 @@ import * as React from "react";
 import Helmet from "react-helmet";
 import "./index.scss";
 
-interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
+interface DefaultLayoutProps {
   data: {
     site: {
       siteMetadata: {
