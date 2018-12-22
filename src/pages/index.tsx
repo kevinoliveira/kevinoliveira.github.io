@@ -4,6 +4,7 @@ import Banner from "../components/banner";
 import Footer from "../components/footer";
 
 import "./index.scss";
+import Grid from "../components/grid";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -36,22 +37,18 @@ export default class extends React.Component<IndexPageProps, {}> {
   }
   public render() {
     return (
-      <div>
+      <Grid>
+
         <h1>Ultimos posts</h1>
-        {/* <p>
-          This is my personal page and is under construction. and o only have
-          <strong> {this.props.data.allMarkdownRemark.totalCount}</strong> blog
-          posts... what a shame.
-        </p> */}
-        {/* <Link to="/blog/">Go to Blog</Link> */}
-        <div className="grid-index-page">
-          {this.props.data.allMarkdownRemark.edges.map(edge => (
-            <div key={edge.node.id} className="grid-index-page-card">
-              {edge.node.frontmatter.title}
-            </div>
-          ))}
-        </div>
-      </div>
+
+        {/* <div className="grid-index-page"> */}
+        {this.props.data.allMarkdownRemark.edges.map(edge => (
+          <div key={edge.node.id} className="grid-index-page-card">
+            {edge.node.frontmatter.title}
+          </div>
+        ))}
+        {/* </div> */}
+      </Grid>
     );
   }
 }

@@ -17,7 +17,7 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
   public render() {
 
     return (
-      <div className="main-grid">
+      <div className="helmet-wrapper">
         <Helmet
           title="Kevin Oliveira"
           meta={[
