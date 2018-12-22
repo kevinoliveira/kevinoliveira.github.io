@@ -31,7 +31,7 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
           meta={[
             { name: "description", content: "Kevin Oliveira blog " },
             { name: "keywords", content: "sample, something" },
-            { name: "theme-color", content: "#2f4f4f" }
+            { name: "theme-color", content: "#f5f5f5" }
           ]}
         />
         {itens}

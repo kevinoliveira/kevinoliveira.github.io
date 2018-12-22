@@ -24,7 +24,24 @@ body {
 .main-grid {
 
   padding-top: 20px;
-  @include grid(12)
+
+
+  @include for-phone-only {
+    @include grid(6);
+	}
+	@include for-tablet-portrait-up {
+    @include grid(12);
+	}
+	@include for-tablet-landscape-up {
+    @include grid(18);
+	}
+	@include for-desktop-up {
+    @include grid(24);
+	}
+	@include for-big-desktop-up {
+    @include grid(30);
+	}
+
   
 }
 .box {
