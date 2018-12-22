@@ -15,14 +15,6 @@ interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
 
 class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
   public render() {
-    const n = 2000;
-    const arr = Array.apply(null, Array(n));
-
-    console.log(arr.length);
-    const itens = arr.map((_a, i) => {
-      console.log(i);
-      return <div className="box" key={i} >{i}</div>;
-    });
 
     return (
       <div className="main-grid">
@@ -34,7 +26,7 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
             { name: "theme-color", content: "#f5f5f5" }
           ]}
         />
-        {itens}
+        {this.props.children()}
       </div>
     );
   }
