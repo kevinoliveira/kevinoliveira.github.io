@@ -46,4 +46,24 @@ $extra: #036564;
   align-items: center;
   font-weight: bold;
   text-transform: uppercase;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+@mixin flex-c-c() {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-l-c() {
+  display: grid;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-r-c() {
+  display: grid;
+  justify-content: flex-end;
+  align-items: center;
 }
