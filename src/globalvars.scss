@@ -67,3 +67,9 @@ $extra: #036564;
   justify-content: flex-end;
   align-items: center;
 }
+
+@mixin flex-l-u() {
+  display: grid;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

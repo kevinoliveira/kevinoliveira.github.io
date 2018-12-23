@@ -15,7 +15,7 @@ interface IMenuItem {
   rel?: string;
 }
 
-class Header extends React.Component<{}, State> {
+class Links extends React.Component<{}, State> {
   state = { menuOpen: false };
 
   private flipState = () => {
@@ -48,29 +48,8 @@ class Header extends React.Component<{}, State> {
       );
     });
 
-    return (
-      <div className="header">
-        {/* <div className="title-wrapper">
-          <Link to="/">kevinoliveira.github.io</Link>
-        </div> */}
-        <div className="nav-wrapper-desktop">{menuItensJSX}</div>
-        <div className="nav-wrapper-mobile">
-          <div className="nav-wrapper-mobile-menu" onClick={this.flipState}>
-            Menu
-          </div>
-          <div
-            className={
-              this.state.menuOpen
-                ? "nav-wrapper-mobile-itens-open"
-                : "nav-wrapper-mobile-itens-close"
-            }
-          >
-            {menuItensJSX}
-          </div>
-        </div>
-      </div>
-    );
+    return <div className="index-links">{menuItensJSX}</div>;
   }
 }
 
-export default Header;
+export default Links;

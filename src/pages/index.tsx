@@ -7,31 +7,11 @@ import "./index.scss";
 import Grid from "../components/grid";
 import Title from "../components/title";
 import Art from "../components/art";
+import Posts from "../components/posts";
+import Links from "../components/links";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
-interface IndexPageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string;
-      };
-    };
-    allMarkdownRemark: {
-      totalCount: number;
-      edges: {
-        node: {
-          id: string;
-          frontmatter: {
-            title: string;
-            date: string;
-            category: string;
-          };
-        };
-      }[];
-    };
-  };
-}
 
 export default class extends React.Component<IndexPageProps, {}> {
   constructor(props: IndexPageProps, context: any) {
@@ -41,12 +21,19 @@ export default class extends React.Component<IndexPageProps, {}> {
     return (
       <Grid>
         <Title />
-        {/* <div className="index-art">art</div> */}
         <Art />
-        <div className="index-links">links</div>
-        {/* <div className="index-footer">footer</div> */}
+        <Links />
+        {/* <div className="index-links">links</div> */}
         <Footer />
-        <div className="index-posts">posts</div>
+        <Posts data={this.props.data} />
+
+        {/* <div className="index-posts">
+          {this.props.data.allMarkdownRemark.edges.map(edge => (
+            <div key={edge.node.id} className="grid-index-page-card">
+              {edge.node.frontmatter.title}
+            </div>
+          ))}
+        </div> */}
       </Grid>
     );
   }
