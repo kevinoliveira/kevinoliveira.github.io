@@ -4,6 +4,9 @@
   background-color: #647ce933;
   // @include demo-text();
 
+  margin: 10px;
+  border-radius: 10px;
+
   @include flex-c-c();
 
   @include for-phone-only {
