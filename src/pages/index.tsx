@@ -42,7 +42,8 @@ export default class extends React.Component<IndexPageProps, {}> {
         <Title />
         <div className="index-art">art</div>
         <div className="index-links">links</div>
-        <div className="index-footer">footer</div>
+        {/* <div className="index-footer">footer</div> */}
+        <Footer />
         <div className="index-posts">posts</div>
       </Grid>
     );

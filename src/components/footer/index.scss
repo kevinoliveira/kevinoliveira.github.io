@@ -1,15 +1,36 @@
 @import "../../globalvars.scss";
 
-.footer {
-  display: flex;
-  height: 100px;
+.index-footer {
+  background-color: #647ce933;
+  // @include demo-text();
 
-  background-color: transparent;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  // margin-top: 2rem;
-  color: black;
-  font-weight: bold;
-  border-radius: 5px 5px 0px 0px;
+  @include flex-c-c();
+
+  @include for-phone-only {
+    grid-column: 1/7;
+    grid-row: 20;
+  }
+  @include for-tablet-portrait-up {
+    grid-column: 1/13;
+    grid-row: 15;
+  }
+  @include for-tablet-landscape-up {
+    grid-column: 13/19;
+    grid-row: 9;
+  }
+  @include for-desktop-up {
+    grid-column: 19/25;
+    grid-row: 8;
+  }
+  @include for-big-desktop-up {
+    grid-column: 22/31;
+    grid-row: 10;
+  }
+
+  code {
+    font-family: monospace;
+    font-weight: bold;
+    color: black;
+    font-size: 0.8rem;
+  }
 }
