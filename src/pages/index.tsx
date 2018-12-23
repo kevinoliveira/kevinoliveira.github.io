@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import "./index.scss";
 import Grid from "../components/grid";
 import Title from "../components/title";
+import Art from "../components/art";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -40,7 +41,8 @@ export default class extends React.Component<IndexPageProps, {}> {
     return (
       <Grid>
         <Title />
-        <div className="index-art">art</div>
+        {/* <div className="index-art">art</div> */}
+        <Art />
         <div className="index-links">links</div>
         {/* <div className="index-footer">footer</div> */}
         <Footer />
