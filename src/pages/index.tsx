@@ -1,6 +1,4 @@
 import * as React from "react";
-import Link from "gatsby-link";
-import Banner from "../components/banner";
 import Footer from "../components/footer";
 
 import "./index.scss";
@@ -23,17 +21,8 @@ export default class extends React.Component<IndexPageProps, {}> {
         <Title />
         <Art />
         <Links />
-        {/* <div className="index-links">links</div> */}
         <Footer />
         <Posts data={this.props.data} />
-
-        {/* <div className="index-posts">
-          {this.props.data.allMarkdownRemark.edges.map(edge => (
-            <div key={edge.node.id} className="grid-index-page-card">
-              {edge.node.frontmatter.title}
-            </div>
-          ))}
-        </div> */}
       </Grid>
     );
   }
