@@ -15,7 +15,6 @@ interface DefaultLayoutProps {
 
 class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
   public render() {
-
     return (
       <div className="helmet-wrapper">
         <Helmet
@@ -23,7 +22,7 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
           meta={[
             { name: "description", content: "Kevin Oliveira blog " },
             { name: "keywords", content: "sample, something" },
-            { name: "theme-color", content: "#f5f5f5" }
+            { name: "theme-color", content: "#2c2c2c" }
           ]}
         />
         {this.props.children()}

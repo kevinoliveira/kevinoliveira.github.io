@@ -7,6 +7,7 @@ import Title from "../components/title";
 import Art from "../components/art";
 import Posts from "../components/posts";
 import Links from "../components/links";
+import { IndexPageProps } from "../declarations";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -16,12 +17,13 @@ export default class extends React.Component<IndexPageProps, {}> {
     super(props, context);
   }
   public render() {
+    console.log(this.props.data);
     return (
       <Grid>
         <Title />
         <Art />
         <Links />
-        <Footer />
+        {/* <Footer /> */}
         <Posts data={this.props.data} />
       </Grid>
     );
@@ -41,6 +43,7 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
+            path
             title
             date
             category

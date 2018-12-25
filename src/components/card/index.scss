@@ -1,0 +1,80 @@
+@import "../../globalvars.scss";
+
+.card-body {
+  margin: 10px;
+  max-height: 100px;
+  border-radius: 10px;
+
+  font-size: 1.2rem;
+  color: #4c4c4c;
+
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+
+  user-select: none;
+
+  cursor: pointer;
+
+  &:hover {
+    font-weight: bold;
+    color: black;
+
+    @include for-phone-only {
+      transform: scale(1.1);
+    }
+    @include for-tablet-portrait-up {
+      transform: scale(1.1);
+    }
+    @include for-tablet-landscape-up {
+      transform: scale(1.1);
+    }
+    @include for-desktop-up {
+      transform: translateX(-20px);
+    }
+    @include for-big-desktop-up {
+      transform: translateX(-20px);
+    }
+  }
+
+  .card-body-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+  }
+
+  .card-body-content {
+    padding: 1px;
+    display: flex;
+    align-items: flex-end;
+
+    .card-body-content-left {
+      width: 100%;
+
+      .card-body-category {
+        font-size: 15px;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+      .card-body-date {
+        font-size: 12px;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+    }
+    .card-body-content-right {
+      width: 80px;
+
+      .card-body-languages {
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+      }
+    }
+  }
+}

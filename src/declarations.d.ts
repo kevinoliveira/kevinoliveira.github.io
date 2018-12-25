@@ -14,6 +14,7 @@ interface IndexPageProps {
         node: {
           id: string;
           frontmatter: {
+            path: string;
             title: string;
             date: string;
             category: string;
@@ -23,3 +24,5 @@ interface IndexPageProps {
     };
   };
 }
+
+export type language = "en" | "pt";

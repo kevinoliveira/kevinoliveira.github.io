@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 import * as groupBy from "lodash.groupby";
 
 import "./blog.scss";
+import Card from "../components/card";
 
 interface IndexPageProps {
   data: {
@@ -22,7 +23,7 @@ interface IEdge {
     frontmatter: {
       title: string;
       path: string;
-      date: Date;
+      date: string;
       tags?: string[];
       category?: string;
     };
@@ -82,14 +83,12 @@ export default class BlogPages extends React.Component<IndexPageProps, IState> {
           <div className="itens">
             {itens.map(i => (
               <a href={i.node.frontmatter.path}>
-                <div className="carditem" key={i.node.frontmatter.path}>
-                  <div className="carditemtitle">
-                    {i.node.frontmatter.title}
-                  </div>
-                  <div className="cardDate">
-                    {i.node.frontmatter.date.toString()}
-                  </div>
-                </div>
+                <Card
+                  title={i.node.frontmatter.title}
+                  category={groupName}
+                  date={new Date(i.node.frontmatter.date)}
+                  languages={["en", "pt"]}
+                />
               </a>
             ))}
           </div>
@@ -129,7 +128,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
-            date(formatString: "MMMM DD, YYYY")
+            date
             tags
             category
           }
