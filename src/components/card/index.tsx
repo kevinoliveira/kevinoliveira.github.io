@@ -18,7 +18,7 @@ class Card extends React.PureComponent<IProps, {}> {
         <div className="card-body-title">{title}</div>
         <div className="card-body-content">
           <div className="card-body-content-left">
-            <div className="card-body-category">{category}</div>
+            <div className="card-body-category">{category || "others"}</div>
             <div className="card-body-date">{date.toDateString()}</div>
           </div>
           <div className="card-body-content-right">

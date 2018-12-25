@@ -1,6 +1,7 @@
 import * as React from "react";
 import Link from "gatsby-link";
 import "./index.scss";
+import classNames = require("classnames");
 
 interface State {
   menuOpen: boolean;
@@ -15,7 +16,11 @@ interface IMenuItem {
   rel?: string;
 }
 
-class Links extends React.Component<{}, State> {
+interface IProps {
+  notHome?: boolean;
+}
+
+class Links extends React.Component<IProps, State> {
   state = { menuOpen: false };
 
   private flipState = () => {
@@ -48,7 +53,13 @@ class Links extends React.Component<{}, State> {
       );
     });
 
-    return <div className="index-links">{menuItensJSX}</div>;
+    return (
+      <div
+        className={classNames("index-links", this.props.notHome && "not-home")}
+      >
+        {menuItensJSX}
+      </div>
+    );
   }
 }
 

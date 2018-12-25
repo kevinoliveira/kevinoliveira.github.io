@@ -17,7 +17,6 @@ export default class extends React.Component<IndexPageProps, {}> {
     super(props, context);
   }
   public render() {
-    console.log(this.props.data);
     return (
       <Grid>
         <Title />
