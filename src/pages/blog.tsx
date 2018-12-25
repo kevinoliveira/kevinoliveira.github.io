@@ -102,7 +102,7 @@ export default class BlogPages extends React.Component<IndexPageProps, {}> {
 
     return (
       <Grid>
-        <Title />
+        <Title notHome />
         <Links notHome />
         <div className="grid-wrapper-categories">
           <h1 className="title">Blog Posts</h1>
