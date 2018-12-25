@@ -4,6 +4,8 @@
   // background-color: #8a89f533;
   border-radius: 10px;
 
+  cursor: pointer;
+
   font-weight: bold;
   text-transform: uppercase;
   margin: 10px;
@@ -72,4 +74,10 @@
       @include flex-l-c();
     }
   }
+}
+
+.index-title-link {
+  all: unset !important;
+  text-decoration: none;
+  color: black;
 }

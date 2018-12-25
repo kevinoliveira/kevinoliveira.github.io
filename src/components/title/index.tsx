@@ -2,6 +2,7 @@ import * as React from "react";
 // import Helmet from "react-helmet";
 import "./index.scss";
 import classNames = require("classnames");
+import Link from "gatsby-link";
 
 interface IProps {
   notHome?: boolean;
@@ -15,7 +16,9 @@ class Title extends React.PureComponent<IProps, {}> {
       <div
         className={classNames("index-title", this.props.notHome && "not-home")}
       >
-        kevin olivera
+        <Link className="index-title-link" to="/">
+          kevin olivera
+        </Link>
       </div>
     );
   }

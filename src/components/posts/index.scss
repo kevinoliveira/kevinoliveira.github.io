@@ -32,6 +32,11 @@
   grid-auto-rows: 140px;
   grid-template-columns: repeat(1, calc(100% / 1));
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
   .posts-card {
     margin: 10px;
     max-height: 100px;
