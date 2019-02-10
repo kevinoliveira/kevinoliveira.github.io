@@ -19,6 +19,7 @@
     "gatsby-plugin-typescript": "^1.4.10",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
+    "github-markdown-css": "^3.0.1",
     "lodash.groupby": "^4.6.0",
     "react": "^16.7.0",
     "react-particles-js": "^2.3.0"
