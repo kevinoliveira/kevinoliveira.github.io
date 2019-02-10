@@ -3,7 +3,7 @@ import * as React from "react";
 // import "./index.scss";
 import Card from "../card";
 import { IndexPageProps } from "../../declarations";
-import Link from "gatsby-link";
+// import Link from "gatsby-link";
 
 class Posts extends React.PureComponent<IndexPageProps, {}> {
   public render() {

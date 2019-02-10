@@ -1,6 +1,7 @@
 import * as React from "react";
-import Helmet from "react-helmet";
-// import "./index.scss";
+// import { graphql } from "../declarations";
+const { Helmet } = require("react-helmet");
+const _GHcss = require("github-markdown-css");
 
 interface DefaultLayoutProps {
   data: {
@@ -16,7 +17,7 @@ interface DefaultLayoutProps {
 class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
   public render() {
     return (
-      <div className="helmet-wrapper">
+      <div className="markdown-body">
         <Helmet
           title="Kevin Oliveira"
           meta={[
@@ -32,7 +33,7 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
 }
 
 export default DefaultLayout;
-
+//@ts-ignore
 export const pageQuery = graphql`
   query LayoutQuery {
     site {

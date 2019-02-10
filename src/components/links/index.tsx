@@ -44,21 +44,21 @@ class Links extends React.Component<IProps, State> {
       const { title, to, external, ...rest } = item;
       return !!external ? (
         <a href={to} {...rest}>
-          {title}
+          <li>{title}</li>
         </a>
       ) : (
         <Link {...rest} to={to}>
-          {title}
+          <li>{title}</li>
         </Link>
       );
     });
 
     return (
-      <div
+      <ul
         className={classNames("index-links", this.props.notHome && "not-home")}
       >
         {menuItensJSX}
-      </div>
+      </ul>
     );
   }
 }

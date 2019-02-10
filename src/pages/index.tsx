@@ -18,17 +18,16 @@ export default class extends React.Component<IndexPageProps, {}> {
   }
   public render() {
     return (
-      <Grid>
+      <div>
         <Title />
-        <Art />
         <Links />
-        {/* <Footer /> */}
         <Posts data={this.props.data} />
-      </Grid>
+        <Footer />
+      </div>
     );
   }
 }
-
+//@ts-ignore
 export const pageQuery = graphql`
   query IndexQuery {
     site {

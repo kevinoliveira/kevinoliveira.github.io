@@ -1,5 +1,5 @@
 declare const graphql: (query: TemplateStringsArray) => void;
-declare module "react-helmet";
+// declare module "react-helmet";
 
 interface IndexPageProps {
   data: {

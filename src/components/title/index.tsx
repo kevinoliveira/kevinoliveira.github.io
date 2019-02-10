@@ -1,7 +1,4 @@
 import * as React from "react";
-// import Helmet from "react-helmet";
-// import "./index.scss";
-import classNames = require("classnames");
 import Link from "gatsby-link";
 
 interface IProps {
@@ -10,16 +7,10 @@ interface IProps {
 
 class Title extends React.PureComponent<IProps, {}> {
   public render() {
-    // const { children } = this.props;
-
     return (
-      <div
-        className={classNames("index-title", this.props.notHome && "not-home")}
-      >
-        <Link className="index-title-link" to="/">
-          kevin olivera
-        </Link>
-      </div>
+      <Link className="index-title-link" to="/">
+        {this.props.notHome ? <h3>Kevin Oliveira</h3> : <h1>Kevin Oliveira</h1>}
+      </Link>
     );
   }
 }
