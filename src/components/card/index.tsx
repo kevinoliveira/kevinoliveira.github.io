@@ -1,8 +1,6 @@
 import * as React from "react";
 import { language } from "../../declarations";
 
-// import "./index.scss";
-
 interface IProps {
   languages: language[];
   title: string;

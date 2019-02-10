@@ -1,5 +1,4 @@
 import * as React from "react";
-// import "./index.scss";
 
 class Footer extends React.PureComponent<{}, {}> {
   public render() {

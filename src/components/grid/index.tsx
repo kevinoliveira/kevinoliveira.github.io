@@ -1,6 +1,4 @@
 import * as React from "react";
-import Helmet from "react-helmet";
-// import "./index.scss";
 
 class Grid extends React.PureComponent<{}, {}> {
   public render() {

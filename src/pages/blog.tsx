@@ -1,9 +1,7 @@
 import * as React from "react";
-import Link from "gatsby-link";
 
 import * as groupBy from "lodash.groupby";
 
-// import "./blog.scss";
 import Card from "../components/card";
 import Grid from "../components/grid";
 import Title from "../components/title";

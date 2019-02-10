@@ -1,14 +1,9 @@
 import * as React from "react";
-// import Helmet from "react-helmet";
-// import "./index.scss";
 import Card from "../card";
 import { IndexPageProps } from "../../declarations";
-// import Link from "gatsby-link";
 
 class Posts extends React.PureComponent<IndexPageProps, {}> {
   public render() {
-    // const { children } = this.props;
-
     return (
       <div className="index-posts">
         {this.props.data.allMarkdownRemark.edges.map((edge, i) => (

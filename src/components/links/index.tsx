@@ -1,7 +1,5 @@
 import * as React from "react";
 import Link from "gatsby-link";
-// import "./index.scss";
-import classNames = require("classnames");
 
 interface State {
   menuOpen: boolean;
@@ -59,15 +57,7 @@ class Links extends React.Component<IProps, State> {
       );
     });
 
-    return (
-      <h5>{menuItensJSX}</h5>
-
-      // <h5
-      //   className={classNames("index-links", this.props.notHome && "not-home")}
-      // >
-      //   {menuItensJSX}
-      // </h5>
-    );
+    return <h5>{menuItensJSX}</h5>;
   }
 }
 

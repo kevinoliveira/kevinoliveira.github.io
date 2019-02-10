@@ -1,5 +1,4 @@
 import * as React from "react";
-// import { graphql } from "../declarations";
 const { Helmet } = require("react-helmet");
 const _GHcss = require("github-markdown-css");
 

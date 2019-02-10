@@ -4,7 +4,6 @@ const { Helmet } = require("react-helmet");
 const _GHcss = require("github-markdown-css");
 import "./index.scss";
 import Title from "../components/title";
-import Links from "../components/links";
 
 export default function Template({
   data // this prop will be injected by the GraphQL query below.
