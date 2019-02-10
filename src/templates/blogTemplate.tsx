@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
-import "./index.scss";
+// import "./index.scss";
 import CardWrapper from "../components/cardWrapper";
 import Grid from "../components/grid";
 import Title from "../components/title";

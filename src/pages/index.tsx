@@ -1,7 +1,7 @@
 import * as React from "react";
 import Footer from "../components/footer";
 
-import "./index.scss";
+// import "./index.scss";
 import Grid from "../components/grid";
 import Title from "../components/title";
 import Art from "../components/art";

@@ -1,6 +1,6 @@
 import * as React from "react";
 // import Helmet from "react-helmet";
-import "./index.scss";
+// import "./index.scss";
 import Card from "../card";
 import { IndexPageProps } from "../../declarations";
 import Link from "gatsby-link";

@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "gatsby-link";
-import "./index.scss";
+// import "./index.scss";
 import classNames = require("classnames");
 
 interface State {

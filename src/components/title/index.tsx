@@ -1,6 +1,6 @@
 import * as React from "react";
 // import Helmet from "react-helmet";
-import "./index.scss";
+// import "./index.scss";
 import classNames = require("classnames");
 import Link from "gatsby-link";
 
