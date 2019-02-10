@@ -43,22 +43,30 @@ class Links extends React.Component<IProps, State> {
     const menuItensJSX = menuItens.map(item => {
       const { title, to, external, ...rest } = item;
       return !!external ? (
-        <a href={to} {...rest}>
-          <li>{title}</li>
-        </a>
+        <span>
+          <a href={to} {...rest}>
+            {title}
+          </a>
+          &nbsp; &nbsp; &nbsp;
+        </span>
       ) : (
-        <Link {...rest} to={to}>
-          <li>{title}</li>
-        </Link>
+        <span>
+          <Link {...rest} to={to}>
+            {title}
+          </Link>
+          &nbsp; &nbsp; &nbsp;
+        </span>
       );
     });
 
     return (
-      <ul
-        className={classNames("index-links", this.props.notHome && "not-home")}
-      >
-        {menuItensJSX}
-      </ul>
+      <h5>{menuItensJSX}</h5>
+
+      // <h5
+      //   className={classNames("index-links", this.props.notHome && "not-home")}
+      // >
+      //   {menuItensJSX}
+      // </h5>
     );
   }
 }
