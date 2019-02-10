@@ -17,9 +17,7 @@ class Card extends React.PureComponent<IProps, {}> {
         <a href={href}>
           <h3>{`${title}`}</h3>
         </a>
-        <h6>{`${date.toDateString()} | ${category || "others"} | ${"[" +
-          languages.join(", ") +
-          "]"}`}</h6>
+        <h6>{`${date.toDateString()} | ${category || "others"} `}</h6>
       </div>
     );
   }

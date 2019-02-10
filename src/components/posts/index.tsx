@@ -7,15 +7,14 @@ class Posts extends React.PureComponent<IndexPageProps, {}> {
     return (
       <div className="index-posts">
         {this.props.data.allMarkdownRemark.edges.map((edge, i) => (
-          <a href={edge.node.frontmatter.path}>
-            <Card
-              category={edge.node.frontmatter.category}
-              title={edge.node.frontmatter.title}
-              date={new Date(edge.node.frontmatter.date)}
-              languages={["en", "pt"]}
-              key={i}
-            />
-          </a>
+          <Card
+            href={edge.node.frontmatter.path}
+            category={edge.node.frontmatter.category}
+            title={edge.node.frontmatter.title}
+            date={new Date(edge.node.frontmatter.date)}
+            languages={["en", "pt"]}
+            key={i}
+          />
         ))}
       </div>
     );
