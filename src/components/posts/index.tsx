@@ -5,7 +5,7 @@ import { IndexPageProps } from "../../declarations";
 class Posts extends React.PureComponent<IndexPageProps, {}> {
   public render() {
     return (
-      <div className="index-posts">
+      <div>
         {this.props.data.allMarkdownRemark.edges.map((edge, i) => (
           <Card
             href={edge.node.frontmatter.path}
