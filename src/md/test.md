@@ -1,13 +1,10 @@
 ---
 path: "/blog/test"
 date: "1970-01-01"
-title: "markdown test to create css stytles"
-tags: ["docker","test","life","breed"]
-category: "politics"
+title: "Hello world"
+tags: ["docker", "test", "life", "breed"]
+# category: "Unimportant"
 ---
-
-
-
 
 ⋅⋅⋅You can have properly indented paragraphs **within list items. Notice the blank line above**, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
 
@@ -15,24 +12,26 @@ category: "politics"
 ⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
 ⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
 
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
+- Unordered list can use asterisks
+
+* Or minuses
+
+- Or pluses
 
 Alternatively, for H1 and H2, an underline-ish style:
 
 1. First ordered list item
 2. Another item
-⋅⋅* Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
+   ⋅⋅\* Unordered sub-list.
+3. Actual numbers don't matter, just that it's a number
+   ⋅⋅1. Ordered sub-list
 4. And another item.
 
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+[I'm a reference-style link][arbitrary case-insensitive reference text]
 
 [I'm a relative reference to a repository file](../blob/master/LICENSE)
 
@@ -40,8 +39,8 @@ Alternatively, for H1 and H2, an underline-ish style:
 
 Or leave it empty and use the [link text itself].
 
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
+URLs and URLs in angle brackets will automatically get turned into links.
+http://www.example.com or <http://www.example.com> and sometimes
 example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
@@ -50,6 +49,4 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
-
 Here's our logo (hover to see the title text):
-

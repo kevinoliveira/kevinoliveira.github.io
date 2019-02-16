@@ -27,9 +27,9 @@ class Links extends React.Component<IProps, State> {
 
   render() {
     const menuItens: IMenuItem[] = [
-      { key: "blog", to: "/blog", title: "blog" },
-      { key: "page-2", to: "/page-2", title: "page2" },
-      { key: "contact", to: "/contact", title: "contact" },
+      { key: "blog", to: "/blog", title: "Posts" },
+      { key: "projects", to: "/projects", title: "Projects" },
+      { key: "broken", to: "/broken", title: "Broken Links" },
       {
         external: true,
         key: "github",

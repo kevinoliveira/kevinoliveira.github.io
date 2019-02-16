@@ -6,16 +6,28 @@ class Posts extends React.PureComponent<IndexPageProps, {}> {
   public render() {
     return (
       <div>
-        {this.props.data.allMarkdownRemark.edges.map((edge, i) => (
-          <Card
-            href={edge.node.frontmatter.path}
-            category={edge.node.frontmatter.category}
-            title={edge.node.frontmatter.title}
-            date={new Date(edge.node.frontmatter.date)}
-            languages={["en", "pt"]}
-            key={i}
-          />
-        ))}
+        {this.props.data.allMarkdownRemark.edges
+          .sort((a, b) => {
+            return (
+              new Date(b.node.frontmatter.date).getTime() -
+              new Date(a.node.frontmatter.date).getTime()
+            );
+          })
+          .map((edge, i) => {
+            const date = edge.node.frontmatter.date.split("-").map(Number);
+
+            return (
+              <Card
+                href={edge.node.frontmatter.path}
+                category={edge.node.frontmatter.category}
+                title={edge.node.frontmatter.title}
+                date={new Date(Date.UTC(date[0], date[1] - 1, date[2]))}
+                languages={["en", "pt"]}
+                key={i}
+                description={edge.node.frontmatter.description}
+              />
+            );
+          })}
       </div>
     );
   }

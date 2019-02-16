@@ -7,20 +7,21 @@ interface IProps {
   category: string;
   date?: Date;
   href?: string;
+  description?: string;
 }
 
 class Card extends React.PureComponent<IProps, {}> {
   public render() {
-    const { languages, title, category, date, href } = this.props;
+    const { title, category, date, href, description } = this.props;
     return (
       <div>
         <a href={href}>
           <h3>{title}</h3>
         </a>
-        <b>{`${date.toDateString()} | ${category || "others"} `}</b>
+        <b>{`${date.getUTCFullYear()}-${date.getUTCMonth() +
+          1}-${date.getUTCDate()} | ${category || "Others"} `}</b>
         <br />
-        Rerum sed quo aperiam et. Ut dolorem possimus assumenda labore est
-        neque.
+        {description || "no description"}
       </div>
     );
   }

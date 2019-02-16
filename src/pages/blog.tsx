@@ -28,6 +28,7 @@ interface IEdge {
       date: string;
       tags?: string[];
       category?: string;
+      description?: string;
     };
   };
 }
@@ -54,6 +55,7 @@ export default class BlogPages extends React.Component<IndexPageProps, {}> {
                 category={groupName}
                 date={new Date(i.node.frontmatter.date)}
                 languages={["en", "pt"]}
+                description={i.node.frontmatter.description}
               />
             ))}
           </dl>
@@ -90,6 +92,7 @@ export const pageQuery = graphql`
             date
             tags
             category
+            description
           }
         }
       }
