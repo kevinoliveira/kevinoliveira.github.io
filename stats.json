@@ -5,64 +5,40 @@
       "component---src-layouts-index-tsx-f84ada91b9dbc75623d5.js.map"
     ],
     "path---blog-test": [
-      "path---blog-test-6cf8cd75f56bea88b8b3.js",
-      "path---blog-test-6cf8cd75f56bea88b8b3.js.map"
+      "path---blog-test-ce2632954ab2ebd3d531.js",
+      "path---blog-test-ce2632954ab2ebd3d531.js.map"
     ],
     "component---src-templates-blog-template-tsx": [
-      "component---src-templates-blog-template-tsx-30bec441caa1ae283ecb.js",
-      "component---src-templates-blog-template-tsx-30bec441caa1ae283ecb.js.map"
+      "component---src-templates-blog-template-tsx-0b90ebc3c6e06aa504e7.js",
+      "component---src-templates-blog-template-tsx-0b90ebc3c6e06aa504e7.js.map"
     ],
     "path---blog": [
-      "path---blog-9e1c0bc69b2b6992869e.js",
-      "path---blog-9e1c0bc69b2b6992869e.js.map"
-    ],
-    "path---blog-crap-4": [
-      "path---blog-crap-4-05a7c8c449a81d414ce4.js",
-      "path---blog-crap-4-05a7c8c449a81d414ce4.js.map"
+      "path---blog-db5582d738f576e387a3.js",
+      "path---blog-db5582d738f576e387a3.js.map"
     ],
     "path---": [
       "path----47128108c2f80df2ca90.js",
       "path----47128108c2f80df2ca90.js.map"
     ],
-    "path---info-biblioteca-como-tirar-cartao": [
-      "path---info-biblioteca-como-tirar-cartao-77142faf7f21850578e2.js",
-      "path---info-biblioteca-como-tirar-cartao-77142faf7f21850578e2.js.map"
-    ],
-    "path---blog-crap-6": [
-      "path---blog-crap-6-29cc9b3bc2b4105f5618.js",
-      "path---blog-crap-6-29cc9b3bc2b4105f5618.js.map"
-    ],
-    "path---blog-crap": [
-      "path---blog-crap-30dd62f10125f56f0198.js",
-      "path---blog-crap-30dd62f10125f56f0198.js.map"
+    "path---workshop-devtools-inspector": [
+      "path---workshop-devtools-inspector-11f2895aee4515853cda.js",
+      "path---workshop-devtools-inspector-11f2895aee4515853cda.js.map"
     ],
     "path---page-2": [
       "path---page-2-a0e39f21c11f6a62c5ab.js",
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
-    "path---blog-crap-5": [
-      "path---blog-crap-5-c0b6f4e86f4479b24dc0.js",
-      "path---blog-crap-5-c0b6f4e86f4479b24dc0.js.map"
-    ],
     "path---index": [
-      "path---index-beb7546125127544608a.js",
-      "path---index-beb7546125127544608a.js.map"
+      "path---index-57788d64dad21e506005.js",
+      "path---index-57788d64dad21e506005.js.map"
     ],
     "component---src-pages-blog-tsx": [
-      "component---src-pages-blog-tsx-c3b8072cc2b0e8047265.js",
-      "component---src-pages-blog-tsx-c3b8072cc2b0e8047265.js.map"
-    ],
-    "path---blog-crap-1": [
-      "path---blog-crap-1-5fadd884035fbd2ade63.js",
-      "path---blog-crap-1-5fadd884035fbd2ade63.js.map"
+      "component---src-pages-blog-tsx-75b42a0b178edb5b32b1.js",
+      "component---src-pages-blog-tsx-75b42a0b178edb5b32b1.js.map"
     ],
     "component---src-pages-page-2-tsx": [
       "component---src-pages-page-2-tsx-e5200429368bb2772333.js",
       "component---src-pages-page-2-tsx-e5200429368bb2772333.js.map"
-    ],
-    "path---blog-crap-3": [
-      "path---blog-crap-3-d45cc8ab44de34679f4c.js",
-      "path---blog-crap-3-d45cc8ab44de34679f4c.js.map"
     ],
     "commons": [
       "commons-3f130d6940a2fd0e7c56.js",
@@ -78,26 +54,14 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
-    "path---blog-crap-7": [
-      "path---blog-crap-7-e6bfdf446c5a481d8da2.js",
-      "path---blog-crap-7-e6bfdf446c5a481d8da2.js.map"
-    ],
-    "path---blog-crap-2": [
-      "path---blog-crap-2-3227efb5114f6242e7e1.js",
-      "path---blog-crap-2-3227efb5114f6242e7e1.js.map"
-    ],
-    "path---blog-super-cool-thing": [
-      "path---blog-super-cool-thing-53fff7afe79e497f6675.js",
-      "path---blog-super-cool-thing-53fff7afe79e497f6675.js.map"
-    ],
     "component---src-pages-index-tsx": [
-      "component---src-pages-index-tsx-572d55d42cda01d4bdc8.js",
-      "component---src-pages-index-tsx-572d55d42cda01d4bdc8.js.map"
+      "component---src-pages-index-tsx-455655edf40c95c4f0c5.js",
+      "component---src-pages-index-tsx-455655edf40c95c4f0c5.js.map"
     ],
     "app": [
-      "app-2ae7d4d6b104a282c7c4.js",
+      "app-748962f9193d6bf993a3.js",
       "build-js-styles.css",
-      "app-2ae7d4d6b104a282c7c4.js.map",
+      "app-748962f9193d6bf993a3.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
