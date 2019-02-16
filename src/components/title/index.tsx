@@ -7,9 +7,13 @@ interface IProps {
 
 class Title extends React.PureComponent<IProps, {}> {
   public render() {
-    return (
+    return !this.props.notHome ? (
+      <div className="index-title-link">
+        <h1>Kevin Oliveira</h1>
+      </div>
+    ) : (
       <Link className="index-title-link" to="/">
-        {this.props.notHome ? <h3>Kevin Oliveira</h3> : <h1>Kevin Oliveira</h1>}
+        <h3>Kevin Oliveira</h3>
       </Link>
     );
   }
