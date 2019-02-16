@@ -18,6 +18,8 @@ export default class extends React.Component<IndexPageProps, {}> {
       <div>
         <Title />
         <Links />
+        <hr />
+        <h2>Lastest Activity</h2>
         <Posts data={this.props.data} />
         <Footer />
       </div>

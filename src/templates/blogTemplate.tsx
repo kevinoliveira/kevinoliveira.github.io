@@ -5,6 +5,7 @@ const _GHcss = require("github-markdown-css");
 import "./index.scss";
 import Title from "../components/title";
 import Footer from "../components/footer";
+import Links from "../components/links";
 
 export default function Template({
   data // this prop will be injected by the GraphQL query below.
@@ -13,9 +14,10 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   return (
     <div>
-      <Title notHome />
-      {/* <Links notHome /> */}
       <Helmet title={frontmatter.title} />
+      <Title notHome />
+      <Links />
+      <hr />
       <h1>{frontmatter.title}</h1>
       <h5>
         <Link to="/blog">Go back</Link>

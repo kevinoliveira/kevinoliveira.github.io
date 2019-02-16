@@ -15,9 +15,12 @@ class Card extends React.PureComponent<IProps, {}> {
     return (
       <div>
         <a href={href}>
-          <h3>{`${title}`}</h3>
+          <h3>{title}</h3>
         </a>
-        <h6>{`${date.toDateString()} | ${category || "others"} `}</h6>
+        <b>{`${date.toDateString()} | ${category || "others"} `}</b>
+        <br />
+        Rerum sed quo aperiam et. Ut dolorem possimus assumenda labore est
+        neque.
       </div>
     );
   }
