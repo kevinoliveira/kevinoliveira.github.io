@@ -1,5 +1,5 @@
 import * as React from "react";
-import Link from "gatsby-link";
+// import Link from "gatsby-link";
 
 interface IProps {
   notHome?: boolean;
@@ -12,9 +12,9 @@ class Title extends React.PureComponent<IProps, {}> {
         <h1>Kevin Oliveira</h1>
       </div>
     ) : (
-      <Link className="index-title-link" to="/">
+      <a className="index-title-link" href="/">
         <h3>Kevin Oliveira</h3>
-      </Link>
+      </a>
     );
   }
 }

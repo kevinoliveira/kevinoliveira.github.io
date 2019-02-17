@@ -1,5 +1,5 @@
 import * as React from "react";
-import Link from "gatsby-link";
+// import Link from "gatsby-link";
 
 interface State {
   menuOpen: boolean;
@@ -49,9 +49,9 @@ class Links extends React.Component<IProps, State> {
         </span>
       ) : (
         <span key={to}>
-          <Link {...rest} to={to}>
+          <a {...rest} href={to}>
             {title}
-          </Link>
+          </a>
           &nbsp; &nbsp; &nbsp;
         </span>
       );

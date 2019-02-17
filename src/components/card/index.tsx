@@ -1,6 +1,5 @@
 import * as React from "react";
 import { language } from "../../declarations";
-import Link from "gatsby-link";
 
 interface IProps {
   languages: language[];
@@ -19,9 +18,9 @@ class Card extends React.PureComponent<IProps, {}> {
     const { title, category, date, absolutePath, description } = this.props;
     return (
       <div>
-        <Link to={this.pathTourlResolver(absolutePath)}>
+        <a href={this.pathTourlResolver(absolutePath)}>
           <h3>{title}</h3>
-        </Link>
+        </a>
         <b>{`${date.getUTCFullYear()}-${date.getUTCMonth() +
           1}-${date.getUTCDate()} | ${category || "Others"} `}</b>
         <br />

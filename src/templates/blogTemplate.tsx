@@ -1,5 +1,5 @@
 import * as React from "react";
-import Link from "gatsby-link";
+// import Link from "gatsby-link";
 const { Helmet } = require("react-helmet");
 const _GHcss = require("github-markdown-css");
 import "./index.scss";
@@ -21,7 +21,7 @@ export default function Template({
       <hr />
       <h1>{frontmatter.title}</h1>
       <h5>
-        <Link to="/blog">Go back</Link>
+        <a href="/blog">Go back</a>
         &nbsp;
         {frontmatter.date}
       </h5>
