@@ -1,68 +1,68 @@
 {
   "assetsByChunkName": {
     "component---src-layouts-index-tsx": [
-      "component---src-layouts-index-tsx-f84ada91b9dbc75623d5.js",
-      "component---src-layouts-index-tsx-f84ada91b9dbc75623d5.js.map"
-    ],
-    "path---blog-test": [
-      "path---blog-test-ce2632954ab2ebd3d531.js",
-      "path---blog-test-ce2632954ab2ebd3d531.js.map"
+      "component---src-layouts-index-tsx-7dee08b9efcf7cea8fad.js",
+      "component---src-layouts-index-tsx-7dee08b9efcf7cea8fad.js.map"
     ],
     "component---src-templates-blog-template-tsx": [
-      "component---src-templates-blog-template-tsx-0b90ebc3c6e06aa504e7.js",
-      "component---src-templates-blog-template-tsx-0b90ebc3c6e06aa504e7.js.map"
+      "component---src-templates-blog-template-tsx-b66dc4219e57c5091fe1.js",
+      "component---src-templates-blog-template-tsx-b66dc4219e57c5091fe1.js.map"
     ],
     "path---blog": [
-      "path---blog-db5582d738f576e387a3.js",
-      "path---blog-db5582d738f576e387a3.js.map"
+      "path---blog-436f55f623e4e81a8b80.js",
+      "path---blog-436f55f623e4e81a8b80.js.map"
     ],
     "path---": [
       "path----47128108c2f80df2ca90.js",
       "path----47128108c2f80df2ca90.js.map"
     ],
-    "path---workshop-devtools-inspector": [
-      "path---workshop-devtools-inspector-11f2895aee4515853cda.js",
-      "path---workshop-devtools-inspector-11f2895aee4515853cda.js.map"
-    ],
-    "path---page-2": [
-      "path---page-2-a0e39f21c11f6a62c5ab.js",
-      "path---page-2-a0e39f21c11f6a62c5ab.js.map"
+    "path---projects": [
+      "path---projects-a0e39f21c11f6a62c5ab.js",
+      "path---projects-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-57788d64dad21e506005.js",
-      "path---index-57788d64dad21e506005.js.map"
+      "path---index-b9b3982545be49e13754.js",
+      "path---index-b9b3982545be49e13754.js.map"
     ],
     "component---src-pages-blog-tsx": [
-      "component---src-pages-blog-tsx-75b42a0b178edb5b32b1.js",
-      "component---src-pages-blog-tsx-75b42a0b178edb5b32b1.js.map"
-    ],
-    "component---src-pages-page-2-tsx": [
-      "component---src-pages-page-2-tsx-e5200429368bb2772333.js",
-      "component---src-pages-page-2-tsx-e5200429368bb2772333.js.map"
+      "component---src-pages-blog-tsx-2151a9c0ec2754afd08e.js",
+      "component---src-pages-blog-tsx-2151a9c0ec2754afd08e.js.map"
     ],
     "commons": [
-      "commons-3f130d6940a2fd0e7c56.js",
+      "commons-bdc4167b9f5eba4a1bb4.js",
       "build-js-styles.css",
-      "commons-3f130d6940a2fd0e7c56.js.map",
+      "commons-bdc4167b9f5eba4a1bb4.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-404-tsx": [
-      "component---src-pages-404-tsx-c429096e912eacdad96f.js",
-      "component---src-pages-404-tsx-c429096e912eacdad96f.js.map"
+      "component---src-pages-404-tsx-76be3269403b397edf29.js",
+      "component---src-pages-404-tsx-76be3269403b397edf29.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---blog-helloworld": [
+      "path---blog-helloworld-5dc215e7df6933f9cb56.js",
+      "path---blog-helloworld-5dc215e7df6933f9cb56.js.map"
+    ],
     "component---src-pages-index-tsx": [
-      "component---src-pages-index-tsx-455655edf40c95c4f0c5.js",
-      "component---src-pages-index-tsx-455655edf40c95c4f0c5.js.map"
+      "component---src-pages-index-tsx-1bc9e54ab76aac6bcf20.js",
+      "component---src-pages-index-tsx-1bc9e54ab76aac6bcf20.js.map"
+    ],
+    "component---src-pages-projects-tsx": [
+      "component---src-pages-projects-tsx-5a442a0381b154164411.js",
+      "component---src-pages-projects-tsx-5a442a0381b154164411.js.map"
     ],
     "app": [
-      "app-748962f9193d6bf993a3.js",
+      "app-46ef926fd1d4ba0499fb.js",
       "build-js-styles.css",
-      "app-748962f9193d6bf993a3.js.map",
+      "app-46ef926fd1d4ba0499fb.js.map",
       "build-js-styles.css.map"
+    ],
+    "path---blog-workshop-devtools-random": [
+      "path---blog-workshop-devtools-random-bdff10d2c60f22016676.js",
+      "path---blog-workshop-devtools-random-bdff10d2c60f22016676.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
