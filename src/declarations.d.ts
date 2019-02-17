@@ -13,8 +13,8 @@ interface IndexPageProps {
       edges: {
         node: {
           id: string;
+          fileAbsolutePath: string;
           frontmatter: {
-            path: string;
             title: string;
             date: string;
             category: string;

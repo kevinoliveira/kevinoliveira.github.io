@@ -22,9 +22,9 @@ interface IndexPageProps {
 
 interface IEdge {
   node: {
+    fileAbsolutePath: string;
     frontmatter: {
       title: string;
-      path: string;
       date: string;
       tags?: string[];
       category?: string;
@@ -50,7 +50,8 @@ export default class BlogPages extends React.Component<IndexPageProps, {}> {
           <dl className="itens">
             {itens.map(i => (
               <Card
-                href={i.node.frontmatter.path}
+                key={i.node.fileAbsolutePath}
+                absolutePath={i.node.fileAbsolutePath}
                 title={i.node.frontmatter.title}
                 category={groupName}
                 date={new Date(i.node.frontmatter.date)}
@@ -86,9 +87,10 @@ export const pageQuery = graphql`
     allMarkdownRemark {
       edges {
         node {
+          id
+          fileAbsolutePath
           frontmatter {
             title
-            path
             date
             tags
             category

@@ -5,6 +5,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.tsx`);
 
+  const pathTourlResolver = path =>
+    `/blog${path.split("src/md")[1]}`.replace(".md", "");
+
   return graphql(`
     {
       allMarkdownRemark(
@@ -13,9 +16,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       ) {
         edges {
           node {
-            frontmatter {
-              path
-            }
+            id
+            fileAbsolutePath
           }
         }
       }
@@ -26,10 +28,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      console.log(node);
       createPage({
-        path: node.frontmatter.path,
+        path: pathTourlResolver(node.fileAbsolutePath),
+        // path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {}, // additional data can be passed via context
+        context: {
+          id: node.id
+        } // additional data can be passed via context
       });
     });
   });

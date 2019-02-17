@@ -39,8 +39,8 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          fileAbsolutePath
           frontmatter {
-            path
             title
             date
             category

@@ -12,8 +12,8 @@ class InformationCards extends React.PureComponent<IProps, {}> {
   public render() {
     return (
       <div className="information-wrapper">
-        {this.props.items.map(item => (
-          <div className="information-item">
+        {this.props.items.map((item, i) => (
+          <div key={i} className="information-item">
             <div className="information-item-legend">{item.legend}</div>
             <div className="information-item-value">{item.value}</div>
           </div>

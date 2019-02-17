@@ -18,12 +18,12 @@ class Posts extends React.PureComponent<IndexPageProps, {}> {
 
             return (
               <Card
-                href={edge.node.frontmatter.path}
+                key={edge.node.fileAbsolutePath}
+                absolutePath={edge.node.fileAbsolutePath}
                 category={edge.node.frontmatter.category}
                 title={edge.node.frontmatter.title}
                 date={new Date(Date.UTC(date[0], date[1] - 1, date[2]))}
                 languages={["en", "pt"]}
-                key={i}
                 description={edge.node.frontmatter.description}
               />
             );

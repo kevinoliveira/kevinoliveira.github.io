@@ -29,7 +29,7 @@ class Links extends React.Component<IProps, State> {
     const menuItens: IMenuItem[] = [
       { key: "blog", to: "/blog", title: "Posts" },
       { key: "projects", to: "/projects", title: "Projects" },
-      { key: "broken", to: "/broken", title: "Broken Links" },
+      { key: "broken", to: "/broken", title: "Broken Link" },
       {
         external: true,
         key: "github",
@@ -41,14 +41,14 @@ class Links extends React.Component<IProps, State> {
     const menuItensJSX = menuItens.map(item => {
       const { title, to, external, ...rest } = item;
       return !!external ? (
-        <span>
+        <span key={to}>
           <a href={to} {...rest}>
             {title}
           </a>
           &nbsp; &nbsp; &nbsp;
         </span>
       ) : (
-        <span>
+        <span key={to}>
           <Link {...rest} to={to}>
             {title}
           </Link>

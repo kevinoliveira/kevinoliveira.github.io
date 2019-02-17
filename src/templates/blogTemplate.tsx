@@ -10,6 +10,7 @@ import Links from "../components/links";
 export default function Template({
   data // this prop will be injected by the GraphQL query below.
 }: any) {
+  console.log(data);
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
   return (
@@ -32,12 +33,13 @@ export default function Template({
 }
 //@ts-ignore
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostByPath($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html
+      fileAbsolutePath
+      id
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
         title
       }
     }

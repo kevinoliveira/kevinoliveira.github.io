@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "gatsby-link";
 
 const NotFoundPage = () => (
   <div>
@@ -6,7 +7,7 @@ const NotFoundPage = () => (
     <p>
       <b>Are you sure about this link?</b>
     </p>
-    <a href="/">go to home page</a>
+    <Link to="/">go to home page</Link>
     <br />
     <img src="http://www.csanl.com.br/alunos/votar/f7/b/f7b14/gif%20fundo%20transparente.gif" />
   </div>

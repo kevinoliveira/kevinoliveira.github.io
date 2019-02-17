@@ -1,23 +1,27 @@
 import * as React from "react";
 import { language } from "../../declarations";
+import Link from "gatsby-link";
 
 interface IProps {
   languages: language[];
   title: string;
   category: string;
   date?: Date;
-  href?: string;
+  absolutePath: string;
   description?: string;
 }
 
 class Card extends React.PureComponent<IProps, {}> {
+  public pathTourlResolver = (path: string) => {
+    return `/blog${path.split("src/md")[1]}`.replace(".md", "");
+  };
   public render() {
-    const { title, category, date, href, description } = this.props;
+    const { title, category, date, absolutePath, description } = this.props;
     return (
       <div>
-        <a href={href}>
+        <Link to={this.pathTourlResolver(absolutePath)}>
           <h3>{title}</h3>
-        </a>
+        </Link>
         <b>{`${date.getUTCFullYear()}-${date.getUTCMonth() +
           1}-${date.getUTCDate()} | ${category || "Others"} `}</b>
         <br />

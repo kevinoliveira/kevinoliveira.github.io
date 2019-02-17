@@ -1,5 +1,5 @@
 ---
-path: "/workshop/devtools/inspector"
+# path: "/workshop/devtools/inspector"
 date: "2019-02-16"
 title: "[DevTools] Using inspector"
 category: "Workshops"
