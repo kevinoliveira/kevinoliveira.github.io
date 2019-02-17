@@ -38,18 +38,21 @@ class Links extends React.Component<IProps, State> {
         title: "Github"
       }
     ];
+    console.log();
+
     const menuItensJSX = menuItens.map(item => {
       const { title, to, external, ...rest } = item;
+      const isActualPage = window.location.pathname === to;
       return !!external ? (
         <span key={to}>
-          <a href={to} {...rest}>
+          <a href={!isActualPage ? to : undefined} {...rest}>
             {title}
           </a>
           &nbsp; &nbsp; &nbsp;
         </span>
       ) : (
         <span key={to}>
-          <a {...rest} href={to}>
+          <a {...rest} href={!isActualPage ? to : undefined}>
             {title}
           </a>
           &nbsp; &nbsp; &nbsp;
