@@ -1,2 +1,0 @@
-webpackJsonp([0xcb7bfd242706],{213:function(e,t,l){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=l(2),r=l(53),a=l(52),c=function(){return n.createElement("div",null,n.createElement(r.default,{notHome:!0}),n.createElement(a.default,null),n.createElement("hr",null),n.createElement("h1",null,"Hi from the projects page"),n.createElement("p",null,"Welcome to nowhere"),n.createElement("a",{href:"/"},"Go back to the homepage"))};t.default=c}});
-//# sourceMappingURL=component---src-pages-projects-tsx-5a442a0381b154164411.js.map
