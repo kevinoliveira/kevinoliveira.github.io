@@ -4,7 +4,7 @@ date: "2019-02-16"
 title: "[DevTools] Using inspector"
 category: "Workshops"
 description: "Learn the very basics of element inspection in Chrome devtools"
-pusblished: false
+published: false
 ---
 
 There must be at least 3 dashes separating each header cell.

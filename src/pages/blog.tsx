@@ -29,7 +29,7 @@ interface IEdge {
       tags?: string[];
       category?: string;
       description?: string;
-      pusblished: boolean;
+      published: boolean;
     };
   };
 }
@@ -38,7 +38,7 @@ export default class BlogPages extends React.Component<IndexPageProps, {}> {
   public render() {
     const groups = groupBy(
       this.props.data.allMarkdownRemark.edges.filter(
-        i => i.node.frontmatter.pusblished
+        i => i.node.frontmatter.published
       ),
       (edge: IEdge) => edge.node.frontmatter.category
     );
@@ -98,7 +98,7 @@ export const pageQuery = graphql`
             tags
             category
             description
-            pusblished
+            published
           }
         }
       }

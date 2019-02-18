@@ -21,7 +21,7 @@ export default function Template({
       <hr />
 
       <h1>{frontmatter.title}</h1>
-      {!frontmatter.pusblished ? (
+      {!frontmatter.published ? (
         <h4>
           WARNING! this post is unpublished, there still work to be done and
           nothing here should be taken seriously.
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        published
       }
     }
   }

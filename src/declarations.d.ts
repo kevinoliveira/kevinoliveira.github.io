@@ -19,7 +19,7 @@ interface IndexPageProps {
             date: string;
             category: string;
             description: string;
-            pusblished: boolean;
+            published: boolean;
           };
         };
       }[];
