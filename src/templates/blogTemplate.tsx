@@ -19,7 +19,14 @@ export default function Template({
       <Title notHome />
       <Links />
       <hr />
+
       <h1>{frontmatter.title}</h1>
+      {!frontmatter.pusblished ? (
+        <h4>
+          WARNING! this post is unpublished, there still work to be done and
+          nothing here should be taken seriously.
+        </h4>
+      ) : null}
       <h5>
         <a href="/blog">Go back</a>
         &nbsp;

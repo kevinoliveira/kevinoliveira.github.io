@@ -29,6 +29,7 @@ interface IEdge {
       tags?: string[];
       category?: string;
       description?: string;
+      pusblished: boolean;
     };
   };
 }
@@ -36,7 +37,9 @@ interface IEdge {
 export default class BlogPages extends React.Component<IndexPageProps, {}> {
   public render() {
     const groups = groupBy(
-      this.props.data.allMarkdownRemark.edges,
+      this.props.data.allMarkdownRemark.edges.filter(
+        i => i.node.frontmatter.pusblished
+      ),
       (edge: IEdge) => edge.node.frontmatter.category
     );
 
@@ -95,6 +98,7 @@ export const pageQuery = graphql`
             tags
             category
             description
+            pusblished
           }
         }
       }

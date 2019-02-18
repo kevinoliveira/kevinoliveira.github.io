@@ -7,6 +7,7 @@ class Posts extends React.PureComponent<IndexPageProps, {}> {
     return (
       <div>
         {this.props.data.allMarkdownRemark.edges
+          .filter(i => i.node.frontmatter.pusblished)
           .sort((a, b) => {
             return (
               new Date(b.node.frontmatter.date).getTime() -
