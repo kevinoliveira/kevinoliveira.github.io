@@ -10,45 +10,45 @@ import { IndexPageProps } from "../declarations";
 // to generate all types from graphQL schema
 
 export default class extends React.Component<IndexPageProps, {}> {
-  constructor(props: IndexPageProps, context: any) {
-    super(props, context);
-  }
-  public render() {
-    return (
-      <div>
-        <Title />
-        <Links />
-        <hr />
-        <h2>Lastest Activity</h2>
-        <Posts data={this.props.data} />
-        <Footer />
-      </div>
-    );
-  }
+	constructor(props: IndexPageProps, context: any) {
+		super(props, context);
+	}
+	public render() {
+		return (
+			<div>
+				<Title />
+				<Links />
+				<hr />
+				<h2>Lastest Activity</h2>
+				<Posts data={this.props.data} />
+				<Footer />
+			</div>
+		);
+	}
 }
 //@ts-ignore
 export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark {
-      totalCount
-      edges {
-        node {
-          id
-          fileAbsolutePath
-          frontmatter {
-            title
-            date
-            category
-            description
-            published
-          }
-        }
-      }
-    }
-  }
+	query IndexQuery {
+		site {
+			siteMetadata {
+				title
+			}
+		}
+		allMarkdownRemark {
+			totalCount
+			edges {
+				node {
+					id
+					fileAbsolutePath
+					frontmatter {
+						title
+						date
+						category
+						description
+						published
+					}
+				}
+			}
+		}
+	}
 `;
