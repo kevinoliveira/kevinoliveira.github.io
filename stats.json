@@ -1,16 +1,16 @@
 {
   "assetsByChunkName": {
     "component---src-layouts-index-tsx": [
-      "component---src-layouts-index-tsx-f254aab029310c9b269c.js",
-      "component---src-layouts-index-tsx-f254aab029310c9b269c.js.map"
+      "component---src-layouts-index-tsx-c7da6075b32d9c0fb5c4.js",
+      "component---src-layouts-index-tsx-c7da6075b32d9c0fb5c4.js.map"
     ],
     "component---src-templates-blog-template-tsx": [
       "component---src-templates-blog-template-tsx-7b82fc2e686d72b3a6c8.js",
       "component---src-templates-blog-template-tsx-7b82fc2e686d72b3a6c8.js.map"
     ],
     "path---blog": [
-      "path---blog-4ab53c1e82abdef5899d.js",
-      "path---blog-4ab53c1e82abdef5899d.js.map"
+      "path---blog-8bce0f6bcc197f82b94b.js",
+      "path---blog-8bce0f6bcc197f82b94b.js.map"
     ],
     "path---": [
       "path----47128108c2f80df2ca90.js",
@@ -21,17 +21,17 @@
       "path---projects-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-b693f642a0348d903947.js",
-      "path---index-b693f642a0348d903947.js.map"
+      "path---index-08ae06e0d185170a5220.js",
+      "path---index-08ae06e0d185170a5220.js.map"
     ],
     "component---src-pages-blog-tsx": [
-      "component---src-pages-blog-tsx-d0116fb1ac6f5e055a35.js",
-      "component---src-pages-blog-tsx-d0116fb1ac6f5e055a35.js.map"
+      "component---src-pages-blog-tsx-160ae027005f1ac3dc5d.js",
+      "component---src-pages-blog-tsx-160ae027005f1ac3dc5d.js.map"
     ],
     "commons": [
-      "commons-13f66d82cab4d20b01eb.js",
+      "commons-bdc4167b9f5eba4a1bb4.js",
       "build-js-styles.css",
-      "commons-13f66d82cab4d20b01eb.js.map",
+      "commons-bdc4167b9f5eba4a1bb4.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-pages-404-tsx": [
@@ -42,27 +42,27 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---blog-workshop-devtools-highlights": [
+      "path---blog-workshop-devtools-highlights-f1ab757453b93f69bda7.js",
+      "path---blog-workshop-devtools-highlights-f1ab757453b93f69bda7.js.map"
+    ],
     "path---blog-helloworld": [
-      "path---blog-helloworld-e53bb655f07cba52b98c.js",
-      "path---blog-helloworld-e53bb655f07cba52b98c.js.map"
+      "path---blog-helloworld-eaaa1505ea44bc423be1.js",
+      "path---blog-helloworld-eaaa1505ea44bc423be1.js.map"
     ],
     "component---src-pages-index-tsx": [
-      "component---src-pages-index-tsx-c19614d1638b76149a84.js",
-      "component---src-pages-index-tsx-c19614d1638b76149a84.js.map"
+      "component---src-pages-index-tsx-af29878274f23c860f79.js",
+      "component---src-pages-index-tsx-af29878274f23c860f79.js.map"
     ],
     "component---src-pages-projects-tsx": [
       "component---src-pages-projects-tsx-e604c1bc4f110aa11feb.js",
       "component---src-pages-projects-tsx-e604c1bc4f110aa11feb.js.map"
     ],
     "app": [
-      "app-794bd80258850fa7d040.js",
+      "app-40649e5ea5eb2c263a81.js",
       "build-js-styles.css",
-      "app-794bd80258850fa7d040.js.map",
+      "app-40649e5ea5eb2c263a81.js.map",
       "build-js-styles.css.map"
-    ],
-    "path---blog-workshop-devtools-random": [
-      "path---blog-workshop-devtools-random-ee28be5caf3c21be6f97.js",
-      "path---blog-workshop-devtools-random-ee28be5caf3c21be6f97.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
