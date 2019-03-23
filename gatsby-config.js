@@ -19,16 +19,16 @@ module.exports = {
         logo: "./src/favicon.png",
   
         // WebApp Manifest Configuration
-        appName: null,
-        appDescription: null,
-        developerName: null,
-        developerURL: null,
+        appName: "Kevin Oliveira",
+        appDescription: "Personal website",
+        developerName: "kevin oliveira",
+        developerURL: "kevinoliveira.github.io",
         dir: 'auto',
         lang: 'en-150',
-        background: '#27ae60',
-        theme_color: '#27ae60',
+        background: '#000530',
+        theme_color: '#000530',
         display: 'standalone',
-        orientation: 'any',
+        orientation: 'portrait-primary',
         start_url: '/',
         version: '1.0',
   
