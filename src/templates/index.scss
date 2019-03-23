@@ -58,6 +58,11 @@ hr {
 * {
 	scrollbar-color: #0c9d9f #193d6a;
 
+	&::selection {
+		background-color: #ff0089;
+		color: black;
+	}
+
 	&::-webkit-scrollbar {
 		width: 15px !important;
 		background-color: #193d6a !important;
