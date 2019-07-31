@@ -120,7 +120,6 @@ export default class extends React.Component<{}, {}> {
 			<div>
 				<Title notHome />
 				<Links />
-				<hr />
 				<h1>My Projects</h1>
 
 				{ct(

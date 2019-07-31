@@ -70,7 +70,6 @@ export default class BlogPages extends React.Component<IndexPageProps, {}> {
 			<div>
 				<Title notHome />
 				<Links />
-				<hr />
 				<h1 className="title">Blog Posts</h1>
 				{categories}
 			</div>

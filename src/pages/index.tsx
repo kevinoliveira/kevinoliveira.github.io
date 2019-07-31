@@ -16,10 +16,10 @@ export default class extends React.Component<IndexPageProps, {}> {
 	public render() {
 		return (
 			<div>
-				<Title />
+				<Title notHome/>
 				<Links />
-				<hr />
-				<h2>Lastest Activity</h2>
+				{/*<hr />*/}
+				<h3>Lastest Activity</h3>
 				<Posts data={this.props.data} />
 				<Footer />
 			</div>

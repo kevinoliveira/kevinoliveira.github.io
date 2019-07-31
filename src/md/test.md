@@ -7,8 +7,6 @@ published: true
 
 
 
-Markdown Cheatsheet
-===================
 
 - - - - 
 

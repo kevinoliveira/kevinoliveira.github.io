@@ -1,7 +1,7 @@
 import * as React from "react";
 // import Link from "gatsby-link";
 const { Helmet } = require("react-helmet");
-const _GHcss = require("github-markdown-css");
+//const _GHcss = require("github-markdown-css");
 import "./index.scss";
 import Title from "../components/title";
 import Footer from "../components/footer";
@@ -17,21 +17,21 @@ export default function Template({
 		<div>
 			<Helmet title={frontmatter.title} />
 			<Title notHome />
-			<Links />
+			{/*<Links />*/}
 			<hr />
 
 			<h1>{frontmatter.title}</h1>
 			{!frontmatter.published ? (
-				<h4>
+				<h4 className="warn">
 					WARNING! this post is unpublished, there still work to be done and nothing here
 					should be taken seriously.
 				</h4>
 			) : null}
-			<h5>
-				<a href="/blog">Go back</a>
-				&nbsp;
-				{frontmatter.date}
-			</h5>
+			{/*<h5>
+							<a href="/blog">Go back</a>
+							&nbsp;
+							{frontmatter.date}
+						</h5>*/}
 
 			<div dangerouslySetInnerHTML={{ __html: html }} />
 			<Footer />

@@ -4,7 +4,7 @@ date: "2019-03-22"
 title: "[DevTools] Highlights"
 category: "Workshops"
 description: "Learn the very basics of element inspection in Chrome devtools"
-published: false
+published: true
 ---
 
 There must be at least 3 dashes separating each header cell.
@@ -26,6 +26,19 @@ Colons can be used to align columns.
 There must be at least 3 dashes separating each header cell.
 The outer pipes (|) are optional, and you don't need to make the
 raw Markdown line up prettily. You can also use inline Markdown.
+
+
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Color Mix in Vanilla CSS" src="//codepen.io/una/embed/qzKXgr/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/una/pen/qzKXgr/'>Color Mix in Vanilla CSS</a> by Una Kravets
+  (<a href='https://codepen.io/una'>@una</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the
+raw Markdown line up prettily. You can also use inline Markdown.
+
 
 | Markdown | Less      | Pretty     |
 | -------- | --------- | ---------- |
