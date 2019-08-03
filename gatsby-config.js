@@ -49,8 +49,14 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-layout`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["node_modules/github-markdown-css/github-markdown.css"],
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {

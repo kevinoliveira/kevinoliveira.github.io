@@ -1,6 +1,6 @@
 import * as React from "react";
 const { Helmet } = require("react-helmet");
-const _GHcss = require("github-markdown-css");
+require("./index.scss");
 
 interface DefaultLayoutProps {
 	data: {
@@ -25,7 +25,7 @@ class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
 						{ name: "theme-color", content: "#000530" },
 					]}
 				/>
-				{this.props.children()}
+				{this.props.children}
 			</div>
 		);
 	}
