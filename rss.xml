@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Oliveira]]></title><description><![CDATA[Kevin Oliveira blog]]></description><link>https://kevinoliveira.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 03 Aug 2019 18:19:57 GMT</lastBuildDate><item><title><![CDATA[[DevTools] Highlights]]></title><link>https://kevinoliveira.github.io/blog/workshop/devtools/highlights</link><guid isPermaLink="false">https://kevinoliveira.github.io17f5b2a8-ae58-52cd-87e6-aa37a6cb497b</guid><pubDate>Fri, 22 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;There must be at least 3 dashes separating each header cell.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Kevin Oliveira]]></title><description><![CDATA[Kevin Oliveira blog]]></description><link>https://kevinoliveira.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 03 Aug 2019 18:26:28 GMT</lastBuildDate><item><title><![CDATA[[DevTools] Highlights]]></title><link>https://kevinoliveira.github.io/blog/workshop/devtools/highlights</link><guid isPermaLink="false">https://kevinoliveira.github.io17f5b2a8-ae58-52cd-87e6-aa37a6cb497b</guid><pubDate>Fri, 22 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;There must be at least 3 dashes separating each header cell.
 The outer pipes (|) are optional, and you don&apos;t need to make the
 raw Markdown line up prettily. You can also use inline Markdown.&lt;/p&gt;
 &lt;iframe src=&quot;https://codesandbox.io/embed/j0y0vpz59&quot; style=&quot;width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;
@@ -93,16 +93,6 @@ puts markdown.to_html
 &lt;ol&gt;
 &lt;li id=&quot;fn-1&quot;&gt;
 &lt;p&gt;To say down here.I have mo&lt;/p&gt;
-&lt;a href=&quot;#fnref-1&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Hello world]]></title><link>https://kevinoliveira.github.io/blog/helloworld</link><guid isPermaLink="false">https://kevinoliveira.github.io5262c00a-7249-580a-ba05-52b136142c35</guid><pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;this is the very beginning&lt;sup id=&quot;fnref-1&quot;&gt;&lt;a href=&quot;#fn-1&quot; class=&quot;footnote-ref&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; of this site/blog, and i hope for the best.&lt;/p&gt;
-&lt;p&gt;if you are wondering why the date is wrong, it&apos;s not wrong, i discovery time travel.&lt;/p&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&quot;fn-1&quot;&gt;
-&lt;p&gt;this was not written before internet.&lt;/p&gt;
 &lt;a href=&quot;#fnref-1&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -339,4 +329,14 @@ Content Cell  | Content Cell
 &lt;p&gt;Emoji:&lt;/p&gt;
 &lt;p&gt;:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at &lt;a href=&quot;http://emoji-cheat-sheet.com/&quot;&gt;emoji-cheat-sheet.com&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Markup : Code appears between colons :EMOJICODE:
-&lt;/code&gt;&lt;/pre&gt;</content:encoded></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title><![CDATA[Hello world]]></title><link>https://kevinoliveira.github.io/blog/helloworld</link><guid isPermaLink="false">https://kevinoliveira.github.io5262c00a-7249-580a-ba05-52b136142c35</guid><pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;this is the very beginning&lt;sup id=&quot;fnref-1&quot;&gt;&lt;a href=&quot;#fn-1&quot; class=&quot;footnote-ref&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; of this site/blog, and i hope for the best.&lt;/p&gt;
+&lt;p&gt;if you are wondering why the date is wrong, it&apos;s not wrong, i discovery time travel.&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;this was not written before internet.&lt;/p&gt;
+&lt;a href=&quot;#fnref-1&quot; class=&quot;footnote-backref&quot;&gt;↩&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content:encoded></item></channel></rss>
