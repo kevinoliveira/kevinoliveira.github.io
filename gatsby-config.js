@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Kevin Oliveira`,
+    description: 'Kevin Oliveira blog',
+    siteUrl: 'https://kevinoliveira.github.io/',
+    author: 'Kevin Oliveira'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -48,5 +51,69 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.description,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl +  pathTourlResolver(edge.node.fileAbsolutePath) ,
+                  guid: site.siteMetadata.siteUrl +  edge.node.id ,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      id
+                      fileAbsolutePath
+                      excerpt
+                    	html
+                      frontmatter {
+                        title
+                        date
+                        description                        
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Your Site's RSS Feed",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/blog/",
+          },
+        ],
+      },
+    },
   ],
 }
+
+
+const pathTourlResolver = path =>
+    `/blog${path.split("src/md")[1]}`.replace(".md", "");

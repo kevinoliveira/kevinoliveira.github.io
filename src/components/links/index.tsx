@@ -31,6 +31,7 @@ class Links extends React.Component<IProps, State> {
 			{ key: "blog", to: "/blog", title: "Posts" },
 			{ key: "projects", to: "/projects", title: "Projects" },
 			{ key: "broken", to: "/broken", title: "Broken Link" },
+			{ key: "rss", to: "/rss.xml", title: "RSS" },
 			{
 				external: true,
 				key: "github",
