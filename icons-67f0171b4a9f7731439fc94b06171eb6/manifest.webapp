@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "Kevin Oliveira",
+  "description": "Personal website",
+  "icons": {
+    "60": "/icons-67f0171b4a9f7731439fc94b06171eb6/firefox_app_60x60.png",
+    "128": "/icons-67f0171b4a9f7731439fc94b06171eb6/firefox_app_128x128.png",
+    "512": "/icons-67f0171b4a9f7731439fc94b06171eb6/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "kevin oliveira",
+    "url": "kevinoliveira.github.io"
+  }
+}
