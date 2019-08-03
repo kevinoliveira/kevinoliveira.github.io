@@ -17,10 +17,11 @@ export default function Template({
 		<div>
 			<Helmet title={frontmatter.title} />
 			<Title notHome />
-			{/*<Links />*/}
-			<hr />
 
 			<h1>{frontmatter.title}</h1>
+			<h6 className="dateSubtitle">{`[ ${frontmatter.tags.join(" , ").toUpperCase()} ] - ${
+				frontmatter.date
+			}`}</h6>
 			{!frontmatter.published ? (
 				<h4 className="warn">
 					WARNING! this post is unpublished, there still work to be done and nothing here
@@ -49,6 +50,7 @@ export const pageQuery = graphql`
 				date(formatString: "MMMM DD, YYYY")
 				title
 				published
+				tags
 			}
 		}
 	}

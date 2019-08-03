@@ -1,8 +1,8 @@
 ---
-# path: "/workshop/devtools/inspector"
 date: "2019-03-22"
 title: "[DevTools] Highlights"
 category: "Workshops"
+tags: ["docker", "test", "life", "breed"]
 description: "Learn the very basics of element inspection in Chrome devtools"
 published: true
 ---
@@ -11,9 +11,9 @@ There must be at least 3 dashes separating each header cell.
 The outer pipes (|) are optional, and you don't need to make the
 raw Markdown line up prettily. You can also use inline Markdown.
 
-<!-- <iframe src="https://codesandbox.io/embed/j0y0vpz59" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe> -->
+<iframe src="https://codesandbox.io/embed/j0y0vpz59" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-<!-- ![Flowers](https://qxf2.com/blog/wp-content/uploads/2015/02/API_DevTools_PostParams.jpg "Title") -->
+![Flowers](https://qxf2.com/blog/wp-content/uploads/2015/02/API_DevTools_PostParams.jpg "Title")
 
 Colons can be used to align columns.
 
