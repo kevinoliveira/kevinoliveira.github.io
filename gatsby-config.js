@@ -53,9 +53,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-sass`,
-      options: {
-        includePaths: ["node_modules/github-markdown-css/github-markdown.css"],
-      },
+
     },
     {
       resolve: `gatsby-plugin-feed`,

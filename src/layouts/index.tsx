@@ -1,5 +1,6 @@
 import * as React from "react";
 const { Helmet } = require("react-helmet");
+require("github-markdown-css");
 require("./index.scss");
 
 interface DefaultLayoutProps {
