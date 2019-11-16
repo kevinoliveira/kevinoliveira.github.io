@@ -19,9 +19,12 @@ export default function Template({
 			<Title notHome />
 
 			<h1>{frontmatter.title}</h1>
-			<h6 className="dateSubtitle">{`[ ${frontmatter.tags.join(" , ").toUpperCase()} ] - ${
+			{/* <h6 className="dateSubtitle">{`[ ${frontmatter.tags.join(" , ").toUpperCase()} ] - ${
 				frontmatter.date
-			}`}</h6>
+			}`}</h6> */}
+			<h6 className="dateSubtitle">{`${
+				frontmatter.date
+				}`}</h6>
 			{!frontmatter.published ? (
 				<h4 className="warn">
 					WARNING! this post is unpublished, there still work to be done and nothing here

@@ -1,4 +1,5 @@
 import * as React from "react";
+import Travolta from "../components/travolta";
 // import Link from "gatsby-link";
 
 const NotFoundPage = () => (
@@ -9,6 +10,7 @@ const NotFoundPage = () => (
 		</p>
 		<a href="/">go to home page</a>
 		<br />
+		<Travolta />
 	</div>
 );
 
