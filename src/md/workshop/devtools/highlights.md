@@ -4,7 +4,7 @@ title: "[DevTools] Highlights"
 category: "Workshops"
 tags: ["docker", "test", "life", "breed"]
 description: "Learn the very basics of element inspection in Chrome devtools"
-published: true
+published: false
 ---
 
 There must be at least 3 dashes separating each header cell.
