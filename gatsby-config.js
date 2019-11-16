@@ -20,7 +20,7 @@ module.exports = {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/favicon.png",
-  
+
         // WebApp Manifest Configuration
         appName: "Kevin Oliveira",
         appDescription: "Personal website",
@@ -34,7 +34,7 @@ module.exports = {
         orientation: 'portrait-primary',
         start_url: '/',
         version: '1.0',
-  
+
         icons: {
           android: true,
           appleIcon: true,
@@ -73,15 +73,17 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.description,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl +  pathTourlResolver(edge.node.fileAbsolutePath) ,
-                  guid: site.siteMetadata.siteUrl +  edge.node.id ,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+              return allMarkdownRemark.edges
+                .filter(edge => edge.node.frontmatter.published)
+                .map(edge => {
+                  return Object.assign({}, edge.node.frontmatter, {
+                    description: edge.node.description,
+                    date: edge.node.frontmatter.date,
+                    url: site.siteMetadata.siteUrl + pathTourlResolver(edge.node.fileAbsolutePath),
+                    guid: site.siteMetadata.siteUrl + edge.node.id,
+                    custom_elements: [{ "content:encoded": edge.node.html }],
+                  })
                 })
-              })
             },
             query: `
               {
@@ -97,7 +99,8 @@ module.exports = {
                       frontmatter {
                         title
                         date
-                        description                        
+                        description        
+                        published                
                       }
                     }
                   }
@@ -120,4 +123,4 @@ module.exports = {
 
 
 const pathTourlResolver = path =>
-    `/blog${path.split("src/md")[1]}`.replace(".md", "");
+  `/blog${path.split("src/md")[1]}`.replace(".md", "");
