@@ -9,7 +9,6 @@ const NotFoundPage = () => (
 		</p>
 		<a href="/">go to home page</a>
 		<br />
-		<img src="http://www.csanl.com.br/alunos/votar/f7/b/f7b14/gif%20fundo%20transparente.gif" />
 	</div>
 );
 
