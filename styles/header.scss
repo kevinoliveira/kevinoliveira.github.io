@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    
+    // border: 1px dashed black;
+    
+    .headerHome {
+        font-size: 16px;
+        color: black;   
+        font-weight: bold;
+    }
+    
+    .headerLinks {
+        
+        a {
+            margin: 10px;
+            font-size: 16px;
+            padding: 10px;
+            color: black;   
+            border: 3px solid transparent;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+
+            transition: all 0.2s;
+    
+            &:last-child{
+                margin-right: 0px;
+            }
+            &:hover {
+                color: white;
+                background-color: black;
+            }
+        }
+
+    }
+
+    
+}

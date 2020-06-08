@@ -1,0 +1,13 @@
+@import 'fonts.scss';
+@import 'header.scss';
+@import 'banner.scss';
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: whitesmoke;
+    // padding: 1em;
+    color: red($color: #000000);
+    margin: 0px;
+    padding: 0px;
+
+}

@@ -1,0 +1,85 @@
+.banner {
+    margin-top: 40px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 45% 55%;
+  
+
+    .bannerArt{
+        width: 35vw;
+        height:  33vw;
+        background-color: lightgrey;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.8s ease normal;
+
+
+        .artWrapper{
+            width: 30vw;
+            height: 30vw;
+            background-color: black;
+            position: absolute;
+            animation: slideRight 1s ease forwards;
+        }
+    }
+
+    .post{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding-right: 10vw;
+        
+        animation: slideUp 1s ease normal;
+
+        .postTitle{
+            font-weight: 900;
+            font-size: 3vw;
+            animation: fadeIn 1s ease normal;
+        }
+        .description{
+            padding-top: 5px;
+            font-size: 1.7vw;
+            color: darkslategrey;
+            animation: fadeIn 1.5s ease normal;
+
+        }
+        .subInfo{
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            animation: fadeIn 2s ease normal;
+
+            .info{
+                margin: 0.3vw;
+                font-size: 1.5vw;
+                color: gray;
+            }
+            .divider{
+                width: 2px;
+                height: 1.5vw;
+                background-color: lightgray;
+            }
+        }
+    }
+    
+}
+
+
+@keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideRight {
+    0%   { transform: translateX(0px);}
+    100% { transform: translateX(8vw);}
+}
+
+@keyframes slideUp {
+    0%   { transform: translateY(8vw);}
+    100% { transform: translateY(0px);}
+}
