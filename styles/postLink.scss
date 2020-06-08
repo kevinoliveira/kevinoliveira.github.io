@@ -1,0 +1,57 @@
+.homeposts {
+    
+
+    padding: 0px 10vw;
+    
+
+    .post{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding-right: 10vw;
+        margin: 50px 0px;
+        
+        // animation: slideUp 1s ease normal;
+    
+        opacity: 0.6;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover{
+            opacity: 1;
+        }
+
+
+        .postTitle{
+            font-weight: 500;
+            font-size: 2vw;
+            // animation: fadeIn 2.5s ease normal;
+        }
+        .description{
+            padding-top: 5px;
+            font-size: 1.3vw;
+            color: darkslategrey;
+            // animation: fadeIn 2.5s ease normal;
+    
+        }
+        .subInfo{
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            // animation: fadeIn 2.5sr ease normal;
+    
+            .info{
+                margin: 0.3vw;
+                font-size: 1vw;
+                color: gray;
+            }
+            .divider{
+                width: 2px;
+                height: 1vw;
+                background-color: lightgray;
+            }
+        }
+    }
+
+}

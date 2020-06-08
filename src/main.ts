@@ -10,6 +10,8 @@ const context = {
   name: "Jake",
   age: 31,
   plinks: [
+    { label: "Dark side", link: "/projects.html" },
+    { label: "Artlets", link: "/projects.html" },
     { label: "Projects", link: "/projects.html" },
     { label: "Blog", link: "/blog.html" },
     { label: "About Me", link: "/about.html" },
