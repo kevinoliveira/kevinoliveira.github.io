@@ -1,6 +1,9 @@
 import fs from "fs";
+import { config } from "./config";
 import { setup } from "./template"
 import { getStyles } from "./styles";
+import { getLayouts, getMarkdowns, getAssets, readMarkdown } from "./files"
+
 
 console.time("BUILD")
 const n = setup();
@@ -25,3 +28,21 @@ const z = n.render("home.njk", context);
 fs.writeFileSync("output/index.html", z, "UTF-8");
 fs.writeFileSync("output/s.css", s.css.toString(), "UTF-8");
 console.timeEnd("BUILD")
+
+
+// console.log(getLayouts());
+// console.log(getMarkdowns());
+// console.log(getAssets());
+const files = getMarkdowns();
+const parsed = files.map(readMarkdown);
+parsed.forEach(console.log);
+
+
+
+
+
+
+
+
+
+
