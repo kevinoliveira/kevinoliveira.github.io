@@ -2,13 +2,14 @@
 @import '../mixins/header.scss';
 @import '../mixins/banner.scss';
 @import '../mixins/postLink.scss';
-@import '../common/colors.scss';
+
 
 body{
     font-family: 'Ubuntu', sans-serif;
-    background-color: $whitesmoke;
+    background-color: whitesmoke;
     // padding: 1em;
-    color: $black;
+    color: red($color: #000000);
     margin: 0px;
     padding: 0px;
+
 }

@@ -1,6 +1,7 @@
 <div class="header">
     <div class="headerHome">Kevin Oliveira</div>
     <div class="headerLinks">
+    	<a onclick="toogleCurrentTheme()">Dark side</a>
         {% for item in plinks %}
             <a href="{{item.link}}">{{item.label}}</a>
         {% endfor %}

@@ -1,0 +1,53 @@
+<script>
+
+let themeIndex = 0;
+let count = 0; 
+const themes = [
+	{
+		background:"#0f0e17",
+		headline:"#fffffe",
+		paragraph: "#a7a9be",
+		button:"#ff8906",
+		buttonText:"#fffffe",
+		stoke: "black",
+		main:"#fffffe",
+		highlight:"#ff8906",
+		secondary:"#f25f4c",
+		tertiary: "#e53170"
+	},
+	{
+		background:"#eff0f3",
+		headline:"#0d0d0d",
+		paragraph: "#2a2a2a",
+		button:"#ff8e3c",
+		buttonText:"#0d0d0d",
+		stoke: "#0d0d0d",
+		main:"#eff0f3",
+		highlight:"#ff8e3c",
+		secondary:"#fffffe",
+		tertiary: "#d9376e"
+	},
+];
+
+
+function toogleCurrentTheme(){
+	var html = document.getElementsByTagName('html')[0];
+
+	themeIndex = (count++) % themes.length;
+	console.log(themes,themeIndex)
+
+	html.style.setProperty("--black", themes[themeIndex].background);
+	html.style.setProperty("--lightgrey", themes[themeIndex].paragraph);
+	html.style.setProperty("--lightgray",themes[themeIndex].buttonText);
+	html.style.setProperty("--darkslategrey", themes[themeIndex].stoke);
+	html.style.setProperty("--gray", themes[themeIndex].tertiary);
+	html.style.setProperty("--whitesmoke", themes[themeIndex].highlight);	
+	html.style.setProperty("--white", themes[themeIndex].main);	
+	
+	
+}
+
+
+
+
+</script>

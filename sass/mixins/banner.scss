@@ -1,3 +1,5 @@
+@import "../common/colors";
+
 .bannerLink{
     all: unset;
     cursor: pointer;
@@ -13,7 +15,7 @@
             border-radius: 0px 1vw 1vw 0px;
             width: 35vw;
             height:  33vw;
-            background-color: lightgrey;
+            background-color: $lightgrey;
     
             display: flex;
             justify-content: center;
@@ -25,7 +27,7 @@
                 border-radius: 1vw;
                 width: 30vw;
                 height: 30vw;
-                background-color: black;
+                background-color: $black;
                 position: absolute;
                 animation: slideRight 1s ease forwards;
             }
@@ -48,7 +50,7 @@
             .description{
                 padding-top: 5px;
                 font-size: 1.7vw;
-                color: darkslategrey;
+                color: $darkslategrey;
                 animation: fadeIn 1.5s ease normal;
     
             }
@@ -61,12 +63,12 @@
                 .info{
                     margin: 0.3vw;
                     font-size: 1.5vw;
-                    color: gray;
+                    color: $gray;
                 }
                 .divider{
                     width: 2px;
                     height: 1.5vw;
-                    background-color: lightgray;
+                    background-color: $lightgray;
                 }
             }
         }

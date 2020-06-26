@@ -1,3 +1,5 @@
+@import "../common/colors";
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -8,7 +10,7 @@
     
     .headerHome {
         font-size: 16px;
-        color: black;   
+        color: $black;   
         font-weight: bold;
     }
     
@@ -18,7 +20,7 @@
             margin: 10px;
             font-size: 16px;
             padding: 10px;
-            color: black;   
+            color: $black;   
             border: 3px solid transparent;
             border-radius: 8px;
             font-weight: bold;
@@ -30,8 +32,8 @@
                 margin-right: 0px;
             }
             &:hover {
-                color: white;
-                background-color: black;
+                color: $white;
+                background-color: $black;
             }
         }
 

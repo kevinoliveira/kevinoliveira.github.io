@@ -1,3 +1,5 @@
+@import "../common/colors";
+
 .homeposts {
     
 
@@ -31,7 +33,7 @@
         .description{
             padding-top: 5px;
             font-size: 1.3vw;
-            color: darkslategrey;
+            color: $darkslategrey;
             // animation: fadeIn 2.5s ease normal;
     
         }
@@ -44,12 +46,12 @@
             .info{
                 margin: 0.3vw;
                 font-size: 1vw;
-                color: gray;
+                color: $gray;
             }
             .divider{
                 width: 2px;
                 height: 1vw;
-                background-color: lightgray;
+                background-color: $lightgray;
             }
         }
     }

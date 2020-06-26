@@ -1,7 +1,7 @@
 import nunjucks from "nunjucks";
 
 export function setup() {
-    return nunjucks.configure(["layouts"], {
+    return nunjucks.configure(["nunjunks"], {
         autoescape: true,
         noCache: true
     });

@@ -3,11 +3,11 @@ import frontmatter from "frontmatter";
 import marked from "marked";
 
 export function getLayouts() {
-    return find("layouts", { matching: "**/*.njk" })
+    return find("nunjunks", { matching: "**/*.njk" })
 }
 
 export function getMarkdowns() {
-    return find("md", { matching: "**/*.md" })
+    return find("markdown", { matching: "**/*.md" })
 }
 
 export function getAssets() {
