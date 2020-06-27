@@ -21,7 +21,7 @@
   "devDependencies": {},
   "scripts": {
     "do": "ts-node src/main.ts",
-    "dev": "onchange 'src/**/*.ts' 'nunjunks/*.njk' 'nunjunks/**/*.njk' 'sass/**/*.scss' 'markdown/**/*.md' -- ts-node src/main.ts",
+    "dev": "onchange 'src/**/*.ts' 'src/*.ts'  'src/**/*.scss'  'src/**/*.njk'  'posts/*.md' -- ts-node src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

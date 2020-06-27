@@ -1,0 +1,14 @@
+@import '../../common/styles/fonts.scss';
+@import '../../common/styles/colors.scss';
+@import '../../common/header/header.scss';
+@import '../../common/home-banner/home-banner.scss';
+@import '../../common/post-links/post-link.scss';
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: $whitesmoke;
+    // padding: 1em;
+    color: $black;
+    margin: 0px;
+    padding: 0px;
+}

@@ -1,4 +1,4 @@
-@import "../common/colors";
+@import "../styles/colors.scss";
 
 .header {
     display: flex;
@@ -17,7 +17,9 @@
     .headerLinks {
         
         a {
+            cursor: pointer;
             margin: 10px;
+            user-select: none;
             font-size: 16px;
             padding: 10px;
             color: $black;   
