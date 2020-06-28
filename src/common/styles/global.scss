@@ -14,6 +14,11 @@ body{
     padding: 0px;
 }
 
+::-moz-selection,
+::selection { /* Code for Firefox */
+    color: $light;
+    background: $darker;
+}
 // * {
 //     transition: color 0.3s ease-in;
 //     transition: background-color 0.3s ease-in;
