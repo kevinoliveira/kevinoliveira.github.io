@@ -24,37 +24,43 @@ const pagesToCreate: IPage[] = [
       // name: "Jake",
       // age: 31,
     }
-  },{
+  },
+  {
     cssOutputName:"404.css",
     htmlOutputName: "404.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
     context: {title: "404",message:"Sorry, can't find anything"}
-  },{
+  },
+  {
     cssOutputName:"artlets.css",
     htmlOutputName: "artlets.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
     context: {title: "Artlets",message:"Artlets"}
-  },{
+  },
+  {
     cssOutputName:"projects.css",
     htmlOutputName: "projects.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
     context: {title: "Projects",message:"Projects"}
-  },{
+  },
+  {
     cssOutputName:"blog.css",
     htmlOutputName: "blog.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
     context: {title: "Blog",message:"Blog"}
-  },{
+  },
+  {
     cssOutputName:"about.css",
     htmlOutputName: "about.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
     context: {title: "About Me",message:"About Me"}
-  },{
+  },
+  {
     cssOutputName:"secret.css",
     htmlOutputName: "secret.html",
     nunjunksTemplate: "pages/404/404.njk",

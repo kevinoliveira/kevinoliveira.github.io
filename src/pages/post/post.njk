@@ -3,15 +3,20 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/post.css">
+    <!-- <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css"> -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"> -->
+
     <title>{{title}} - Kevin Oliveira</title>
   </head>
   <body>
     {% include "common/header/header.njk" %}
-    <article>
-    	<h1>{{title}}</h1>
-    	{% set content = rawHtml %}
-		{{ content | safe}}
-    </article>
+    <div class="articleWrapper">
+	    <article>
+	    	<h1>{{title}}</h1>
+	    	{% set content = rawHtml %}
+			{{ content | safe}}
+	    </article>
+    </div>
   </body>
       {% include "common/theme/theme.njk" %}
 </html>
