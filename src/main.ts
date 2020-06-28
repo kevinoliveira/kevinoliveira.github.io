@@ -3,7 +3,9 @@ console.log(new Date().toString())
 
 import fs from "fs";
 import path from "path";
-
+import { find, read, dir } from "fs-jetpack";
+import frontmatter from "frontmatter";
+import marked from "marked";
 import { IPage } from "./types";
 import nunjucks from "nunjucks";
 import sass from "node-sass";
@@ -27,37 +29,37 @@ const pagesToCreate: IPage[] = [
     htmlOutputName: "404.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {message:"Sorry, can't find anything"}
+    context: {title: "404",message:"Sorry, can't find anything"}
   },{
     cssOutputName:"artlets.css",
     htmlOutputName: "artlets.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {message:"Artlets"}
+    context: {title: "Artlets",message:"Artlets"}
   },{
     cssOutputName:"projects.css",
     htmlOutputName: "projects.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {message:"Projects"}
+    context: {title: "Projects",message:"Projects"}
   },{
     cssOutputName:"blog.css",
     htmlOutputName: "blog.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {message:"Blog"}
+    context: {title: "Blog",message:"Blog"}
   },{
     cssOutputName:"about.css",
     htmlOutputName: "about.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {message:"About Me"}
+    context: {title: "About Me",message:"About Me"}
   },{
     cssOutputName:"secret.css",
     htmlOutputName: "secret.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {message:"Secret"}
+    context: {title: "Secret",message:"Secret page"}
   }
 ]
 
@@ -82,6 +84,32 @@ pagesToCreate.forEach(p => {
 })
 
 
+// 4. createPosts
+
+const postsFilePaths = find("posts",{matching: "**/*.md"})
+const postsParsedData = postsFilePaths.map(path => {
+  const fileContent = read(path, "utf8");
+  const FM = frontmatter(fileContent);
+
+  return {
+      headers: FM.data,
+      content: FM.content,
+      parsedHtml: marked(FM.content)
+  }
+});
+
+// console.log(postsParsedData);
+
+dir("output/posts")
+
+postsParsedData.forEach(post => {
+  const html = n.render("pages/post/post.njk", {rawHtml: post.parsedHtml, title: post.headers.title});
+  fs.writeFileSync(path.join("output/posts/",post.headers.key+".html",),html, "UTF-8");
+});
+
+const css = sass.renderSync({ file: "src/pages/post/post.scss"}).css.toString();
+fs.writeFileSync(path.join("output/", "post.css"), css, "UTF-8");
+
 
 // console.time("BUILD")
 // const n = setup();
@@ -93,7 +121,7 @@ pagesToCreate.forEach(p => {
 //   age: 31,
 //   plinks: [
 //     { label: "Artlets", link: "/projects.html" },
-//     { label: "Projects", link: "/projects.html" },
+//     { label: "Projects", link: "/projects.html"  },
 //     { label: "Blog", link: "/blog.html" },
 //     { label: "About Me", link: "/about.html" },
 //   ]

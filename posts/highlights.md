@@ -1,5 +1,6 @@
 ---
 date: "2019-03-22"
+key: "devtools"
 title: "[DevTools] Highlights"
 category: "Workshops"
 tags: ["docker", "test", "life", "breed"]

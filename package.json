@@ -18,9 +18,12 @@
     "typescript": "^3.9.5",
     "typescript-deno-plugin": "^1.31.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "serve": "^11.3.2"
+  },
   "scripts": {
     "do": "ts-node src/main.ts",
+    "serve": "serve output",
     "dev": "onchange 'src/**/*.ts' 'src/*.ts'  'src/**/*.scss'  'src/**/*.njk'  'posts/*.md' -- ts-node src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,5 +1,6 @@
 ---
 date: "1970-01-01"
+key: "helloworld"
 title: "Hello world"
 tags: ["docker", "test", "life", "breed"]
 description: "hello world is the way to go"
