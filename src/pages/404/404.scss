@@ -4,3 +4,11 @@
 @import '../../common/home-banner/home-banner.scss';
 @import '../../common/post-links/post-link.scss';
 @import '../../common/styles/global.scss';
+
+.message{
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 200px);
+}

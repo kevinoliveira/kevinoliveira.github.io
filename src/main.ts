@@ -3,16 +3,11 @@ console.log(new Date().toString())
 
 import fs from "fs";
 import path from "path";
-// import { setup } from "./template"
-// import { getStyles, getPosterStyles } from "./styles";
-import { getLayouts, getMarkdowns, getAssets, readMarkdown } from "./files"
 
 import { IPage } from "./types";
 import nunjucks from "nunjucks";
 import sass from "node-sass";
 
-
-//HELPERS 
 
 
 // 1. define files to compiple
@@ -23,19 +18,49 @@ const pagesToCreate: IPage[] = [
     nunjunksTemplate: "pages/home/home.njk",
     sassFile: "pages/home/main.scss",
     context: {
-      name: "Jake",
-      age: 31,
-      plinks: [
-        { label: "Artlets", link: "/projects.html" },
-        { label: "Projects", link: "/projects.html" },
-        { label: "Blog", link: "/blog.html" },
-        { label: "About Me", link: "/about.html" },
-      ]
+      hideHome: true,
+      // name: "Jake",
+      // age: 31,
     }
+  },{
+    cssOutputName:"404.css",
+    htmlOutputName: "404.html",
+    nunjunksTemplate: "pages/404/404.njk",
+    sassFile: "pages/404/404.scss",
+    context: {message:"Sorry, can't find anything"}
+  },{
+    cssOutputName:"artlets.css",
+    htmlOutputName: "artlets.html",
+    nunjunksTemplate: "pages/404/404.njk",
+    sassFile: "pages/404/404.scss",
+    context: {message:"Artlets"}
+  },{
+    cssOutputName:"projects.css",
+    htmlOutputName: "projects.html",
+    nunjunksTemplate: "pages/404/404.njk",
+    sassFile: "pages/404/404.scss",
+    context: {message:"Projects"}
+  },{
+    cssOutputName:"blog.css",
+    htmlOutputName: "blog.html",
+    nunjunksTemplate: "pages/404/404.njk",
+    sassFile: "pages/404/404.scss",
+    context: {message:"Blog"}
+  },{
+    cssOutputName:"about.css",
+    htmlOutputName: "about.html",
+    nunjunksTemplate: "pages/404/404.njk",
+    sassFile: "pages/404/404.scss",
+    context: {message:"About Me"}
+  },{
+    cssOutputName:"secret.css",
+    htmlOutputName: "secret.html",
+    nunjunksTemplate: "pages/404/404.njk",
+    sassFile: "pages/404/404.scss",
+    context: {message:"Secret"}
   }
 ]
 
-console.log("NICE ", pagesToCreate)
 // 2. compile html
 
 const n = nunjucks.configure(["src"], {

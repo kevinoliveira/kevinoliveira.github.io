@@ -1,9 +1,15 @@
 <div class="header">
     <div class="headerHome">Kevin Oliveira</div>
     <div class="headerLinks">
-    	<a onclick="toogleCurrentTheme()">Change Theme</a>
-        {% for item in plinks %}
-            <a href="{{item.link}}">{{item.label}}</a>
-        {% endfor %}
+        {% if hideHome %}
+        {% else %}
+          <a href="/">Home</a>
+        {% endif %}
+        <a href="/artlets.html">Artlets</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About Me</a>
+        <a href="/404.html">404</a>
+    	<a onclick="toogleCurrentTheme()">Switch Theme</a>
     </div>
 </div>

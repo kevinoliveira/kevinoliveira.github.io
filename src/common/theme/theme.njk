@@ -1,53 +1,53 @@
 <script>
+	let isDarkThemeActive = false;
+	const darkTheme = 
+		{
+			"lighter": "#000",
+			"light": "#000",
+			"midLight": "#2b2b2b",
+			"midDark": "#aeaeae",
+			"dark": "#bdbdbd",
+			"darker": "#c4c4c4",
+		};
 
-let themeIndex = 0;
-let count = 0; 
-const themes = [
-	{
-		background:"#0f0e17",
-		headline:"#fffffe",
-		paragraph: "#a7a9be",
-		button:"#ff8906",
-		buttonText:"#fffffe",
-		stoke: "black",
-		main:"#fffffe",
-		highlight:"#ff8906",
-		secondary:"#f25f4c",
-		tertiary: "#e53170"
-	},
-	{
-		background:"#eff0f3",
-		headline:"#0d0d0d",
-		paragraph: "#2a2a2a",
-		button:"#ff8e3c",
-		buttonText:"#0d0d0d",
-		stoke: "#0d0d0d",
-		main:"#eff0f3",
-		highlight:"#ff8e3c",
-		secondary:"#fffffe",
-		tertiary: "#d9376e"
-	},
-];
-
-
-function toogleCurrentTheme(){
-	var html = document.getElementsByTagName('html')[0];
-
-	themeIndex = (count++) % themes.length;
-	console.log(themes,themeIndex)
-
-	html.style.setProperty("--black", themes[themeIndex].background);
-	html.style.setProperty("--lightgrey", themes[themeIndex].paragraph);
-	html.style.setProperty("--lightgray",themes[themeIndex].buttonText);
-	html.style.setProperty("--darkslategrey", themes[themeIndex].stoke);
-	html.style.setProperty("--gray", themes[themeIndex].tertiary);
-	html.style.setProperty("--whitesmoke", themes[themeIndex].highlight);	
-	html.style.setProperty("--white", themes[themeIndex].main);	
-	
-	
-}
+	const lightTheme =
+		{
+			"lighter": "white",
+			"light": "whitesmoke",
+			"midLight": "lightgrey",
+			"midDark": "gray",
+			"dark": "darkslategrey",
+			"darker": "black",
+		};
 
 
 
+	function toogleCurrentTheme() {
 
+		// SWITCH THEME
+		isDarkThemeActive = !isDarkThemeActive;
+
+		// CHANGE THEME
+		var html = document.getElementsByTagName('html')[0];
+		const themeToSet = isDarkThemeActive? darkTheme : lightTheme;
+		html.style.setProperty("--lighter", themeToSet.lighter);
+		html.style.setProperty("--light", themeToSet.light);
+		html.style.setProperty("--mid-light", themeToSet.midLight);
+		html.style.setProperty("--mid-dark", themeToSet.midDark);
+		html.style.setProperty("--dark", themeToSet.dark);
+		html.style.setProperty("--darker", themeToSet.darker);
+
+		// SAVE THEME CHOICE ON LOCAL STORAGE
+		localStorage.setItem('theme', isDarkThemeActive? "dark": "light");
+	}
+
+	function switchThemeOnStartUpIfNeeded() {
+		const previousThemeChoice = localStorage.getItem('theme');
+		if(
+			(previousThemeChoice === "dark"  && !isDarkThemeActive ) ||
+			(previousThemeChoice === "light" &&  isDarkThemeActive) 
+		) toogleCurrentTheme();
+	}
+
+	switchThemeOnStartUpIfNeeded()
 </script>

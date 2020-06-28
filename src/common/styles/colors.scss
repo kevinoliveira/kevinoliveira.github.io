@@ -1,18 +1,31 @@
 
 :root {
-	--black: black;
-	--lightgrey: lightgrey;
-	--lightgray: lightgray;
-	--darkslategrey: darkslategrey;
-	--gray: gray;
-	--whitesmoke: whitesmoke;
-	--white: white;
+	// --black: black;
+	// --lightgrey: lightgrey;
+	// --lightgray: lightgray;
+	// --darkslategrey: darkslategrey;
+	// --gray: gray;
+	// --whitesmoke: whitesmoke;
+	// --white: white;
+	--lighter: white;
+	--light: whitesmoke;
+	--mid-light: lightgrey;
+	--mid-dark: gray;
+	--dark: darkslategrey;
+	--darker: black;
 }
 
-$black: var(--black);
-$lightgrey: var(--lightgrey);
-$lightgray: var(--lightgray);
-$darkslategrey: var(--darkslategrey);
-$gray: var(--gray);
-$whitesmoke: var(--whitesmoke);
-$white: var(--white);
+// $darker: var(--black);
+// $lightgrey: var(--lightgrey);
+// $lightgray: var(--lightgray);
+// $darkslategrey: var(--darkslategrey);
+// $gray: var(--gray);
+// $whitesmoke: var(--whitesmoke);
+// $white: var(--white);
+
+$lighter: var(--lighter);
+$light: var(--light);
+$mid-light: var(--mid-light);
+$mid-dark: var(--mid-dark);
+$dark: var(--dark);
+$darker: var(--darker);

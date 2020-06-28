@@ -10,7 +10,7 @@
     
     .headerHome {
         font-size: 16px;
-        color: $black;   
+        color: $darker;   
         font-weight: bold;
     }
     
@@ -22,7 +22,7 @@
             user-select: none;
             font-size: 16px;
             padding: 10px;
-            color: $black;   
+            color: $darker;   
             border: 3px solid transparent;
             border-radius: 8px;
             font-weight: bold;
@@ -34,8 +34,8 @@
                 margin-right: 0px;
             }
             &:hover {
-                color: $white;
-                background-color: $black;
+                color: $lighter;
+                background-color: $darker;
             }
         }
 
