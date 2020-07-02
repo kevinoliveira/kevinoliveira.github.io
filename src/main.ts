@@ -136,6 +136,6 @@ function postsParsedToTemplate(parsed: ParsedPost[] ):TemplatePost[]{
     title: p.headers.title,
     date: p.headers.date,
     description: p.headers.description,
-    link:  "/sorry"
+    link:  `/posts/${p.headers.key}`
   }))
 }

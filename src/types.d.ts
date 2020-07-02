@@ -15,7 +15,7 @@ export interface TemplatePost {
 
 export interface ParsedPost {
 	headers: Headers;
-	content: any;
+	content: string;
 	parsedHtml: string;
 }
 
