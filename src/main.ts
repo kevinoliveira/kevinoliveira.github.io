@@ -1,18 +1,41 @@
 console.clear();
 console.log(new Date().toString())
 
+import { 
+  IPage, 
+  TemplatePost, 
+  ParsedPost 
+} from "./types";
 import fs from "fs";
 import path from "path";
 import { find, read, dir } from "fs-jetpack";
 import frontmatter from "frontmatter";
 import marked from "marked";
-import { IPage } from "./types";
 import nunjucks from "nunjucks";
 import sass from "node-sass";
 
+// 1. SETUP
 
+// nunjunks setup
+const n = nunjucks.configure(["src"], {
+  autoescape: true,
+  noCache: true
+});
+ 
+// parsing posts
+const postsFilePaths = find("posts",{matching: "**/*.md"})
+const postsParsedData:ParsedPost[] = postsFilePaths.map(path => {
+  const fileContent = read(path, "utf8");
+  const FM = frontmatter(fileContent);
 
-// 1. define files to compiple
+  return {
+      headers: FM.data,
+      content: FM.content,
+      parsedHtml: marked(FM.content)
+  }
+});
+
+// define files to compiple
 const pagesToCreate: IPage[] = [
   {
     htmlOutputName: "index.html",
@@ -21,6 +44,7 @@ const pagesToCreate: IPage[] = [
     sassFile: "pages/home/main.scss",
     context: {
       hideHome: true,
+      posts: postsParsedToTemplate(postsParsedData)
       // name: "Jake",
       // age: 31,
     }
@@ -69,99 +93,49 @@ const pagesToCreate: IPage[] = [
   }
 ]
 
-// 2. compile html
 
-const n = nunjucks.configure(["src"], {
-  autoescape: true,
-  noCache: true
+// 2. compile posts
+
+// create dir
+dir("output/posts")
+
+// html
+postsParsedData.forEach(post => {
+  const html = n.render("pages/post/post.njk", {rawHtml: post.parsedHtml, title: post.headers.title});
+  fs.writeFileSync(path.join("output/posts/",post.headers.key+".html",),html, "UTF-8");
 });
 
+// styles
+const css = sass.renderSync({ file: "src/pages/post/post.scss"}).css.toString();
+fs.writeFileSync(path.join("output/", "post.css"), css, "UTF-8");
+
+
+// 3. compile other pages
+
+// html
 pagesToCreate.forEach(p => {
   const html = n.render(p.nunjunksTemplate, p.context);
   fs.writeFileSync(path.join("output/", p.htmlOutputName), html, "UTF-8");
 })
-
-
-// 3. complie scss
-
+// styles
 pagesToCreate.forEach(p => {
   const css = sass.renderSync({ file: path.join("src/", p.sassFile) }).css.toString();
   fs.writeFileSync(path.join("output/", p.cssOutputName), css, "UTF-8");
 })
 
 
-// 4. createPosts
-
-const postsFilePaths = find("posts",{matching: "**/*.md"})
-const postsParsedData = postsFilePaths.map(path => {
-  const fileContent = read(path, "utf8");
-  const FM = frontmatter(fileContent);
-
-  return {
-      headers: FM.data,
-      content: FM.content,
-      parsedHtml: marked(FM.content)
-  }
-});
-
-// console.log(postsParsedData);
-
-dir("output/posts")
-
-postsParsedData.forEach(post => {
-  const html = n.render("pages/post/post.njk", {rawHtml: post.parsedHtml, title: post.headers.title});
-  fs.writeFileSync(path.join("output/posts/",post.headers.key+".html",),html, "UTF-8");
-});
-
-const css = sass.renderSync({ file: "src/pages/post/post.scss"}).css.toString();
-fs.writeFileSync(path.join("output/", "post.css"), css, "UTF-8");
-
-
-// console.time("BUILD")
-// const n = setup();
-// const s = getStyles();
-// const s2 = getPosterStyles();
-
-// const context = {
-//   name: "Jake",
-//   age: 31,
-//   plinks: [
-//     { label: "Artlets", link: "/projects.html" },
-//     { label: "Projects", link: "/projects.html"  },
-//     { label: "Blog", link: "/blog.html" },
-//     { label: "About Me", link: "/about.html" },
-//   ]
-// }
-
-// console.log(n)
-
-// const z = n.render("home.njk", context);
-// fs.writeFileSync("output/index.html", z, "UTF-8");
-// fs.writeFileSync("output/s.css", s.css.toString(), "UTF-8");
-
-
-// const z2 = n.render("post.njk", context);
-// fs.writeFileSync("output/post.html", z2, "UTF-8");
-// fs.writeFileSync("output/post.css", s2.css.toString(), "UTF-8");
-
-// console.timeEnd("BUILD")
-
-
-
-// // console.log(getLayouts());
-// // console.log(getMarkdowns());
-// // console.log(getAssets());
-// const files = getMarkdowns();
-// const parsed = files.map(readMarkdown);
-// parsed.forEach(console.log);
 
 
 
 
+// HELPERS
 
 
-// console.log(files)
-
-
-
-
+function postsParsedToTemplate(parsed: ParsedPost[] ):TemplatePost[]{
+  return parsed.map(p => ({
+    title: p.headers.title,
+    date: p.headers.date,
+    description: p.headers.description,
+    link:  "/sorry"
+  }))
+}
