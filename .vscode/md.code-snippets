@@ -1,0 +1,180 @@
+{
+	"To do list": {
+		"scope": "markdown",
+		"prefix": "todo",
+		"body": "- [ ] $1"
+	},
+	"Simple list": {
+		"scope": "markdown",
+		"prefix": "list",
+		"body": "- $1"
+	},
+	"Numeric list": {
+		"scope": "markdown",
+		"prefix": "numeric",
+		"body": "1. $1"
+	},
+	"Definition list": {
+		"scope": "markdown",
+		"prefix": "definition",
+		"body": [
+			"$1",
+			": $2"
+		]
+	},
+	"Title": {
+		"scope": "markdown",
+		"prefix": "title",
+		"body": "# $1"
+	},
+	"Bold Text": {
+		"scope": "markdown",
+		"prefix": "bold",
+		"body": "**$1**$0"
+	},
+	"Quote": {
+		"scope": "markdown",
+		"prefix": "quote",
+		"body": "> $1"
+	},
+	"Link": {
+		"scope": "markdown",
+		"prefix": "link",
+		"body": "[$1]($2)$0"
+	},
+	"Image": {
+		"scope": "markdown",
+		"prefix": "image",
+		"body": "![$1]($2)$0"
+	},
+	"Divisor": {
+		"scope": "markdown",
+		"prefix": "divide",
+		"body": "---\n"
+	},
+	"Table": {
+		"scope": "markdown",
+		"prefix": "table",
+		"body": [
+			"| Syntax      | Description |",
+			"| ----------- | ----------- |",
+			"| Header      | Title       |",
+			"| Paragraph   | Text        |",
+		]
+	},
+	"Javascript Code": {
+		"scope": "markdown",
+		"prefix": "javascript",
+		"body": [
+			"```javascript",
+			"var x, y;",
+			"x = 5;",
+			"y = 6;",
+			"document.getElementById('demo').innerHTML = x + y;",
+			"```\n",
+		]
+	},
+	"Ruby Code": {
+		"scope": "markdown",
+		"prefix": "ruby",
+		"body": [
+			"```ruby",
+			"print <<`EOC`                 # execute commands",
+			"\techo hi there",
+			"\techo lo there",
+			"EOC",
+			"```\n",
+		]
+	},
+	"Crystal Code": {
+		"scope": "markdown",
+		"prefix": "crystal",
+		"body": [
+			"```crystal",
+			"print <<`EOC`                 # execute commands",
+			"\techo hi there",
+			"\techo lo there",
+			"EOC",
+			"```\n",
+		]
+	},
+	"C++ Code": {
+		"scope": "markdown",
+		"prefix": "cpp",
+		"body": [
+			"```cpp",
+			"#include <iostream>",
+			"using namespace std;",
+			"",
+			"// main() is where program execution begins.",
+			"int main() {",
+			"\tcout << \"Hello World\"; // prints Hello World",
+			"\treturn 0;",
+			"}",
+			"```\n",
+		]
+	},
+	"Python Code": {
+		"scope": "markdown",
+		"prefix": "python",
+		"body": [
+			"```python",
+			"var = 100",
+			"if ( var == 100 ) : print \"Value of expression is 100\"",
+			"print \"Good bye!\"",
+			"```\n",
+		]
+	},
+	"Typescript Code": {
+		"scope": "markdown",
+		"prefix": "typescript",
+		"body": [
+			"```typescript",
+			"interface Foo {",
+			"\tperson: string;",
+			"\thell: number;",
+			"}",
+			"const a : Record<Foo, keyof Foo> = {home: \"is the way to go\"}",
+			"```\n",
+		]
+	},
+	"ReasonMl Code": {
+		"scope": "markdown",
+		"prefix": "reasonml",
+		"body": [
+			"```reasonml",
+			"let myFun = (x, y) => {",
+			"\tlet doubleX = x + x;",
+			"\tlet doubleY = y + \"nice\";",
+			"\tdoubleX + doubleY",
+			"};",
+			"```\n",
+		]
+	},
+	"GoLang Code": {
+		"scope": "markdown",
+		"prefix": "golang",
+		"body": [
+			"```golang",
+			"package main",
+			"",
+			"import \"fmt\"",
+			"",
+			"func main() {",
+			"\tfmt.Println(\"Hello, 世界\")",
+			"}",
+			"```\n",
+		]
+	},
+	"Rust Code": {
+		"scope": "markdown",
+		"prefix": "rust",
+		"body": [
+			"```rust",
+			"fn main() {",
+			"\tprintln!(\"Hello, world!\");",
+			"}",
+			"```\n",
+		]
+	},
+}

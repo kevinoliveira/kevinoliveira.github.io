@@ -3,5 +3,26 @@
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"liveServer.settings.root": "output/",
 	"liveServer.settings.port": 6660,
-	"liveServer.settings.fullReload": true
+	"liveServer.settings.fullReload": true,
+	"editor.minimap.enabled": false,
+	"editor.fontLigatures": true,
+	"editor.wrappingIndent": "indent",
+	"editor.overviewRulerBorder": false,
+	"editor.lineHeight": 24,
+	"workbench.colorTheme": "Verdandi",
+	"[markdown]": {
+		"editor.quickSuggestions": true
+	},
+	"git.enableSmartCommit": true,
+	"git.postCommitCommand": "sync",
+	"editor.detectIndentation": false,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"markdown.extension.list.indentationSize": 4,
+	"terminal.integrated.cursorBlinking": true,
+	"terminal.integrated.fontWeight": "bold",
+	"editor.rulers": [
+		80,
+		120
+	]
 }
