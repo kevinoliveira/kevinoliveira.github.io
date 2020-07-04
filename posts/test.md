@@ -1,10 +1,13 @@
 ---
-date: "2001-02-01"
+date: "2020-12-01"
 key: "testing"
-title: "Testing this thing up"
+title: "Compiled list of mental models"
+description: "all mental models categorized and united to help you think and make choices"
 tags: ["docker", "test", "life", "breed"]
 published: false
 ---
+
+hahah he is some text for you
 
 # Heading 1 #
 
@@ -57,16 +60,16 @@ ___Strong emphasized text___
 
 Table, like this one :
 
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+| First Header | Second Header |
+| ------------ | ------------- |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
 
 ```
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+| First Header | Second Header |
+| ------------ | ------------- |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
 ```
 
 `code()`
@@ -173,22 +176,22 @@ Hotkey:
 
 Hotkey list:
 
-| Key | Symbol |
-| --- | --- |
-| Option | ⌥ |
-| Control | ⌃ |
-| Command | ⌘ |
-| Shift | ⇧ |
-| Caps Lock | ⇪ |
-| Tab | ⇥ |
-| Esc | ⎋ |
-| Power | ⌽ |
-| Return | ↩ |
-| Delete | ⌫ |
-| Up | ↑ |
-| Down | ↓ |
-| Left | ← |
-| Right | → |
+| Key       | Symbol |
+| --------- | ------ |
+| Option    | ⌥      |
+| Control   | ⌃      |
+| Command   | ⌘      |
+| Shift     | ⇧      |
+| Caps Lock | ⇪      |
+| Tab       | ⇥      |
+| Esc       | ⎋      |
+| Power     | ⌽      |
+| Return    | ↩      |
+| Delete    | ⌫      |
+| Up        | ↑      |
+| Down      | ↓      |
+| Left      | ←      |
+| Right     | →      |
 
 Emoji:
 

@@ -1,10 +1,10 @@
 console.clear();
 console.log(new Date().toString())
 
-import { 
-  IPage, 
-  TemplatePost, 
-  ParsedPost 
+import {
+  IPage,
+  TemplatePost,
+  ParsedPost
 } from "./types";
 import fs from "fs";
 import path from "path";
@@ -21,19 +21,24 @@ const n = nunjucks.configure(["src"], {
   autoescape: true,
   noCache: true
 });
- 
+
 // parsing posts
-const postsFilePaths = find("posts",{matching: "**/*.md"})
-const postsParsedData:ParsedPost[] = postsFilePaths.map(path => {
+const postsFilePaths = find("posts", { matching: "**/*.md" })
+const postsParsedData: ParsedPost[] = postsFilePaths.map(path => {
   const fileContent = read(path, "utf8");
   const FM = frontmatter(fileContent);
 
   return {
-      headers: FM.data,
-      content: FM.content,
-      parsedHtml: marked(FM.content)
+    headers: FM.data,
+    content: FM.content,
+    parsedHtml: marked(FM.content)
   }
 });
+postsParsedData.sort((postA, postB) => {
+  const dateA = postA.headers.date;
+  const dateB = postB.headers.date;
+  return dateB.localeCompare(dateA, 'en', { sensitivity: 'base' });
+})
 
 // define files to compiple
 const pagesToCreate: IPage[] = [
@@ -50,46 +55,46 @@ const pagesToCreate: IPage[] = [
     }
   },
   {
-    cssOutputName:"404.css",
+    cssOutputName: "404.css",
     htmlOutputName: "404.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {title: "404",message:"Sorry, can't find anything"}
+    context: { title: "404", message: "Sorry, can't find anything" }
   },
   {
-    cssOutputName:"artlets.css",
+    cssOutputName: "artlets.css",
     htmlOutputName: "artlets.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {title: "Artlets",message:"Artlets"}
+    context: { title: "Artlets", message: "Artlets" }
   },
   {
-    cssOutputName:"projects.css",
+    cssOutputName: "projects.css",
     htmlOutputName: "projects.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {title: "Projects",message:"Projects"}
+    context: { title: "Projects", message: "Projects" }
   },
   {
-    cssOutputName:"blog.css",
+    cssOutputName: "blog.css",
     htmlOutputName: "blog.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {title: "Blog",message:"Blog"}
+    context: { title: "Blog", message: "Blog" }
   },
   {
-    cssOutputName:"about.css",
+    cssOutputName: "about.css",
     htmlOutputName: "about.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {title: "About Me",message:"About Me"}
+    context: { title: "About Me", message: "About Me" }
   },
   {
-    cssOutputName:"secret.css",
+    cssOutputName: "secret.css",
     htmlOutputName: "secret.html",
     nunjunksTemplate: "pages/404/404.njk",
     sassFile: "pages/404/404.scss",
-    context: {title: "Secret",message:"Secret page"}
+    context: { title: "Secret", message: "Secret page" }
   }
 ]
 
@@ -101,12 +106,12 @@ dir("output/posts")
 
 // html
 postsParsedData.forEach(post => {
-  const html = n.render("pages/post/post.njk", {rawHtml: post.parsedHtml, title: post.headers.title});
-  fs.writeFileSync(path.join("output/posts/",post.headers.key+".html",),html, "UTF-8");
+  const html = n.render("pages/post/post.njk", { rawHtml: post.parsedHtml, title: post.headers.title });
+  fs.writeFileSync(path.join("output/posts/", post.headers.key + ".html",), html, "UTF-8");
 });
 
 // styles
-const css = sass.renderSync({ file: "src/pages/post/post.scss"}).css.toString();
+const css = sass.renderSync({ file: "src/pages/post/post.scss" }).css.toString();
 fs.writeFileSync(path.join("output/", "post.css"), css, "UTF-8");
 
 
@@ -131,11 +136,11 @@ pagesToCreate.forEach(p => {
 // HELPERS
 
 
-function postsParsedToTemplate(parsed: ParsedPost[] ):TemplatePost[]{
+function postsParsedToTemplate(parsed: ParsedPost[]): TemplatePost[] {
   return parsed.map(p => ({
     title: p.headers.title,
     date: p.headers.date,
     description: p.headers.description,
-    link:  `/posts/${p.headers.key}`
+    link: `/posts/${p.headers.key}`
   }))
 }
