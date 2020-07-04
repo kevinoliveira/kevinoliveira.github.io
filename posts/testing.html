@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/post.css">
+    <!-- <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css"> -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"> -->
+
+    <title>Compiled list of mental models - Kevin Oliveira</title>
+  </head>
+  <body>
+    <div class="headerWrapper">
+	<div class="header">
+		<div class="headerHome">Kevin Oliveira</div>
+		<div class="headerLinks">
+			
+				<a href="/">Home</a>
+			
+			<!-- <a href="/artlets.html">Artlets</a>
+			<a href="/projects.html">Projects</a>
+			<a href="/blog.html">Blog</a>
+			<a href="/about.html">About Me</a>
+			<a href="/404.html">404</a> -->
+			<a onclick="toogleCurrentTheme()">Switch Theme</a>
+		</div>
+	</div>
+</div>
+    <div class="articleWrapper">
+	    <article>
+	    	<h1>Compiled list of mental models</h1>
+	    	
+			<p>hahah he is some text for you</p>
+<h1 id="heading-1">Heading 1</h1>
+<pre><code>Markup :  # Heading 1 #
+
+-OR-
+
+Markup :  ============= (below H1 text)</code></pre>
+<h2 id="heading-2">Heading 2</h2>
+<pre><code>Markup :  ## Heading 2 ##
+
+-OR-
+
+Markup: --------------- (below H2 text)</code></pre>
+<h3 id="heading-3">Heading 3</h3>
+<pre><code>Markup :  ### Heading 3 ###</code></pre>
+<h4 id="heading-4">Heading 4</h4>
+<pre><code>Markup :  #### Heading 4 ####</code></pre>
+<p>Common text</p>
+<pre><code>Markup :  Common text</code></pre>
+<p><em>Emphasized text</em></p>
+<pre><code>Markup :  _Emphasized text_ or *Emphasized text*</code></pre>
+<p><del>Strikethrough text</del></p>
+<pre><code>Markup :  ~~Strikethrough text~~</code></pre>
+<p><strong>Strong text</strong></p>
+<pre><code>Markup :  __Strong text__ or **Strong text**</code></pre>
+<p><strong><em>Strong emphasized text</em></strong></p>
+<pre><code>Markup :  ___Strong emphasized text___ or ***Strong emphasized text***</code></pre>
+<p><a href="http://www.google.fr/">Named Link</a> and <a href="http://www.google.fr/">http://www.google.fr/</a> or <a href="http://example.com/">http://example.com/</a></p>
+<pre><code>Markup :  [Named Link](http://www.google.fr/) and http://www.google.fr/ or &lt;http://example.com/&gt;</code></pre>
+<p>Table, like this one :</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody></table>
+<pre><code>| First Header | Second Header |
+| ------------ | ------------- |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |</code></pre>
+<p><code>code()</code></p>
+<pre><code>Markup :  `code()`</code></pre>
+<pre><code class="language-javascript">    var specificLanguage_code = 
+    {
+        &quot;data&quot;: {
+            &quot;lookedUpPlatform&quot;: 1,
+            &quot;query&quot;: &quot;Kasabian+Test+Transmission&quot;,
+            &quot;lookedUpItem&quot;: {
+                &quot;name&quot;: &quot;Test Transmission&quot;,
+                &quot;artist&quot;: &quot;Kasabian&quot;,
+                &quot;album&quot;: &quot;Kasabian&quot;,
+                &quot;picture&quot;: null,
+                &quot;link&quot;: &quot;http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp&quot;
+            }
+        }
+    }</code></pre>
+<pre><code>Markup : ```javascript
+         ```</code></pre>
+<ul>
+<li>Bullet list<ul>
+<li>Nested bullet<ul>
+<li>Sub-nested bullet etc</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Bullet list item 2</li>
+</ul>
+<pre><code> Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2</code></pre>
+<ol>
+<li>A numbered list<ol>
+<li>A nested numbered list</li>
+<li>Which is numbered</li>
+</ol>
+</li>
+<li>Which is numbered</li>
+</ol>
+<pre><code> Markup : 1. A numbered list
+              1. A nested numbered list
+              2. Which is numbered
+          2. Which is numbered</code></pre>
+<ul>
+<li><input disabled="" type="checkbox"> An uncompleted task</li>
+<li><input checked="" disabled="" type="checkbox"> A completed task</li>
+</ul>
+<pre><code> Markup : - [ ] An uncompleted task
+          - [x] A completed task</code></pre>
+<blockquote>
+<p>Blockquote</p>
+<blockquote>
+<p>Nested blockquote</p>
+</blockquote>
+</blockquote>
+<pre><code>Markup :  &gt; Blockquote
+          &gt;&gt; Nested Blockquote</code></pre>
+<p><em>Horizontal line :</em></p>
+<hr>
+<pre><code>Markup :  - - - -</code></pre>
+<p><em>Image with alt :</em></p>
+<p><img src="http://cdn.cnn.com/cnnnext/dam/assets/141216183300-simpsons-25-anniversary-image-4-horizontal-large-gallery.jpg" alt="picture alt" title="Title is optional"></p>
+<pre><code>Markup : ![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg &quot;Title is optional&quot;)</code></pre>
+<p>Foldable text:</p>
+<details>
+  <summary>Title 1</summary>
+  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+</details>
+<details>
+  <summary>Title 2</summary>
+  <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
+</details>
+
+<pre><code>Markup : &lt;details&gt;
+           &lt;summary&gt;Title 1&lt;/summary&gt;
+           &lt;p&gt;Content 1 Content 1 Content 1 Content 1 Content 1&lt;/p&gt;
+         &lt;/details&gt;</code></pre>
+<pre><code class="language-html">&lt;h3&gt;HTML&lt;/h3&gt;
+&lt;p&gt; Some HTML code here &lt;/p&gt;</code></pre>
+<p>Hotkey:</p>
+<p><kbd>⌘F</kbd></p>
+<p><kbd>⇧⌘F</kbd></p>
+<pre><code>Markup : &lt;kbd&gt;⌘F&lt;/kbd&gt;</code></pre>
+<p>Hotkey list:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Symbol</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Option</td>
+<td>⌥</td>
+</tr>
+<tr>
+<td>Control</td>
+<td>⌃</td>
+</tr>
+<tr>
+<td>Command</td>
+<td>⌘</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>⇧</td>
+</tr>
+<tr>
+<td>Caps Lock</td>
+<td>⇪</td>
+</tr>
+<tr>
+<td>Tab</td>
+<td>⇥</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>⎋</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>⌽</td>
+</tr>
+<tr>
+<td>Return</td>
+<td>↩</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>⌫</td>
+</tr>
+<tr>
+<td>Up</td>
+<td>↑</td>
+</tr>
+<tr>
+<td>Down</td>
+<td>↓</td>
+</tr>
+<tr>
+<td>Left</td>
+<td>←</td>
+</tr>
+<tr>
+<td>Right</td>
+<td>→</td>
+</tr>
+</tbody></table>
+<p>Emoji:</p>
+<p>:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at <a href="http://emoji-cheat-sheet.com/">emoji-cheat-sheet.com</a></p>
+<pre><code>Markup : Code appears between colons :EMOJICODE:</code></pre>
+
+	    </article>
+    </div>
+  </body>
+      <script>
+	let isDarkThemeActive = false;
+	const darkTheme = 
+		{
+			"lighter": "#202020",
+			"light": "#202020",
+			"midLight": "#2b2b2b",
+			"midDark": "#aeaeae",
+			"dark": "#bdbdbd",
+			"darker": "#c4c4c4",
+		};
+
+	const lightTheme =
+		{
+			"lighter": "white",
+			"light": "whitesmoke",
+			"midLight": "lightgrey",
+			"midDark": "gray",
+			"dark": "darkslategrey",
+			"darker": "black",
+		};
+
+
+
+	function toogleCurrentTheme() {
+
+		// SWITCH THEME
+		isDarkThemeActive = !isDarkThemeActive;
+
+		// CHANGE THEME
+		var html = document.getElementsByTagName('html')[0];
+		const themeToSet = isDarkThemeActive? darkTheme : lightTheme;
+		html.style.setProperty("--lighter", themeToSet.lighter);
+		html.style.setProperty("--light", themeToSet.light);
+		html.style.setProperty("--mid-light", themeToSet.midLight);
+		html.style.setProperty("--mid-dark", themeToSet.midDark);
+		html.style.setProperty("--dark", themeToSet.dark);
+		html.style.setProperty("--darker", themeToSet.darker);
+
+		// SAVE THEME CHOICE ON LOCAL STORAGE
+		localStorage.setItem('theme', isDarkThemeActive? "dark": "light");
+	}
+
+	function switchThemeOnStartUpIfNeeded() {
+		const previousThemeChoice = localStorage.getItem('theme');
+		if(
+			(previousThemeChoice === "dark"  && !isDarkThemeActive ) ||
+			(previousThemeChoice === "light" &&  isDarkThemeActive) 
+		) toogleCurrentTheme();
+	}
+
+	switchThemeOnStartUpIfNeeded()
+</script>
+</html>

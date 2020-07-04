@@ -1,0 +1,310 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+:root {
+  --lighter: white;
+  --light: whitesmoke;
+  --mid-light: lightgrey;
+  --mid-dark: gray;
+  --dark: darkslategrey;
+  --darker: black; }
+
+:root {
+  --lighter: white;
+  --light: whitesmoke;
+  --mid-light: lightgrey;
+  --mid-dark: gray;
+  --dark: darkslategrey;
+  --darker: black; }
+
+.headerWrapper {
+  display: flex;
+  justify-content: center; }
+  .headerWrapper .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 1000px; }
+    @media (max-width: 1000px) {
+      .headerWrapper .header {
+        width: 80vw; } }
+    .headerWrapper .header .headerHome {
+      font-size: 16px;
+      color: var(--darker);
+      font-weight: bold; }
+    .headerWrapper .header .headerLinks a {
+      cursor: pointer;
+      margin: 10px;
+      user-select: none;
+      font-size: 16px;
+      padding: 10px;
+      color: var(--darker);
+      border: 3px solid transparent;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.2s; }
+      .headerWrapper .header .headerLinks a:last-child {
+        margin-right: 0px; }
+      .headerWrapper .header .headerLinks a:hover {
+        color: var(--lighter);
+        background-color: var(--darker); }
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: var(--light);
+  color: var(--darker);
+  margin: 0px;
+  padding: 0px; }
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px; }
+
+::-moz-selection,
+::selection {
+  /* Code for Firefox */
+  color: var(--light);
+  background: var(--darker); }
+
+.articleWrapper {
+  display: flex;
+  justify-content: center; }
+  .articleWrapper article {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px 30px; }
+    @media (max-width: 1000px) {
+      .articleWrapper article {
+        width: 80vw; } }
+    .articleWrapper article address,
+    .articleWrapper article area,
+    .articleWrapper article article,
+    .articleWrapper article aside,
+    .articleWrapper article audio,
+    .articleWrapper article blockquote,
+    .articleWrapper article datalist,
+    .articleWrapper article details,
+    .articleWrapper article dl,
+    .articleWrapper article fieldset,
+    .articleWrapper article figure,
+    .articleWrapper article form,
+    .articleWrapper article input,
+    .articleWrapper article iframe,
+    .articleWrapper article img,
+    .articleWrapper article meter,
+    .articleWrapper article nav,
+    .articleWrapper article ol,
+    .articleWrapper article optgroup,
+    .articleWrapper article option,
+    .articleWrapper article output,
+    .articleWrapper article p,
+    .articleWrapper article pre,
+    .articleWrapper article progress,
+    .articleWrapper article ruby,
+    .articleWrapper article section,
+    .articleWrapper article table,
+    .articleWrapper article textarea,
+    .articleWrapper article ul,
+    .articleWrapper article video {
+      /* Margins for most elements */
+      margin-bottom: 1rem; }
+    .articleWrapper article html,
+    .articleWrapper article input,
+    .articleWrapper article select,
+    .articleWrapper article button {
+      /* Set body font family and some finicky elements */ }
+    .articleWrapper article h1,
+    .articleWrapper article h2,
+    .articleWrapper article h3,
+    .articleWrapper article h4,
+    .articleWrapper article h5,
+    .articleWrapper article h6 {
+      line-height: 1;
+      padding-top: 0.875rem; }
+    .articleWrapper article h1,
+    .articleWrapper article h2,
+    .articleWrapper article h3 {
+      padding-bottom: 2px;
+      margin-bottom: 8px; }
+    .articleWrapper article h4,
+    .articleWrapper article h5,
+    .articleWrapper article h6 {
+      margin-bottom: 0.3rem; }
+    .articleWrapper article h1 {
+      font-size: 2.25rem; }
+    .articleWrapper article h2 {
+      font-size: 1.85rem; }
+    .articleWrapper article h3 {
+      font-size: 1.55rem; }
+    .articleWrapper article h4 {
+      font-size: 1.25rem; }
+    .articleWrapper article h5 {
+      font-size: 1rem; }
+    .articleWrapper article h6 {
+      font-size: 0.875rem; }
+    .articleWrapper article abbr:hover {
+      /* Set the '?' cursor while hovering an abbreviation */
+      cursor: help; }
+    .articleWrapper article blockquote {
+      padding: 1.5rem; }
+    .articleWrapper article abbr {
+      cursor: help; }
+    .articleWrapper article blockquote *:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0; }
+    .articleWrapper article header {
+      padding: 2rem 1.5rem;
+      /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
+      margin: -2rem calc(0px - (50vw - 50%)) 2rem;
+      /* Shorthand for:
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+	margin-left: calc(0px - (50vw - 50%));
+	margin-right: calc(0px - (50vw - 50%)); */
+      padding-left: calc(50vw - 50%);
+      padding-right: calc(50vw - 50%); }
+    .articleWrapper article header h1,
+    .articleWrapper article header h2,
+    .articleWrapper article header h3 {
+      padding-bottom: 0;
+      border-bottom: 0; }
+    .articleWrapper article header > *:first-child {
+      margin-top: 0;
+      padding-top: 0; }
+    .articleWrapper article header > *:last-child {
+      margin-bottom: 0; }
+    .articleWrapper article a button,
+    .articleWrapper article button,
+    .articleWrapper article input[type="submit"],
+    .articleWrapper article input[type="reset"],
+    .articleWrapper article input[type="button"] {
+      font-size: 1rem;
+      display: inline-block;
+      padding: 6px 12px;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      border: 0;
+      border-radius: 4px;
+      box-sizing: border-box;
+      cursor: pointer; }
+    .articleWrapper article a button[disabled],
+    .articleWrapper article button[disabled],
+    .articleWrapper article input[type="submit"][disabled],
+    .articleWrapper article input[type="reset"][disabled],
+    .articleWrapper article input[type="button"][disabled] {
+      cursor: default;
+      opacity: 0.5;
+      /* Set the [X] cursor while hovering a disabled link */
+      cursor: not-allowed; }
+    .articleWrapper article code,
+    .articleWrapper article pre,
+    .articleWrapper article kbd,
+    .articleWrapper article samp {
+      /* Set the font family for monospaced elements */ }
+    .articleWrapper article code,
+    .articleWrapper article samp,
+    .articleWrapper article kbd,
+    .articleWrapper article pre {
+      /* The main preformatted style. This is changed slightly across different cases. */
+      border-radius: 4px;
+      padding: 3px 6px;
+      font-size: 0.9rem; }
+    .articleWrapper article kbd {
+      /* Makes the kbd element look like a keyboard key */ }
+    .articleWrapper article pre {
+      padding: 1rem 1.4rem;
+      max-width: 100%;
+      overflow: auto; }
+    .articleWrapper article pre code {
+      /* When <code> is in a <pre>, reset it's formatting to blend in */
+      background: inherit;
+      font-size: inherit;
+      color: inherit;
+      border: 0;
+      padding: 0;
+      margin: 0; }
+    .articleWrapper article code pre {
+      /* When <pre> is in a <code>, reset it's formatting to blend in */
+      display: inline;
+      background: inherit;
+      font-size: inherit;
+      color: inherit;
+      border: 0;
+      padding: 0;
+      margin: 0; }
+    .articleWrapper article details {
+      /* Make the <details> look more "clickable" */
+      padding: 0.6rem 1rem;
+      border-radius: 4px; }
+    .articleWrapper article summary {
+      /* Makes the <summary> look more like a "clickable" link with the pointer cursor */
+      cursor: pointer;
+      font-weight: bold; }
+    .articleWrapper article details[open] {
+      /* Adjust the <details> padding while open */
+      padding-bottom: 0.75rem; }
+    .articleWrapper article details[open] summary {
+      /* Adjust the <details> padding while open */
+      margin-bottom: 6px; }
+    .articleWrapper article details[open] > *:last-child {
+      /* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
+      margin-bottom: 0; }
+    .articleWrapper article dt {
+      font-weight: bold; }
+    .articleWrapper article dd::before {
+      /* Add an arrow to data table definitions */
+      content: "→ "; }
+    .articleWrapper article hr {
+      /* Reset the border of the <hr> separator, then set a better line */
+      border: 0;
+      margin: 1rem auto; }
+    .articleWrapper article fieldset {
+      margin-top: 1rem;
+      padding: 2rem;
+      border-radius: 4px; }
+    .articleWrapper article legend {
+      padding: auto 0.5rem; }
+    .articleWrapper article table {
+      /* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+      border-collapse: collapse;
+      width: 100%; }
+    .articleWrapper article td,
+    .articleWrapper article th {
+      text-align: left;
+      padding: 0.5rem; }
+    .articleWrapper article tr:nth-child(even) {
+      /* Set every other cell slightly darker. Improves readability. */ }
+    .articleWrapper article table caption {
+      font-weight: bold;
+      margin-bottom: 0.5rem; }
+    .articleWrapper article textarea {
+      /* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
+      max-width: 100%; }
+    .articleWrapper article ol,
+    .articleWrapper article ul {
+      /* Replace the browser default padding */
+      padding-left: 2rem; }
+    .articleWrapper article li {
+      margin-top: 0.4rem; }
+    .articleWrapper article ul ul,
+    .articleWrapper article ol ul,
+    .articleWrapper article ul ol,
+    .articleWrapper article ol ol {
+      margin-bottom: 0; }
+    .articleWrapper article mark {
+      padding: 3px 6px; }
+    .articleWrapper article textarea,
+    .articleWrapper article select,
+    .articleWrapper article input {
+      padding: 6px 12px;
+      margin-bottom: 0.5rem;
+      border-radius: 4px;
+      box-shadow: none;
+      box-sizing: border-box; }
+    .articleWrapper article img {
+      max-width: 100%; }

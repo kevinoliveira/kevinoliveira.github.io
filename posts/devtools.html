@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/post.css">
+    <!-- <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css"> -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"> -->
+
+    <title>[DevTools] Highlights - Kevin Oliveira</title>
+  </head>
+  <body>
+    <div class="headerWrapper">
+	<div class="header">
+		<div class="headerHome">Kevin Oliveira</div>
+		<div class="headerLinks">
+			
+				<a href="/">Home</a>
+			
+			<!-- <a href="/artlets.html">Artlets</a>
+			<a href="/projects.html">Projects</a>
+			<a href="/blog.html">Blog</a>
+			<a href="/about.html">About Me</a>
+			<a href="/404.html">404</a> -->
+			<a onclick="toogleCurrentTheme()">Switch Theme</a>
+		</div>
+	</div>
+</div>
+    <div class="articleWrapper">
+	    <article>
+	    	<h1>[DevTools] Highlights</h1>
+	    	
+			<p>There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don&#39;t need to make the
+raw Markdown line up prettily. You can also use inline Markdown.</p>
+<iframe src="https://codesandbox.io/embed/j0y0vpz59" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+<p><img src="https://qxf2.com/blog/wp-content/uploads/2015/02/API_DevTools_PostParams.jpg" alt="Flowers" title="Title"></p>
+<p>Colons can be used to align columns.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody></table>
+<p>There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don&#39;t need to make the
+raw Markdown line up prettily. You can also use inline Markdown.</p>
+<iframe height="265" style="width: 100%;" scrolling="no" title="Color Mix in Vanilla CSS" src="//codepen.io/una/embed/qzKXgr/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/una/pen/qzKXgr/'>Color Mix in Vanilla CSS</a> by Una Kravets
+  (<a href='https://codepen.io/una'>@una</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
+<p>There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don&#39;t need to make the
+raw Markdown line up prettily. You can also use inline Markdown.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> @mentions, #refs, <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del> supported</li>
+<li><input checked="" disabled="" type="checkbox"> list syntax required (any unordered or ordered list supported)</li>
+<li><input checked="" disabled="" type="checkbox"> this is a complete item</li>
+<li><input disabled="" type="checkbox"> this is an incomplete item</li>
+</ul>
+<blockquote>
+<p>É impossível para um homem ser enganado por outra pessoa que não seja ele próprio.</p>
+<p>-- <cite>Ralph Waldo Emerson</cite></p>
+</blockquote>
+<p>A <a href="http://example.com" title="Title">link</a>.</p>
+<p>I have more [^1] to say up here.</p>
+<p>[^1]: To say down here.I have mo</p>
+<ol>
+<li>Item</li>
+<li>Item<ul>
+<li>Mixed</li>
+<li>Mixed</li>
+</ul>
+</li>
+<li>Item1. Item 2.</li>
+</ol>
+<pre><code class="language-ruby">require &#39;redcarpet&#39;
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html</code></pre>
+
+	    </article>
+    </div>
+  </body>
+      <script>
+	let isDarkThemeActive = false;
+	const darkTheme = 
+		{
+			"lighter": "#202020",
+			"light": "#202020",
+			"midLight": "#2b2b2b",
+			"midDark": "#aeaeae",
+			"dark": "#bdbdbd",
+			"darker": "#c4c4c4",
+		};
+
+	const lightTheme =
+		{
+			"lighter": "white",
+			"light": "whitesmoke",
+			"midLight": "lightgrey",
+			"midDark": "gray",
+			"dark": "darkslategrey",
+			"darker": "black",
+		};
+
+
+
+	function toogleCurrentTheme() {
+
+		// SWITCH THEME
+		isDarkThemeActive = !isDarkThemeActive;
+
+		// CHANGE THEME
+		var html = document.getElementsByTagName('html')[0];
+		const themeToSet = isDarkThemeActive? darkTheme : lightTheme;
+		html.style.setProperty("--lighter", themeToSet.lighter);
+		html.style.setProperty("--light", themeToSet.light);
+		html.style.setProperty("--mid-light", themeToSet.midLight);
+		html.style.setProperty("--mid-dark", themeToSet.midDark);
+		html.style.setProperty("--dark", themeToSet.dark);
+		html.style.setProperty("--darker", themeToSet.darker);
+
+		// SAVE THEME CHOICE ON LOCAL STORAGE
+		localStorage.setItem('theme', isDarkThemeActive? "dark": "light");
+	}
+
+	function switchThemeOnStartUpIfNeeded() {
+		const previousThemeChoice = localStorage.getItem('theme');
+		if(
+			(previousThemeChoice === "dark"  && !isDarkThemeActive ) ||
+			(previousThemeChoice === "light" &&  isDarkThemeActive) 
+		) toogleCurrentTheme();
+	}
+
+	switchThemeOnStartUpIfNeeded()
+</script>
+</html>
