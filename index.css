@@ -226,7 +226,8 @@
           opacity: 1; }
         .homepostsWrapper .homeposts .link .post .postTitle {
           font-weight: 500;
-          font-size: 2vw; }
+          font-size: 2vw;
+          color: var(--darker); }
           @media (max-width: 1000px) {
             .homepostsWrapper .homeposts .link .post .postTitle {
               font-size: 25px; } }
