@@ -3,6 +3,7 @@
 
 .bannerLink {
 	all: unset;
+	text-decoration: none;
 	cursor: pointer;
 
 	display: flex;
@@ -82,6 +83,7 @@
 				font-weight: 900;
 				font-size: 40px;
 				animation: fadeIn 1s ease normal;
+				color: $darker;
 			}
 			.description {
 				padding-top: 5px;
