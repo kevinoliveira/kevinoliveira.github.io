@@ -83,6 +83,7 @@
 
 .bannerLink {
   all: unset;
+  text-decoration: none;
   cursor: pointer;
   display: flex;
   justify-content: center; }
