@@ -29,15 +29,31 @@
     @media (max-width: 1000px) {
       .headerWrapper .header {
         width: 80vw; } }
-    .headerWrapper .header .headerHome {
+    .headerWrapper .header .headerHome a {
+      all: unset;
       font-size: 16px;
       color: var(--darker);
-      font-weight: bold; }
+      font-weight: bold;
+      box-sizing: border-box;
+      cursor: pointer;
+      user-select: none;
+      font-size: 16px;
+      line-height: 16px;
+      color: var(--darker);
+      font-weight: bold;
+      text-decoration: none;
+      transition: text-decoration 1s ease-in-out; }
+      .headerWrapper .header .headerHome a:hover {
+        text-decoration: underline; }
     .headerWrapper .header .headerLinks a {
+      all: unset;
+      min-width: 45px;
+      box-sizing: border-box;
       cursor: pointer;
       margin: 10px;
       user-select: none;
       font-size: 16px;
+      line-height: 16px;
       padding: 10px;
       color: var(--darker);
       border: 3px solid transparent;
@@ -50,6 +66,12 @@
       .headerWrapper .header .headerLinks a:hover {
         color: var(--lighter);
         background-color: var(--darker); }
+        .headerWrapper .header .headerLinks a:hover svg {
+          fill: var(--lighter); }
+      .headerWrapper .header .headerLinks a svg {
+        height: 16px;
+        width: 16px;
+        fill: var(--darker); }
 
 body {
   font-family: 'Ubuntu', sans-serif;
