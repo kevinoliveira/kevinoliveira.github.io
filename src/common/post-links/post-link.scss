@@ -1,65 +1,88 @@
 @import "../styles/colors.scss";
+@import "../styles/media.scss";
 
-.homeposts {
-    
+.homepostsWrapper {
+	display: flex;
+	justify-content: center;
+	.homeposts {
+		width: 100%;
+		max-width: 1000px;
+		padding: 20px 30px;
 
-    padding: 0px 10vw;
-    
+		@include small {
+			width: 80vw;
+		}
 
-    .link {
-        all: unset;
+		// padding: 0px 10vw;
+		// display: flex;
+		// align-items: center;
+		// flex-direction: column;
 
-        .post{
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
-        padding-right: 10vw;
-        margin: 50px 0px;
-        
-        // animation: slideUp 1s ease normal;
-    
-        opacity: 0.6;
-        cursor: pointer;
-        transition: opacity 0.3s ease;
+		.link {
+			all: unset;
 
-        &:hover{
-            opacity: 1;
-        }
+			.post {
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				flex-direction: column;
+				padding-right: 10vw;
+				margin: 50px 0px;
 
+				@include small {
+					padding-right: 0px;
+				}
+				// animation: slideUp 1s ease normal;
 
-        .postTitle{
-            font-weight: 500;
-            font-size: 2vw;
-            // animation: fadeIn 2.5s ease normal;
-        }
-        .description{
-            padding-top: 5px;
-            font-size: 1.3vw;
-            color: $dark;
-            // animation: fadeIn 2.5s ease normal;
-    
-        }
-        .subInfo{
-            display: flex;
-            align-items: center;
-            padding-top: 10px;
-            // animation: fadeIn 2.5sr ease normal;
-    
-            .info{
-                margin: 0.3vw;
-                font-size: 1vw;
-                color: $darker;
-            }
-            .divider{
-                width: 2px;
-                height: 1vw;
-                background-color: $mid-light;
-            }
-        }
-    }
-    }
+				opacity: 0.6;
+				cursor: pointer;
+				transition: opacity 0.3s ease;
 
-    
+				&:hover {
+					opacity: 1;
+				}
 
+				.postTitle {
+					font-weight: 500;
+					@include small {
+						font-size: 25px;
+					}
+					font-size: 2vw;
+					// animation: fadeIn 2.5s ease normal;
+				}
+				.description {
+					padding-top: 5px;
+					@include small {
+						font-size: 18px;
+					}
+					font-size: 1.3vw;
+					color: $dark;
+					// animation: fadeIn 2.5s ease normal;
+				}
+				.subInfo {
+					display: flex;
+					align-items: center;
+					padding-top: 10px;
+					// animation: fadeIn 2.5sr ease normal;
+
+					.info {
+						margin: 0.3vw;
+						@include small {
+							font-size: 15px;
+						}
+						font-size: 1vw;
+						color: $darker;
+					}
+					.divider {
+						width: 2px;
+						height: 1vw;
+						@include small {
+							font-size: 15px;
+						}
+						background-color: $mid-light;
+					}
+				}
+			}
+		}
+	}
 }

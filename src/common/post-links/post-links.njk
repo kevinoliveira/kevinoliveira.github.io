@@ -1,25 +1,21 @@
-<div class="homeposts">
-
-{% for post in posts %}
-
-  {% if loop.index0 == 0 %}
-
-  {% else %}
-  <a class="link" href={{post.link}}>
-    <div class="post">
-        <div class="postTitle">{{post.title}}</div>
-        <div class="description">{{post.description}} </div>
-        <div class="subInfo">
-            <div class="info">{{post.date}}</div>
-            <div class="divider"></div>
-            <div class="info">12 minute read</div>
-        </div>
-      </div>
-    </a>
-  {% endif %}
-{% endfor %}
-
-  
-
-    
+<div class="homepostsWrapper">
+	<div class="homeposts">
+		{% for post in posts %}
+			{% if loop.index0 == 0 %}
+			{% else %}
+				<a class="link" href={{post.link}}>
+					<div class="post">
+						<div class="postTitle">{{post.title}}</div>
+						<div class="description">{{post.description}}
+						</div>
+						<div class="subInfo">
+							<div class="info">{{post.date}}</div>
+							<div class="divider"></div>
+							<div class="info">12 minute read</div>
+						</div>
+					</div>
+				</a>
+			{% endif %}
+		{% endfor %}
+	</div>
 </div>

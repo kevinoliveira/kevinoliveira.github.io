@@ -1,0 +1,10 @@
+@mixin small() {
+	@media (max-width: 1000px) {
+		@content;
+	}
+}
+@mixin notSmall() {
+	@media (min-width: 1000px) {
+		@content;
+	}
+}
