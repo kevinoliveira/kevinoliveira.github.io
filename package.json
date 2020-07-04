@@ -27,7 +27,7 @@
 		"serve": "serve output",
 		"dev": "onchange 'src/**/*.ts' 'src/*.ts'  'src/**/*.scss'  'src/**/*.njk'  'posts/*.md' -- ts-node src/main.ts",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"deploy": "npm run do && gh-pages -d public -b master"
+		"deploy": "npm run do && gh-pages -d output -b master"
 	},
 	"repository": {
 		"type": "git",
