@@ -24,7 +24,7 @@ const n = nunjucks.configure(["src"], {
 
 // parsing posts
 const postsFilePaths = find("posts", { matching: "**/*.md" })
-const postsParsedData: ParsedPost[] = postsFilePaths.map(path => {
+let postsParsedData: ParsedPost[] = postsFilePaths.map(path => {
 	const fileContent = read(path, "utf8");
 	const FM = frontmatter(fileContent);
 
@@ -39,6 +39,8 @@ postsParsedData.sort((postA, postB) => {
 	const dateB = postB.headers.date;
 	return dateB.localeCompare(dateA, 'en', { sensitivity: 'base' });
 })
+
+postsParsedData = postsParsedData.filter(p => p.headers.published);
 
 // define files to compiple
 const pagesToCreate: IPage[] = [
