@@ -143,12 +143,7 @@ pagesToCreate.forEach(p => {
 })
 
 
-
-
-
-
 // HELPERS
-
 
 function postsParsedToTemplate(parsed: ParsedPost[]): TemplatePost[] {
 	return parsed.map(p => ({

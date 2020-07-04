@@ -20,17 +20,37 @@
 		// border: 1px dashed black;
 
 		.headerHome {
-			font-size: 16px;
-			color: $darker;
-			font-weight: bold;
+			a {
+				all: unset;
+				font-size: 16px;
+				color: $darker;
+				font-weight: bold;
+				box-sizing: border-box;
+				cursor: pointer;
+				user-select: none;
+				font-size: 16px;
+				line-height: 16px;
+				color: $darker;
+				font-weight: bold;
+				text-decoration: none;
+				transition: text-decoration 1s ease-in-out;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 
 		.headerLinks {
 			a {
+				all: unset;
+				min-width: 45px;
+				box-sizing: border-box;
 				cursor: pointer;
 				margin: 10px;
 				user-select: none;
 				font-size: 16px;
+				line-height: 16px;
 				padding: 10px;
 				color: $darker;
 				border: 3px solid transparent;
@@ -46,6 +66,14 @@
 				&:hover {
 					color: $lighter;
 					background-color: $darker;
+					svg {
+						fill: $lighter;
+					}
+				}
+				svg {
+					height: 16px;
+					width: 16px;
+					fill: $darker;
 				}
 			}
 		}
