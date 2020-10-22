@@ -40,7 +40,7 @@ postsParsedData.sort((postA, postB) => {
 	return dateB.localeCompare(dateA, 'en', { sensitivity: 'base' });
 })
 
-postsParsedData = postsParsedData.filter(p => p.headers.published);
+//postsParsedData = postsParsedData.filter(p => p.headers.published);
 
 // define files to compiple
 const pagesToCreate: IPage[] = [
@@ -112,7 +112,8 @@ postsParsedData.forEach(post => {
 		"pages/post/post.njk",
 		{
 			rawHtml: post.parsedHtml,
-			title: post.headers.title
+			title: post.headers.title,
+	        date: post.headers.date,
 		});
 	fs.writeFileSync(
 		path.join("output/posts/", post.headers.key + ".html",),
@@ -147,9 +148,9 @@ pagesToCreate.forEach(p => {
 
 function postsParsedToTemplate(parsed: ParsedPost[]): TemplatePost[] {
 	return parsed.map(p => ({
-		title: p.headers.title,
-		date: p.headers.date,
-		description: p.headers.description,
-		link: `/posts/${p.headers.key}`
-	}))
+	   	title: p.headers.title,
+	    date: p.headers.date,
+	    description: p.headers.description,
+	    link: `/posts/${p.headers.key}`
+    }))
 }

@@ -16,7 +16,7 @@
 		max-width: 1000px;
 
 		@include small {
-			width: 80vw;
+			width: $smallWidth;
 		}
 		// border: 1px dashed black;
 

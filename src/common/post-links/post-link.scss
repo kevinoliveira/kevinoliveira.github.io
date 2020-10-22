@@ -10,7 +10,7 @@
 		padding: 20px 30px;
 
 		@include small {
-			width: 80vw;
+			width: $smallWidth;
 		}
 
 		// padding: 0px 10vw;

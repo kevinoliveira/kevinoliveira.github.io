@@ -12,8 +12,6 @@ There must be at least 3 dashes separating each header cell.
 The outer pipes (|) are optional, and you don't need to make the
 raw Markdown line up prettily. You can also use inline Markdown.
 
-<iframe src="https://codesandbox.io/embed/j0y0vpz59" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-
 ![Flowers](https://qxf2.com/blog/wp-content/uploads/2015/02/API_DevTools_PostParams.jpg "Title")
 
 Colons can be used to align columns.
@@ -30,10 +28,6 @@ raw Markdown line up prettily. You can also use inline Markdown.
 
 
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Color Mix in Vanilla CSS" src="//codepen.io/una/embed/qzKXgr/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/una/pen/qzKXgr/'>Color Mix in Vanilla CSS</a> by Una Kravets
-  (<a href='https://codepen.io/una'>@una</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 
 There must be at least 3 dashes separating each header cell.
@@ -66,9 +60,3 @@ I have more [^1] to say up here.
    - Mixed
    - Mixed
 3. Item1. Item 2.
-
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```

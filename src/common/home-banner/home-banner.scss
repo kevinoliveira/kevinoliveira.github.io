@@ -2,147 +2,147 @@
 @import "../styles/media.scss";
 
 .bannerLink {
-	all: unset;
-	text-decoration: none;
-	cursor: pointer;
+  all: unset;
+  text-decoration: none;
+  cursor: pointer;
 
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 
-	// @include small {
-	// 	background-color: hotpink;
-	// }
+  // @include small {
+  // 	background-color: hotpink;
+  // }
 
-	.banner {
-		margin-top: 40px;
-		width: 100%;
-		max-width: 1000px;
+  .banner {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1000px;
 
-		display: grid;
-		grid-template-columns: 30% 70%;
-		@include small {
-			grid-template-columns: 100%;
-		}
+    display: grid;
+    grid-template-columns: 30% 70%;
+    @include small {
+      grid-template-columns: 100%;
+    }
 
-		.bannerArt {
-			// border-radius: 0px 1vw 1vw 0px;
-			border-radius: 20px;
-			width: 300px;
-			height: 300px;
+    .bannerArt {
+      // border-radius: 0px 1vw 1vw 0px;
+      border-radius: 20px;
+      width: 300px;
+      height: 300px;
 
-			@include small {
-				width: 80vw;
-				height: 80vw;
-				margin: 0px auto;
-				border-radius: 30px;
-			}
-			background-color: $mid-light;
+      @include small {
+        width: $smallWidth;
+        height: $smallWidth;
+        margin: 0px auto;
+        border-radius: 30px;
+      }
+      background-color: $mid-light;
 
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			animation: fadeIn 0.8s ease normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.8s ease normal;
 
-			.artWrapper {
-				border-radius: 20px;
-				width: 250px;
-				height: 250px;
-				@include small {
-					width: 75vw;
-					height: 75vw;
-					border-radius: 30px;
-				}
-				background-color: $darker;
-				position: absolute;
-				@include small {
-					animation: slideRightSmall 1s ease forwards;
-				}
-				@include notSmall {
-					animation: slideRight 1s ease forwards;
-				}
-			}
-		}
+      .artWrapper {
+        border-radius: 20px;
+        width: 250px;
+        height: 250px;
+        @include small {
+          width: 75vw;
+          height: 75vw;
+          border-radius: 30px;
+        }
+        background-color: $darker;
+        position: absolute;
+        @include small {
+          animation: slideRightSmall 1s ease forwards;
+        }
+        @include notSmall {
+          animation: slideRight 1s ease forwards;
+        }
+      }
+    }
 
-		.post {
-			display: flex;
-			align-items: flex-start;
-			justify-content: center;
-			flex-direction: column;
-			padding-left: 60px;
+    .post {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 60px;
 
-			@include small {
-				padding-top: 60px;
-				padding-left: 0px;
-				width: 80vw;
-				margin: 0px auto;
-			}
+      @include small {
+        padding-top: 60px;
+        padding-left: 0px;
+        width: $smallWidth;
+        margin: 0px auto;
+      }
 
-			animation: slideUp 1s ease normal;
+      animation: slideUp 1s ease normal;
 
-			.postTitle {
-				font-weight: 900;
-				font-size: 40px;
-				animation: fadeIn 1s ease normal;
-				color: $darker;
-			}
-			.description {
-				padding-top: 5px;
-				font-size: 20px;
-				color: $dark;
-				animation: fadeIn 1.5s ease normal;
-			}
-			.subInfo {
-				display: flex;
-				align-items: center;
-				padding-top: 10px;
-				animation: fadeIn 2s ease normal;
+      .postTitle {
+        font-weight: 900;
+        font-size: 40px;
+        animation: fadeIn 1s ease normal;
+        color: $darker;
+      }
+      .description {
+        padding-top: 5px;
+        font-size: 20px;
+        color: $dark;
+        animation: fadeIn 1.5s ease normal;
+      }
+      .subInfo {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        animation: fadeIn 2s ease normal;
 
-				.info {
-					margin: 0.3vw;
-					font-size: 18px;
-					color: $mid-dark;
-				}
-				.divider {
-					width: 2px;
-					height: 18px;
-					background-color: $mid-light;
-				}
-			}
-		}
-	}
+        .info {
+          margin: 0.3vw;
+          font-size: 18px;
+          color: $mid-dark;
+        }
+        .divider {
+          width: 2px;
+          height: 18px;
+          background-color: $mid-light;
+        }
+      }
+    }
+  }
 
-	@keyframes fadeIn {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
-	@keyframes slideRight {
-		0% {
-			transform: translateX(0px);
-		}
-		100% {
-			transform: translateX(50px);
-		}
-	}
-	@keyframes slideRightSmall {
-		0% {
-			transform: translateX(0px);
-		}
-		100% {
-			transform: translateX(5vw);
-		}
-	}
+  @keyframes slideRight {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(50px);
+    }
+  }
+  @keyframes slideRightSmall {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(5vw);
+    }
+  }
 
-	@keyframes slideUp {
-		0% {
-			transform: translateY(50px);
-		}
-		100% {
-			transform: translateY(0px);
-		}
-	}
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 }

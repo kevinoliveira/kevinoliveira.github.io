@@ -11,11 +11,16 @@
 		width: 100%;
 		max-width: 1000px;
 		@include small {
-			width: 80vw;
+			width: $smallWidth;
 		}
 		// border-left: 2px dotted $mid-light;
 		// border-right: 2px dotted $mid-light;
 		padding: 20px 30px;
+
+        .date{
+            text-align: right;
+            margin-bottom: 30px;
+        }
 
 		address,
 		area,
