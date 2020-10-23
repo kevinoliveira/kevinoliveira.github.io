@@ -29,7 +29,7 @@
     max-width: 1000px; }
     @media (max-width: 1000px) {
       .headerWrapper .header {
-        width: 80vw; } }
+        width: 90vw; } }
     .headerWrapper .header .headerHome a {
       all: unset;
       font-size: 16px;
@@ -102,7 +102,10 @@ body {
     padding: 20px 30px; }
     @media (max-width: 1000px) {
       .articleWrapper article {
-        width: 80vw; } }
+        width: 90vw; } }
+    .articleWrapper article .date {
+      text-align: right;
+      margin-bottom: 30px; }
     .articleWrapper article address,
     .articleWrapper article area,
     .articleWrapper article article,

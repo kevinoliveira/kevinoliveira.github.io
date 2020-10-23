@@ -87,26 +87,242 @@
 		</div>
 	</div>
 </div>
-		<a class="bannerLink" href=/posts/helloworld>
+		<a class="bannerLink" href=/posts/testing>
     <div class="banner">
         <div class="bannerArt">
-            <div class="artWrapper"></div>
+            <canvas class="artWrapper" width="250" height="250">
+            </canvas>
         </div>
         <div class="post">
-            <div class="postTitle">Hello world</div>
-            <div class="description">hello world is the way to go</div>
+            <div class="postTitle">Compiled list of mental models</div>
+            <div class="description">all mental models categorized and united to help you think and make choices</div>
             <div class="subInfo">
-                <div class="info">1970-01-01</div>
+                <div class="info">2020-12-01</div>
                 <div class="divider"></div>
                 <div class="info">12 minute read</div>
             </div>
         </div>
     </div>
 </a>
+<script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
+<script>
+
+// Made with Zdog
+
+// ----- setup ----- //
+let illo = new Zdog.Illustration({
+  // set canvas with selector
+  element: '.artWrapper',
+  dragRotate: true,
+});
+
+// 1  4
+// | / 
+// 2 
+// | \
+// 3  5
+
+
+
+// const point1 = { x: -32, y: -60 };
+// const point2 = { x: -32, y:   0 };
+// const point3 = { x: -32, y:  40 };
+// const point4 = { x:  12, y: -40 };
+// const point5 = { x:  12, y:  40 };
+
+
+let dome = new Zdog.Hemisphere({
+  addTo: illo,
+  diameter: 120,
+  // fill enabled by default
+  // disable stroke for crisp edge
+  stroke: false,
+  color: '#1D2B53',
+  backface: '#008751',
+  rotate: { x: -Zdog.TAU/8 },
+});
+
+
+new Zdog.Shape({
+  addTo: illo,
+  path: [
+   { y: -60 },
+   { y: -40 },
+   { y: -50, x: -20 },
+   { y: -40 },
+   { y:   0 }
+  ],
+  stroke: 5,
+  color: '#00E436',
+});
+
+
+let xRect = new Zdog.Rect({
+  addTo: illo,
+  width: 10,
+  height: 10,
+  stroke: 5,
+  translate: { y: -55, x: -25 }, // x +40 from zCircle
+  color: '#00E436'
+}); 
+
+
+let flower = new Zdog.Ellipse({
+  addTo: illo,
+  diameter: 30,
+  stroke: 10,
+  quarters: 3,
+  translate: { y: -80 },
+  rotate: { z: Zdog.TAU/8, y: -Zdog.TAU/2 },
+  color: '#FF004D',
+});
+
+
+let flowerCenter = new Zdog.Ellipse({
+  addTo: illo,
+  stroke: 10,
+  translate: { y: -80 },
+  color: '#FF004D',
+});
+
+// new Zdog.Shape({
+//   addTo: illo,
+//   // no path set, default to single point
+//   stroke: 120,
+//   color: '#FFEC27',
+// });
+
+
+// new Zdog.Shape({
+//   addTo: illo,
+//   path:[
+//      { x: -25, y: -20, z: 40 }
+//   ],
+//   // no path set, default to single point
+//   stroke: 30,
+//   color: '#FFF1E8',
+// }); 
+
+// new Zdog.Shape({
+//   addTo: illo,
+//   path:[
+//      { x: 25, y: -20, z: 40 }
+//   ],
+//   // no path set, default to single point
+//   stroke: 30,
+//   color: '#FFF1E8',
+// }); 
+
+
+// new Zdog.Ellipse({
+//   addTo: illo,
+//   diameter: 80,
+//   quarters: 2,
+//   stroke: 20, 
+//   color: '#FF004D',
+// });
+
+// new Zdog.Shape({
+//   addTo: illo,
+//   path:[
+//      { x: -40, y: -40 }
+//   ],
+//   // no path set, default to single point
+//   stroke: 20,
+//   color: '#FF004D',
+// });
+
+// new Zdog.Shape({
+//   addTo: illo,
+//   path:[
+//      { x: -40, y: 40 }
+//   ],
+//   // no path set, default to single point
+//   stroke: 20,
+//   color: '#FF004D',
+// });
+// new Zdog.Shape({
+//   addTo: illo,
+//   path: [
+//     point1,
+//     point2,
+//     point4,
+//     point2,
+//     point5,
+//     point2,
+//     point3,
+//   ],
+//   closed: false,
+//   stroke: 20,
+//   color: '#FF004D',
+// });
+
+// new Zdog.Ellipse({
+//   addTo: illo,
+//   diameter: 80,
+//   // position closer
+//   translate: { z: 40 },
+//   stroke: 20,
+//   color: '#636',
+// });
+
+// // square
+// new Zdog.Rect({
+//   addTo: illo,
+//   width: 80,
+//   height: 80,
+//   // position further back
+//   translate: { z: -40 },
+//   stroke: 12,
+//   color: '#E62',
+//   fill: true,
+// });
+
+function animate() {
+  // rotate illo each frame
+  illo.rotate.y += 0.03;
+  illo.updateRenderGraph();
+  // animate next frame
+  requestAnimationFrame( animate );
+}
+// start animation
+animate();
+
+</script>
 		<div class="homepostsWrapper">
 	<div class="homeposts">
 		
 			
+			
+		
+			
+				<a class="link" href=/posts/devtools>
+					<div class="post">
+						<div class="postTitle">[DevTools] Highlights</div>
+						<div class="description">Learn the very basics of element inspection in Chrome devtools
+						</div>
+						<div class="subInfo">
+							<div class="info">2001-12-02</div>
+							<div class="divider"></div>
+							<div class="info">12 minute read</div>
+						</div>
+					</div>
+				</a>
+			
+		
+			
+				<a class="link" href=/posts/helloworld>
+					<div class="post">
+						<div class="postTitle">Hello world</div>
+						<div class="description">hello world is the way to go
+						</div>
+						<div class="subInfo">
+							<div class="info">1970-01-01</div>
+							<div class="divider"></div>
+							<div class="info">12 minute read</div>
+						</div>
+					</div>
+				</a>
 			
 		
 	</div>
@@ -165,4 +381,5 @@
 
 	switchThemeOnStartUpIfNeeded()
 </script>
+
 </html>

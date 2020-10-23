@@ -28,7 +28,7 @@
     max-width: 1000px; }
     @media (max-width: 1000px) {
       .headerWrapper .header {
-        width: 80vw; } }
+        width: 90vw; } }
     .headerWrapper .header .headerHome a {
       all: unset;
       font-size: 16px;
@@ -100,34 +100,30 @@
       border-radius: 20px;
       width: 300px;
       height: 300px;
+      animation: fadeIn 0.8s ease normal, rotamove 1s ease forwards;
       background-color: var(--mid-light);
       display: flex;
       justify-content: center;
-      align-items: center;
-      animation: fadeIn 0.8s ease normal; }
+      align-items: center; }
       @media (max-width: 1000px) {
         .bannerLink .banner .bannerArt {
           width: 80vw;
           height: 80vw;
           margin: 0px auto;
-          border-radius: 30px; } }
+          border-radius: 30px;
+          animation: fadeIn 0.8s ease normal, rota 1s ease forwards; } }
       .bannerLink .banner .bannerArt .artWrapper {
         border-radius: 20px;
         width: 250px;
         height: 250px;
         background-color: var(--darker);
-        position: absolute; }
+        position: absolute;
+        animation: rotarev 1s ease forwards; }
         @media (max-width: 1000px) {
           .bannerLink .banner .bannerArt .artWrapper {
             width: 75vw;
             height: 75vw;
             border-radius: 30px; } }
-        @media (max-width: 1000px) {
-          .bannerLink .banner .bannerArt .artWrapper {
-            animation: slideRightSmall 1s ease forwards; } }
-        @media (min-width: 1000px) {
-          .bannerLink .banner .bannerArt .artWrapper {
-            animation: slideRight 1s ease forwards; } }
     .bannerLink .banner .post {
       display: flex;
       align-items: flex-start;
@@ -139,7 +135,7 @@
         .bannerLink .banner .post {
           padding-top: 60px;
           padding-left: 0px;
-          width: 80vw;
+          width: 90vw;
           margin: 0px auto; } }
       .bannerLink .banner .post .postTitle {
         font-weight: 900;
@@ -170,6 +166,24 @@
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@keyframes rotamove {
+  0% {
+    transform: rotate(0deg) translateX(0px); }
+  100% {
+    transform: rotate(8deg) translateX(-24px); } }
+
+@keyframes rota {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(8deg); } }
+
+@keyframes rotarev {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-8deg); } }
 
 @keyframes slideRight {
   0% {
@@ -206,7 +220,7 @@
     padding: 20px 30px; }
     @media (max-width: 1000px) {
       .homepostsWrapper .homeposts {
-        width: 80vw; } }
+        width: 90vw; } }
     .homepostsWrapper .homeposts .link {
       all: unset; }
       .homepostsWrapper .homeposts .link .post {
