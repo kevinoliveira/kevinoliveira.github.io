@@ -31,17 +31,18 @@
       height: 300px;
 
       @include small {
-        width: $smallWidth;
-        height: $smallWidth;
+        width: 80vw;
+        height: 80vw;
         margin: 0px auto;
         border-radius: 30px;
+        animation: fadeIn 0.8s ease normal, rota 1s ease forwards;
       }
+      animation: fadeIn 0.8s ease normal, rotamove 1s ease forwards;
       background-color: $mid-light;
 
       display: flex;
       justify-content: center;
       align-items: center;
-      animation: fadeIn 0.8s ease normal;
 
       .artWrapper {
         border-radius: 20px;
@@ -54,12 +55,7 @@
         }
         background-color: $darker;
         position: absolute;
-        @include small {
-          animation: slideRightSmall 1s ease forwards;
-        }
-        @include notSmall {
-          animation: slideRight 1s ease forwards;
-        }
+        animation: rotarev 1s ease forwards;
       }
     }
 
@@ -119,6 +115,34 @@
       opacity: 1;
     }
   }
+
+   @keyframes rotamove {
+    0% {
+      transform: rotate(0deg) translateX(0px);
+    }
+    100% {
+      transform: rotate(8deg) translateX(-24px);
+    }
+  }
+
+   @keyframes rota {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(8deg);
+    }
+  }
+
+   @keyframes rotarev {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-8deg);
+    }
+  }
+
 
   @keyframes slideRight {
     0% {
