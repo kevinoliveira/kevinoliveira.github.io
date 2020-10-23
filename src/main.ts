@@ -40,7 +40,7 @@ postsParsedData.sort((postA, postB) => {
 	return dateB.localeCompare(dateA, 'en', { sensitivity: 'base' });
 })
 
-//postsParsedData = postsParsedData.filter(p => p.headers.published);
+postsParsedData = postsParsedData.filter(p => p.headers.published);
 
 // define files to compiple
 const pagesToCreate: IPage[] = [
