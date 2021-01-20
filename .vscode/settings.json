@@ -9,7 +9,7 @@
 	"editor.wrappingIndent": "indent",
 	"editor.overviewRulerBorder": false,
 	"editor.lineHeight": 24,
-	"workbench.colorTheme": "Verdandi Alter",
+	"workbench.colorTheme": "Verdandi",
 	"[markdown]": {
 		"editor.quickSuggestions": true
 	},

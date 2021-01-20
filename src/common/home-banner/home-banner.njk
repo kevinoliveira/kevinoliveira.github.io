@@ -1,4 +1,4 @@
-<a class="bannerLink" href={{posts[0].link}}>
+<a class="bannerLink" _href={{posts[0].link}}>
     <div class="banner">
         <div class="bannerArt">
             <canvas class="artWrapper" width="250" height="250">
@@ -28,8 +28,8 @@ let illo = new Zdog.Illustration({
 });
 
 // 1  4
-// | / 
-// 2 
+// | /
+// 2
 // | \
 // 3  5
 
@@ -48,12 +48,150 @@ let dome = new Zdog.Hemisphere({
   // fill enabled by default
   // disable stroke for crisp edge
   stroke: false,
-  color: '#1D2B53',
-  backface: '#008751',
-  rotate: { x: -Zdog.TAU/8 },
+  color: '#ecebe9',
+  backface: '#9c9c9c',
+  rotate: { x: -Zdog.TAU/4 },
+});
+
+const purple = [
+"#eaf1ff",
+"#c0d6fe",
+"#97bafd",
+"#6d9efc",
+"#4383fb",
+"#1a67fa",
+"#0552e5",
+"#0443bc",
+"#033492",
+"#022568",
+"#01163f",
+"#000715",
+]
+
+for(let i=0;i<12;i++){
+	console.log(`i=${i}`)
+	new Zdog.Shape({
+		addTo: illo,
+		path: [ // triangle
+			{ x:   0, y: -10, z: 56 },
+			{ x:  15, y:   0, z: 56 },
+			{ x: -10, y:   0, z: 57 },
+			{ x:  -5, y:   0, z: 58 },
+			{ x:   0, y:   0, z: 58 },
+			{ x:   5, y:   0, z: 58 },
+			{ x:  10, y:   0, z: 57 },
+			{ x: -15, y:   0, z: 56 },
+		],
+		// closed by default
+		stroke: 5,
+		fill: true,
+		//color: purple[i],
+		color: '#ecebe9',
+		backface: '#9c9c9c',
+		rotate: { y: i*(Zdog.TAU/12) },
+	});
+}
+
+
+let duckBody = new Zdog.Hemisphere({
+  addTo: illo,
+  diameter: 60,
+
+  // fill enabled by default
+  // disable stroke for crisp edge
+  stroke: false,
+  color: '#fbc31d',
+  rotate: { x: -Zdog.TAU/4 * 3 },
+  translate:{ y: -30 },
+});
+
+new Zdog.Cylinder({
+  addTo: illo,
+  diameter: 60,
+  length: 30,
+  rotate: { x: -Zdog.TAU/4 * 3 },
+  translate:{ y: -15 },
+  stroke: false,
+  color: '#fbc31d',
 });
 
 
+new Zdog.Shape({
+  addTo: illo,
+  rotate: { y: -Zdog.TAU/4 * 2 },
+  stroke: 5,
+  path:[
+	  {x: -2,y: -12,z: 30},
+	  {x:  2,y: -12,z: 30},
+	  {x:  0,y: -10,z: 35},
+  ],
+  fill: true,
+  color: '#fbc31d',
+});
+
+
+new Zdog.Shape({
+  addTo: illo,
+  rotate: { y: -Zdog.TAU/4 * 4 },
+  stroke: 5,
+  path:[
+	  {x: -2,y: -12,z: 30},
+	  {x:  2,y: -12,z: 30},
+	  {x:  0,y: -10,z: 35},
+  ],
+  fill: true,
+  color: '#fbc31d',
+});
+
+
+new Zdog.Shape({
+  addTo: illo,
+  stroke: 10,
+  translate:{ y: -30, x: 25, z:15 },
+  color: '#636',
+});
+
+new Zdog.Shape({
+  addTo: illo,
+  stroke: 10,
+  translate:{ y: -30, x: 25, z: -15 },
+  color: '#636',
+});
+
+new Zdog.Shape({
+  addTo: illo,
+  stroke: 5,
+  translate:{ y: -15, x: 30 },
+  path:[
+		{y: -5, x: 10, z: 0 },
+
+		{y: -10, x: 0, z: 0 },
+		{y: -5, x: 0, z: 5 },
+
+		{y: -5, x: 10, z: 0 },
+
+		{y: -5, x: 0, z: 5 },
+		{y:  0, x: 0, z: 0 },
+
+		{y: -5, x: 10, z: 0 },
+
+		{y:  0, x: 0, z: 0 },
+		{y: -5, x: 0, z: -5 },
+
+		{y: -5, x: 10, z: 0 },
+
+		{y: -5, x: 0, z: -5 },
+		{y: -10, x: 0, z: 0 },
+
+
+
+  ],
+  fill: true,
+  color: '#eb6c2c',
+});
+
+
+{#
 new Zdog.Shape({
   addTo: illo,
   path: [
@@ -65,9 +203,9 @@ new Zdog.Shape({
   ],
   stroke: 5,
   color: '#00E436',
-});
+}); #}
 
-
+{#
 let xRect = new Zdog.Rect({
   addTo: illo,
   width: 10,
@@ -75,9 +213,9 @@ let xRect = new Zdog.Rect({
   stroke: 5,
   translate: { y: -55, x: -25 }, // x +40 from zCircle
   color: '#00E436'
-}); 
+});  #}
 
-
+{#
 let flower = new Zdog.Ellipse({
   addTo: illo,
   diameter: 30,
@@ -86,15 +224,15 @@ let flower = new Zdog.Ellipse({
   translate: { y: -80 },
   rotate: { z: Zdog.TAU/8, y: -Zdog.TAU/2 },
   color: '#FF004D',
-});
+}); #}
 
-
+{#
 let flowerCenter = new Zdog.Ellipse({
   addTo: illo,
   stroke: 10,
   translate: { y: -80 },
   color: '#FF004D',
-});
+}); #}
 
 // new Zdog.Shape({
 //   addTo: illo,
@@ -112,7 +250,7 @@ let flowerCenter = new Zdog.Ellipse({
 //   // no path set, default to single point
 //   stroke: 30,
 //   color: '#FFF1E8',
-// }); 
+// });
 
 // new Zdog.Shape({
 //   addTo: illo,
@@ -122,14 +260,14 @@ let flowerCenter = new Zdog.Ellipse({
 //   // no path set, default to single point
 //   stroke: 30,
 //   color: '#FFF1E8',
-// }); 
+// });
 
 
 // new Zdog.Ellipse({
 //   addTo: illo,
 //   diameter: 80,
 //   quarters: 2,
-//   stroke: 20, 
+//   stroke: 20,
 //   color: '#FF004D',
 // });
 
@@ -188,10 +326,21 @@ let flowerCenter = new Zdog.Ellipse({
 //   color: '#E62',
 //   fill: true,
 // });
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
+const axis = ["x","y","z"];
 function animate() {
   // rotate illo each frame
-  illo.rotate.y += 0.03;
+
+  illo.rotate.z += 0.01
+  illo.rotate.x += 0.01
+  illo.rotate.y += 0.01
+
+  //illo.rotate[axis[getRandomInt(3)]] += 0.01;
+  //illo.rotate[axis[getRandomInt(3)]] += 0.01;
+
   illo.updateRenderGraph();
   // animate next frame
   requestAnimationFrame( animate );
